@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+	<!--[if lt IE 7]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 7]> <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 8]> <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 9]> <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <!--<![endif]-->
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+		<!--[if ie]>
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<![endif]-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="language" content="es" />
+		<title>Mirai Components Library</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://hotelbecquer.webs3.mirai.es/xmlrpc.php" />
+		<link rel="shortcut icon" href="../wordpress/wp-content/themes/mirai/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="../wordpress/wp-content/themes/mirai/images/apple_touch_icon.png" />
+		<link rel='stylesheet' id='bootstrap-css'  href='../wordpress/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='main-css'  href='../wordpress/wp-content/themes/child/style.css' type='text/css' media='all' />
+		
+		<!--[if IE 8]>
+			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='../wordpress/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
+		<![endif]-->
+		
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
+		
+		<link rel='prev' title='bookingstep3' href='http://hotelbecquer.webs3.mirai.es/bookingstep3/' />
+		<link rel='next' title='Galería' href='http://hotelbecquer.webs3.mirai.es/galeria/' />
+		<link rel='canonical' href='http://hotelbecquer.webs3.mirai.es/' />
+		
+		<!-- <meta name="NextGEN" version="1.9.1" /> -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+		<meta http-equiv="Content-Language" content="es-ES" />
+		
+		<link hreflang="en" href="http://hotelbecquer.webs3.mirai.es/en/" rel="alternate" />
+		<link hreflang="fr" href="http://hotelbecquer.webs3.mirai.es/fr/" rel="alternate" />
+		<link hreflang="it" href="http://hotelbecquer.webs3.mirai.es/it/" rel="alternate" />
+		<link hreflang="de" href="http://hotelbecquer.webs3.mirai.es/de/" rel="alternate" />
+
+		<!-- MIRAI ASYNC ANALYTICS BEGIN -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-00000000-1']);
+			_gaq.push(['_setDomainName', 'none']);
+			_gaq.push(['_setAllowLinker', true]);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		<!-- MIRAI ASYNC ANALYTICS END -->
+		
+		<style>
+			/* prettify.css */
+				.com { color: #93a1a1; }
+				.lit { color: #195f91; }
+				.pun, .opn, .clo { color: #93a1a1; }
+				.fun { color: #dc322f; }
+				.str, .atv { color: #D14; }
+				.kwd, .prettyprint .tag { color: #1e347b; }
+				.typ, .atn, .dec, .var { color: teal; }
+				.pln { color: #48484c; }
+
+				.prettyprint {
+				  padding: 8px;
+				  background-color: #f7f7f9;
+				  border: 1px solid #e1e1e8;
+				}
+				.prettyprint.linenums {
+				  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+					 -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+						  box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+				}
+
+				/* Specify class=linenums on a pre to get line numbering */
+				ol.linenums {
+				  margin: 0 0 0 33px; /* IE indents via margin-left */
+				}
+				ol.linenums li {
+				  padding-left: 12px;
+				  color: #bebec5;
+				  line-height: 20px;
+				  text-shadow: 0 1px 0 #fff;
+				}
+			/* prettify.css */
+			
+			#header {
+				background-color: white;
+				min-height:170px;
+				margin-top:10px;
+				padding: 40px 0;
+				color: white;
+				text-align: center;
+				text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+				-webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+				-moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+				box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+			}
+			#header h1 {
+				font-size: 120px;
+				line-height: 1;
+				letter-spacing: -2px;
+			}
+			#header  p {
+				font-size: 40px;
+				font-weight: 200;
+				line-height: 1.25;
+			}
+			.bs-docs-sidenav {
+				width: 258px;
+				margin: 30px 0 0;
+				padding: 0;
+				background-color: white;
+				-webkit-border-radius: 6px;
+				-moz-border-radius: 6px;
+				border-radius: 6px;
+				-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+				-moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+				box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+			}
+			.bs-docs-sidenav.affix {top: 40px;}
+			.bs-docs-sidenav > li:first-child > a {
+				-webkit-border-radius: 6px 6px 0 0;
+				-moz-border-radius: 6px 6px 0 0;
+				border-radius: 6px 6px 0 0;
+			}
+			.bs-docs-sidenav > li > a {
+				display: block;
+				margin: 0 0 -1px;
+				padding: 8px 14px;
+				border: 1px solid #E5E5E5;
+			}
+			.bs-docs-sidenav > li:last-child > a {
+				-webkit-border-radius: 0 0 6px 6px;
+				-moz-border-radius: 0 0 6px 6px;
+				border-radius: 0 0 6px 6px;
+			}
+			h1 {font-size: 36px;line-height: 40px;}
+			section {padding-top: 30px;}
+			ol {
+			list-style: decimal outside none;
+			}
+			.page-header {color: #5A5A5A;}
+			.bs-docs-example {
+				position: relative;
+				margin: 15px 0;
+				padding: 39px 19px 14px;
+				background-color: white;
+				border: 1px solid #DDD;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+			}
+			.bs-docs-example::after {
+				content: "Example";
+				position: absolute;
+				top: -1px;
+				left: -1px;
+				padding: 3px 7px;
+				font-size: 12px;
+				font-weight: bold;
+				background-color: whiteSmoke;
+				border: 1px solid #DDD;
+				color: #9DA0A4;
+				-webkit-border-radius: 4px 0 4px 0;
+				-moz-border-radius: 4px 0 4px 0;
+				border-radius: 4px 0 4px 0;
+			}
+			/*collapse*/
+			.accordion-heading h2 {display:inline-block;padding-left:15px;}
+			.accordion-heading .accordion-toggle {display:inline-block;}
+			
+		</style>
+		
+	</head>
+
+	<body id="hotel-becquer" class="hotel home page cat-hotel">        
+
+		<div id="container" class="">
+		
+			<header id="header" class="">
+				<div class="content container">
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>			
+				</div>
+			</header><!-- end header -->
+
+			<section id="main" class="">
+				<div class="content container">					
+					<div class="row">
+						
+						<!--div class="span3 bs-docs-sidebar">
+							<ul class="nav nav-list bs-docs-sidenav affix-top">
+								<li><a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a></li>
+								<li><a href="#transitions"><i class="icon-chevron-right"></i> Transitions</a></li>								
+								<li><a href="#affix"><i class="icon-chevron-right"></i> Affix</a></li>
+							</ul>
+						</div-->
+						
+						<div class="span12">
+						
+							<section id="colapse">
+								<div class="page-header">
+									<h1>Collapse</h1>
+								</div>
+								
+								<p>Para mostrar visible el contenido de un grupo al cargar la página, seteamos #div.accordion-body con la clase .in.</p>
+								<p>Para mostrar/ocultar cada grupo de manera independiente basta con no utilizar el atributo 'data-parent'.</p>
+								
+								<div class="bs-docs-example">
+								
+									<div class="accordion" id="accordion2">
+										<div class="accordion-group">
+											<div class="accordion-heading">
+												<h2>Texto sin link</h2>
+												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion21" href="#collapseOne">
+													Link mostrar/ocultar Group Item #1
+												</a>
+											</div>
+											<div id="collapseOne" class="accordion-body collapse">
+												<div class="accordion-inner">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												</div>
+											</div>
+										</div>
+									
+										<div class="accordion-group">
+											<div class="accordion-heading">
+												<h2>Texto sin link</h2>
+												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion21" href="#collapseTwo">
+													Link mostrar/ocultar Group Item #2
+												</a>
+											</div>
+											<div id="collapseTwo" class="accordion-body collapse">
+												<div class="accordion-inner">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												</div>
+											</div>
+										</div>
+																				
+									</div>
+									
+								</div>
+								
+<pre class="prettyprint linenums">
+
+&lt;div class="accordion" id="accordion2"&gt;
+	&lt;div class="accordion-group"&gt;
+		&lt;div class="accordion-heading"&gt;
+			&lt;h2&gt;Texto sin link&lt;/h2&gt;
+			&lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"&gt;
+				Link mostrar/ocultar Group Item #2
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div id="collapseOne" class="accordion-body collapse"&gt;
+			&lt;div class="accordion-inner"&gt;
+				Anim pariatur cliche reprehenderit.
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class="accordion-group"&gt;
+		&lt;div class="accordion-heading"&gt;
+			&lt;h2&gt;Texto sin link&lt;/h2&gt;
+			&lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"&gt;
+				Link mostrar/ocultar Group Item #2
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div id="collapseTwo" class="accordion-body collapse"&gt;
+			&lt;div class="accordion-inner"&gt;
+				Anim pariatur cliche reprehenderit.
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+/*----------------------------- COLLAPSE COMPONENT -----------------------------*/
+.accordion-group {}
+.accordion-heading {}
+.accordion-heading h2 {}
+.accordion-heading .accordion-toggle {}
+.accordion-heading .accordion-toggle:hover {}
+.accordion-heading .accordion-toggle.collapsed {}
+.accordion-body {}
+.accordion-body .accordion-inner {}
+/*------------------------------------------------------------------------------*/
+
+</pre>
+							</section>
+							
+							<section id="tabs">
+								<div class="page-header">
+									<h1>Tabs / Pills</h1>
+								</div>
+								
+								<p>Para variar la posición de las pestañas (izquierda, derecha, abajo) añadimos al div.tabbable la clase correspondiente (tabs-left, tabs-right, tabs-below).</p>
+								<p>Ojo! si utilizamos .tabs-below hay que invertir el orden del marcado: primero .tab-content y luego .nav-tabs</p>
+								<p>Si cambiamos .nav-tabs por .nav-pills tenemos un formato tabs pero sin pestañas.</p>
+								
+								<div class="bs-docs-example">
+								
+									<div class="tabbable"> <!-- Only required for left/right and bellow tabs -->
+										<ul class="nav nav-tabs">
+											<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+											<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+											<li><a href="#tab3" data-toggle="tab">Section 3</a></li>
+										</ul>
+										<div class="tab-content">
+											<div class="tab-pane active" id="tab1">
+												<p>I'm in Section 1.</p>
+											</div>
+											<div class="tab-pane" id="tab2">
+												<p>Howdy, I'm in Section 2.</p>
+											</div>
+											<div class="tab-pane" id="tab3">
+												<p>Howdy, I'm in Section 3.</p>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+<pre class="prettyprint linenums">
+
+&lt;div class="tabbable"&gt; &lt;!-- Only required for left/right and bellow tabs --&gt;
+	&lt;ul class="nav nav-tabs"&gt;
+		&lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#tab3" data-toggle="tab"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="tab-content"&gt;
+		&lt;div class="tab-pane active" id="tab1"&gt;
+			&lt;p&gt;I'm in Section 1.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="tab-pane" id="tab2"&gt;
+			&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="tab-pane" id="tab3"&gt;
+			&lt;p&gt;Howdy, I'm in Section 3.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+/*----------------------------- TABS COMPONENT -----------------------------*/
+.tabbable {}
+.nav-tabs, .nav-pills {}
+.nav-tabs > li, .nav-pills > li {}
+.nav-tabs > li.active > a, .nav-pills > li.active > a {}
+.nav-tabs > li.active > a:hover, .nav-pills > li.active > a:hover {}
+.nav-tabs > li > a, .nav-pills > li > a {}
+.nav-tabs > li > a:hover, .nav-pills > li > a:hover {}
+.tab-content {}
+.tab-content > .tab-pane {}
+/*------------------------------------------------------------------------------*/
+
+</pre>
+							</section>
+							
+						</div>
+					</div>
+				</div>
+			</section><!-- end section -->
+
+			<footer id="footer" class="">
+				<div class='hidden-phone content container'>					
+					<address class="address_phone visible-phone">
+						<ul>
+							<li class="address_street_phone"><a href="https://maps.google.com/maps?q=HOTEL+B%C3%89CQUER,+Calle+Reyes+Cat%C3%B3licos,+Sevilla,+Espa%C3%B1a&hl=es&ie=UTF8&ll=37.38922,-6.00008&spn=0.02646,0.066047&sll=38.341656,-95.712891&sspn=52.659046,135.263672&hq=HOTEL+B%C3%89CQUER,+Calle+Reyes+Cat%C3%B3licos,+Sevilla,+Espa%C3%B1a&t=m&z=15&iwloc=A" title="Reyes Católicos, 4">Reyes Católicos, 4</a></li>
+							<li class="address_tel_phone"><a href="tel:+34 954228900" title="Tel:+34 954228900">+34 954228900</a></li>
+							<li class="address_mail_phone"><a href="mailto:becquer@hotelbecquer.com" title="becquer@hotelbecquer.com">becquer@hotelbecquer.com</a></li>
+						</ul>
+					</address>
+					<div class="visible-phone widget-container widget_qtranslate">
+						<ul class="qtrans_language_chooser" id="qtranslate--1-chooser">
+							<li class="lang-es active"><a href="http://hotelbecquer.webs3.mirai.es/" hreflang="es" title="ES"><span>ES</span></a></li>
+							<li class="lang-en"><a href="http://hotelbecquer.webs3.mirai.es/en/" hreflang="en" title="EN"><span>EN</span></a></li>
+							<li class="lang-fr"><a href="http://hotelbecquer.webs3.mirai.es/fr/" hreflang="fr" title="FR"><span>FR</span></a></li>
+							<li class="lang-it"><a href="http://hotelbecquer.webs3.mirai.es/it/" hreflang="it" title="IT"><span>IT</span></a></li>
+							<li class="lang-de"><a href="http://hotelbecquer.webs3.mirai.es/de/" hreflang="de" title="DE"><span>DE</span></a></li>
+						</ul>
+						<div class="qtrans_widget_end"></div>
+					</div>
+				</div>
+			</footer><!-- end footer -->
+				
+		</div> <!-- end container -->
+
+		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
+		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
+		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/mirai.common.js?ver=1.0'></script>
+		<script type='text/javascript'>
+		/* <![CDATA[ */
+			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+		/* ]]> */
+		</script>
+		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<!--script src="assets/js/jquery.js"></script-->
+		<script src="google-code-prettify/prettify.js"></script>
+		<!--script src="assets/js/bootstrap-transition.js"></script>
+		<script src="assets/js/bootstrap-alert.js"></script>
+		<script src="assets/js/bootstrap-modal.js"></script>
+		<script src="assets/js/bootstrap-dropdown.js"></script>
+		<script src="assets/js/bootstrap-scrollspy.js"></script>
+		<script src="assets/js/bootstrap-tab.js"></script>
+		<script src="assets/js/bootstrap-tooltip.js"></script>
+		<script src="assets/js/bootstrap-popover.js"></script>
+		<script src="assets/js/bootstrap-button.js"></script>
+		<script src="assets/js/bootstrap-collapse.js"></script>
+		<script src="assets/js/bootstrap-carousel.js"></script>
+		<script src="assets/js/bootstrap-typeahead.js"></script>
+		<script src="assets/js/bootstrap-affix.js"></script-->
+		<script src="application.js"></script>
+		
+	</body>
+</html>

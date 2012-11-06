@@ -14,23 +14,25 @@
 		<meta name="language" content="es" />
 		<title>Mirai Components Library</title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="pingback" href="http://hotelbecquer.webs3.mirai.es/xmlrpc.php" />
-		<link rel="shortcut icon" href="../wordpress/wp-content/themes/mirai/images/favicon.ico" />
-		<link rel="apple-touch-icon" href="../wordpress/wp-content/themes/mirai/images/apple_touch_icon.png" />
-		<link rel='stylesheet' id='bootstrap-css'  href='../wordpress/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
+		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
+		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
-		<link rel='stylesheet' id='main-css'  href='../wordpress/wp-content/themes/child/style.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
+                
+                <link rel='stylesheet' id='components-css'  href='components.css' type='text/css' media='all' />
 		
 		<!--[if IE 8]>
-			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='../wordpress/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
+			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
 		<![endif]-->
 		
 		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
-		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
 		
-		<link rel='prev' title='bookingstep3' href='http://hotelbecquer.webs3.mirai.es/bookingstep3/' />
-		<link rel='next' title='Galería' href='http://hotelbecquer.webs3.mirai.es/galeria/' />
-		<link rel='canonical' href='http://hotelbecquer.webs3.mirai.es/' />
+		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
+		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
+		<link rel='canonical' href='http://webs3.mirai.es/' />
 		
 		<!-- <meta name="NextGEN" version="1.9.1" /> -->
 		<meta name="keywords" content="" />
@@ -38,10 +40,10 @@
 
 		<meta http-equiv="Content-Language" content="es-ES" />
 		
-		<link hreflang="en" href="http://hotelbecquer.webs3.mirai.es/en/" rel="alternate" />
-		<link hreflang="fr" href="http://hotelbecquer.webs3.mirai.es/fr/" rel="alternate" />
-		<link hreflang="it" href="http://hotelbecquer.webs3.mirai.es/it/" rel="alternate" />
-		<link hreflang="de" href="http://hotelbecquer.webs3.mirai.es/de/" rel="alternate" />
+		<link hreflang="en" href="http://webs3.mirai.es/en/" rel="alternate" />
+		<link hreflang="fr" href="http://webs3.mirai.es/fr/" rel="alternate" />
+		<link hreflang="it" href="http://webs3.mirai.es/it/" rel="alternate" />
+		<link hreflang="de" href="http://webs3.mirai.es/de/" rel="alternate" />
 
 		<!-- MIRAI ASYNC ANALYTICS BEGIN -->
 		<script type="text/javascript">
@@ -58,128 +60,6 @@
 		</script>
 		<!-- MIRAI ASYNC ANALYTICS END -->
 		
-		<style>
-			/* prettify.css */
-				.com { color: #93a1a1; }
-				.lit { color: #195f91; }
-				.pun, .opn, .clo { color: #93a1a1; }
-				.fun { color: #dc322f; }
-				.str, .atv { color: #D14; }
-				.kwd, .prettyprint .tag { color: #1e347b; }
-				.typ, .atn, .dec, .var { color: teal; }
-				.pln { color: #48484c; }
-
-				.prettyprint {
-				  padding: 8px;
-				  background-color: #f7f7f9;
-				  border: 1px solid #e1e1e8;
-				}
-				.prettyprint.linenums {
-				  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-					 -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-						  box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-				}
-
-				/* Specify class=linenums on a pre to get line numbering */
-				ol.linenums {
-				  margin: 0 0 0 33px; /* IE indents via margin-left */
-				}
-				ol.linenums li {
-				  padding-left: 12px;
-				  color: #bebec5;
-				  line-height: 20px;
-				  text-shadow: 0 1px 0 #fff;
-				}
-			/* prettify.css */
-			
-			#header {
-				background-color: white;
-				min-height:170px;
-				margin-top:10px;
-				padding: 40px 0;
-				color: white;
-				text-align: center;
-				text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
-				-webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
-				-moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-				box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
-			}
-			#header h1 {
-				font-size: 120px;
-				line-height: 1;
-				letter-spacing: -2px;
-			}
-			#header  p {
-				font-size: 40px;
-				font-weight: 200;
-				line-height: 1.25;
-			}
-			.bs-docs-sidenav {
-				width: 258px;
-				margin: 30px 0 0;
-				padding: 0;
-				background-color: white;
-				-webkit-border-radius: 6px;
-				-moz-border-radius: 6px;
-				border-radius: 6px;
-				-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-				-moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-				box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-			}
-			.bs-docs-sidenav.affix {top: 40px;}
-			.bs-docs-sidenav > li:first-child > a {
-				-webkit-border-radius: 6px 6px 0 0;
-				-moz-border-radius: 6px 6px 0 0;
-				border-radius: 6px 6px 0 0;
-			}
-			.bs-docs-sidenav > li > a {
-				display: block;
-				margin: 0 0 -1px;
-				padding: 8px 14px;
-				border: 1px solid #E5E5E5;
-			}
-			.bs-docs-sidenav > li:last-child > a {
-				-webkit-border-radius: 0 0 6px 6px;
-				-moz-border-radius: 0 0 6px 6px;
-				border-radius: 0 0 6px 6px;
-			}
-			h1 {font-size: 36px;line-height: 40px;}
-			section {padding-top: 30px;}
-			ol {
-			list-style: decimal outside none;
-			}
-			.page-header {color: #5A5A5A;}
-			.bs-docs-example {
-				position: relative;
-				margin: 15px 0;
-				padding: 39px 19px 14px;
-				background-color: white;
-				border: 1px solid #DDD;
-				-webkit-border-radius: 4px;
-				-moz-border-radius: 4px;
-				border-radius: 4px;
-			}
-			.bs-docs-example::after {
-				content: "Example";
-				position: absolute;
-				top: -1px;
-				left: -1px;
-				padding: 3px 7px;
-				font-size: 12px;
-				font-weight: bold;
-				background-color: whiteSmoke;
-				border: 1px solid #DDD;
-				color: #9DA0A4;
-				-webkit-border-radius: 4px 0 4px 0;
-				-moz-border-radius: 4px 0 4px 0;
-				border-radius: 4px 0 4px 0;
-			}
-			/*collapse*/
-			.accordion-heading h2 {display:inline-block;padding-left:15px;}
-			.accordion-heading .accordion-toggle {display:inline-block;}
-			
-		</style>
-		
 	</head>
 
 	<body id="hotel-becquer" class="hotel home page cat-hotel">        
@@ -189,7 +69,7 @@
 			<header id="header" class="">
 				<div class="content container">
 					<h1>Mirai Components</h1>
-					<p>Patterns, Objects Library for faster and easier websites production.</p>			
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
 				</div>
 			</header><!-- end header -->
 
@@ -363,6 +243,88 @@
 
 </pre>
 							</section>
+                                                    
+                                                        <section id="jcarousel">
+								<div class="page-header">
+									<h1>JCarousel</h1>
+								</div>
+								
+								<div class="bs-docs-example">
+								
+                                                                    <div class="carousel jcarousel" id="myCarousel">
+                                                                        <div class="layer">
+                                                                            <div class="itemLayer">
+                                                                                <img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" />
+                                                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>                                                                                
+                                                                            </div>
+                                                                            <div class="itemLayer">
+                                                                                <img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" />
+                                                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>                                                                                
+                                                                            </div>
+                                                                            <div class="itemLayer">
+                                                                                <img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" />
+                                                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>                                                                                
+                                                                            </div>
+                                                                            <div class="itemLayer">
+                                                                                <img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" />
+                                                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>                                                                                
+                                                                            </div>
+                                                                            <div class="itemLayer">
+                                                                                <img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" />
+                                                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>                                                                                
+                                                                            </div>
+                                                                            <div class="itemLayer">
+                                                                                <img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" />
+                                                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>                                                                                                                                                            </div>
+                                                                        </div>
+                                                                        <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
+                                                                        <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>	   
+                                                                    </div>
+									
+								</div>
+								
+<pre class="prettyprint linenums">
+
+&lt;div class="carousel jcarousel" id="myCarousel"&gt;
+    &lt;div class="layer"&gt;
+        &lt;div class="itemLayer"&gt;
+            &lt;img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" /&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="itemLayer"&gt;
+            &lt;img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" /&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="itemLayer"&gt;
+            &lt;img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" /&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="itemLayer"&gt;
+            &lt;img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" /&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="itemLayer"&gt;
+            &lt;img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" /&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="itemLayer"&gt;
+            &lt;img src="http://dummyimage.com/400x300/ccc/000.png" alt="" title="" /&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;a data-slide="prev" href="#myCarousel" class="left carousel-control"&gt;‹&lt;/a&gt;
+    &lt;a data-slide="next" href="#myCarousel" class="right carousel-control"&gt;›&lt;/a&gt;	   
+&lt;/div&gt;
+
+/*----------------------------- JCAROUSEL -----------------------------*/
+.jcarousel {overflow:hidden;}
+.jcarousel .layer .itemLayer {}
+.jcarousel .layer .itemLayer:hover {} 
+.jcarousel .layer .itemLayer p {} 
+.jcarousel .carousel-control {}
+/*------------------------------------------------------------------------------*/
+
+</pre>
+							</section>
 							
 						</div>
 					</div>
@@ -393,36 +355,22 @@
 				
 		</div> <!-- end container -->
 
-		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
-		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
-		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/bootstrap.min.js'></script>
-		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/mirai.common.js?ver=1.0'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
 		<script type='text/javascript'>
 		/* <![CDATA[ */
 			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
 		/* ]]> */
 		</script>
-		<script type='text/javascript' src='../wordpress/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
 		
 		<!-- Le javascript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-		<!--script src="assets/js/jquery.js"></script-->
-		<script src="google-code-prettify/prettify.js"></script>
-		<!--script src="assets/js/bootstrap-transition.js"></script>
-		<script src="assets/js/bootstrap-alert.js"></script>
-		<script src="assets/js/bootstrap-modal.js"></script>
-		<script src="assets/js/bootstrap-dropdown.js"></script>
-		<script src="assets/js/bootstrap-scrollspy.js"></script>
-		<script src="assets/js/bootstrap-tab.js"></script>
-		<script src="assets/js/bootstrap-tooltip.js"></script>
-		<script src="assets/js/bootstrap-popover.js"></script>
-		<script src="assets/js/bootstrap-button.js"></script>
-		<script src="assets/js/bootstrap-collapse.js"></script>
-		<script src="assets/js/bootstrap-carousel.js"></script>
-		<script src="assets/js/bootstrap-typeahead.js"></script>
-		<script src="assets/js/bootstrap-affix.js"></script-->
+		<script src="google-code-prettify/prettify.js"></script>		
 		<script src="application.js"></script>
 		
 	</body>

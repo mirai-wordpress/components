@@ -21,7 +21,7 @@
 		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
                 
-                <link rel='stylesheet' id='components-css'  href='components.css' type='text/css' media='all' />
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
 		
 		<!--[if IE 8]>
 			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
@@ -52,22 +52,104 @@
 				<div class="content container">					
 					<div class="row">
 						
-						<div class="span3 bs-docs-sidebar">
+						<!--div class="span3 bs-docs-sidebar">
 							<ul class="nav nav-list bs-docs-sidenav affix-top">
-								<li><a href="lib/collapse.html"><i class="icon-chevron-right"></i> Collapse</a></li>
-								<li><a href="lib/tabs.html"><i class="icon-chevron-right"></i> Tabs / Pills</a></li>								
-								<li><a href="lib/jcarousel.html"><i class="icon-chevron-right"></i> jCarousel</a></li>
+								<li><a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a></li>
+								<li><a href="#transitions"><i class="icon-chevron-right"></i> Transitions</a></li>								
+								<li><a href="#affix"><i class="icon-chevron-right"></i> Affix</a></li>
 							</ul>
-						</div>
+						</div-->
 						
-						<div class="span9">
-                                                    Lorem Ipsum...
-							
-							
-						</div>
-					</div>
-				</div>
-			</section><!-- end section -->
+						<div class="span12">
+						
+							<section id="colapse">
+								<div class="page-header">
+									<h1>Collapse</h1>
+								</div>
+								
+								<p>Para mostrar visible el contenido de un grupo al cargar la página, seteamos #div.accordion-body con la clase .in.</p>
+								<p>Para mostrar/ocultar cada grupo de manera independiente basta con no utilizar el atributo 'data-parent'.</p>
+								
+								<div class="bs-docs-example">
+								
+									<div class="accordion" id="accordion2">
+										<div class="accordion-group">
+											<div class="accordion-heading">
+												<h2>Texto sin link</h2>
+												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion21" href="#collapseOne">
+													Link mostrar/ocultar Group Item #1
+												</a>
+											</div>
+											<div id="collapseOne" class="accordion-body collapse">
+												<div class="accordion-inner">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												</div>
+											</div>
+										</div>
+									
+										<div class="accordion-group">
+											<div class="accordion-heading">
+												<h2>Texto sin link</h2>
+												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion21" href="#collapseTwo">
+													Link mostrar/ocultar Group Item #2
+												</a>
+											</div>
+											<div id="collapseTwo" class="accordion-body collapse">
+												<div class="accordion-inner">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												</div>
+											</div>
+										</div>
+																				
+									</div>
+									
+								</div>
+								
+<pre class="prettyprint linenums">
+
+&lt;div class="accordion" id="accordion2"&gt;
+	&lt;div class="accordion-group"&gt;
+		&lt;div class="accordion-heading"&gt;
+			&lt;h2&gt;Texto sin link&lt;/h2&gt;
+			&lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"&gt;
+				Link mostrar/ocultar Group Item #2
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div id="collapseOne" class="accordion-body collapse"&gt;
+			&lt;div class="accordion-inner"&gt;
+				Anim pariatur cliche reprehenderit.
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class="accordion-group"&gt;
+		&lt;div class="accordion-heading"&gt;
+			&lt;h2&gt;Texto sin link&lt;/h2&gt;
+			&lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"&gt;
+				Link mostrar/ocultar Group Item #2
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div id="collapseTwo" class="accordion-body collapse"&gt;
+			&lt;div class="accordion-inner"&gt;
+				Anim pariatur cliche reprehenderit.
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+/*----------------------------- COLLAPSE COMPONENT -----------------------------*/
+.accordion-group {}
+.accordion-heading {}
+.accordion-heading h2 {}
+.accordion-heading .accordion-toggle {}
+.accordion-heading .accordion-toggle:hover {}
+.accordion-heading .accordion-toggle.collapsed {}
+.accordion-body {}
+.accordion-body .accordion-inner {}
+/*------------------------------------------------------------------------------*/
+
+</pre>
+							</section>
 
 			<footer id="footer" class="">
 				<div class='hidden-phone content container'>					

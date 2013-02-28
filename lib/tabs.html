@@ -21,7 +21,7 @@
 		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
                 
-                <link rel='stylesheet' id='components-css'  href='components.css' type='text/css' media='all' />
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
 		
 		<!--[if IE 8]>
 			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
@@ -52,22 +52,88 @@
 				<div class="content container">					
 					<div class="row">
 						
-						<div class="span3 bs-docs-sidebar">
+						<!--div class="span3 bs-docs-sidebar">
 							<ul class="nav nav-list bs-docs-sidenav affix-top">
-								<li><a href="lib/collapse.html"><i class="icon-chevron-right"></i> Collapse</a></li>
-								<li><a href="lib/tabs.html"><i class="icon-chevron-right"></i> Tabs / Pills</a></li>								
-								<li><a href="lib/jcarousel.html"><i class="icon-chevron-right"></i> jCarousel</a></li>
+								<li><a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a></li>
+								<li><a href="#transitions"><i class="icon-chevron-right"></i> Transitions</a></li>								
+								<li><a href="#affix"><i class="icon-chevron-right"></i> Affix</a></li>
 							</ul>
-						</div>
+						</div-->
 						
-						<div class="span9">
-                                                    Lorem Ipsum...
-							
-							
+						<div class="span12">
+							<section id="tabs">
+								<div class="page-header">
+									<h1>Tabs / Pills</h1>
+								</div>
+								
+								<p>Para variar la posición de las pestañas (izquierda, derecha, abajo) añadimos al div.tabbable la clase correspondiente (tabs-left, tabs-right, tabs-below).</p>
+								<p>Ojo! si utilizamos .tabs-below hay que invertir el orden del marcado: primero .tab-content y luego .nav-tabs</p>
+								<p>Si cambiamos .nav-tabs por .nav-pills tenemos un formato tabs pero sin pestañas.</p>
+								
+								<div class="bs-docs-example">
+								
+									<div class="tabbable"> <!-- Only required for left/right and bellow tabs -->
+										<ul class="nav nav-tabs">
+											<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+											<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+											<li><a href="#tab3" data-toggle="tab">Section 3</a></li>
+										</ul>
+										<div class="tab-content">
+											<div class="tab-pane active" id="tab1">
+												<p>I'm in Section 1.</p>
+											</div>
+											<div class="tab-pane" id="tab2">
+												<p>Howdy, I'm in Section 2.</p>
+											</div>
+											<div class="tab-pane" id="tab3">
+												<p>Howdy, I'm in Section 3.</p>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+<pre class="prettyprint linenums">
+
+&lt;div class="tabbable"&gt; &lt;!-- Only required for left/right and bellow tabs --&gt;
+	&lt;ul class="nav nav-tabs"&gt;
+		&lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#tab3" data-toggle="tab"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="tab-content"&gt;
+		&lt;div class="tab-pane active" id="tab1"&gt;
+			&lt;p&gt;I'm in Section 1.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="tab-pane" id="tab2"&gt;
+			&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="tab-pane" id="tab3"&gt;
+			&lt;p&gt;Howdy, I'm in Section 3.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+/*----------------------------- TABS COMPONENT -----------------------------*/
+.tabbable {}
+.nav-tabs, .nav-pills {}
+.nav-tabs > li, .nav-pills > li {}
+.nav-tabs > li.active > a, .nav-pills > li.active > a {}
+.nav-tabs > li.active > a:hover, .nav-pills > li.active > a:hover {}
+.nav-tabs > li > a, .nav-pills > li > a {}
+.nav-tabs > li > a:hover, .nav-pills > li > a:hover {}
+.tab-content {}
+.tab-content > .tab-pane {}
+/*------------------------------------------------------------------------------*/
+
+</pre>
+							</section>
 						</div>
 					</div>
 				</div>
 			</section><!-- end section -->
+
+
 
 			<footer id="footer" class="">
 				<div class='hidden-phone content container'>					

@@ -40,7 +40,7 @@ ol.linenums li {
 /* prettify.css */
 
 #header {
-        background-color: white;
+        background-color: red;
         min-height:170px;
         margin-top:10px;
         padding: 40px 0;
@@ -63,7 +63,7 @@ ol.linenums li {
 }
 .bs-docs-sidenav {
         width: 258px;
-        margin: 30px 0 0;
+        margin: 0;
         padding: 0;
         background-color: white;
         -webkit-border-radius: 6px;

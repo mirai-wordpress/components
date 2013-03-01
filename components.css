@@ -40,7 +40,7 @@ ol.linenums li {
 /* prettify.css */
 
 #header {
-        background-color: red;
+        background-color: #ee293a;
         min-height:170px;
         margin-top:10px;
         padding: 40px 0;
@@ -139,4 +139,10 @@ list-style: decimal outside none;
 .jcarousel .layer .itemLayer:hover {background-color:#882923;opacity:1;} 
 .jcarousel .layer .itemLayer p {color:#000;margin-top:20px;} 
 .jcarousel .carousel-control {top:auto;bottom:0px}
+
+ul.bullets {
+    margin: 10px 20px 20px;}
+ul.bullets li {
+    margin: 0 0 5px 20px;
+    list-style-type: disc;}
 

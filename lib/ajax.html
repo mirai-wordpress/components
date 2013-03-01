@@ -12,7 +12,7 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<meta name="language" content="es" />
-		<title>Mirai Components Library / Collapse</title>
+		<title>Mirai Components Library / Ajax content loader</title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
 		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
@@ -37,7 +37,7 @@
 		<meta http-equiv="Content-Language" content="es-ES" />
 	</head>
 
-	<body id="main" class="hotel home page cat-hotel">    
+	<body id="" class="hotel home page cat-hotel">    
 
 		<div id="container" class="">
 		
@@ -55,95 +55,23 @@
                                             <ul><li><a href="..">Home</a></li></ul>
                                         </nav>
                                     </div>
-					<div class="row">
+                                    <div class="row">
 						<div class="span12">
 						
 							<section id="colapse">
 								<div class="page-header">
-									<h1>Collapse</h1>
+									<h1>Ajax component loader</h1>
 								</div>
 								
-								<p>Para mostrar visible el contenido de un grupo al cargar la página, seteamos #div.accordion-body con la clase .in.</p>
-								<p>Para mostrar/ocultar cada grupo de manera independiente basta con no utilizar el atributo 'data-parent'.</p>
-								
-								<div class="bs-docs-example">
-								
-									<div class="accordion" id="accordion2">
-										<div class="accordion-group">
-											<div class="accordion-heading">
-												<h2>Texto sin link</h2>
-												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion21" href="#collapseOne">
-													Link mostrar/ocultar Group Item #1
-												</a>
-											</div>
-											<div id="collapseOne" class="accordion-body collapse">
-												<div class="accordion-inner">
-													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-												</div>
-											</div>
-										</div>
-									
-										<div class="accordion-group">
-											<div class="accordion-heading">
-												<h2>Texto sin link</h2>
-												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion21" href="#collapseTwo">
-													Link mostrar/ocultar Group Item #2
-												</a>
-											</div>
-											<div id="collapseTwo" class="accordion-body collapse">
-												<div class="accordion-inner">
-													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-												</div>
-											</div>
-										</div>
-																				
-									</div>
-									
-								</div>
-								
+								<p>Permite cargar una sección HTML de otra página dentro de la capa que hemos creado.</p>
+                                                                <ul class="bullets">
+                                                                <li><strong>id</strong>: obligatorio y único.</li>
+                                                                <li><strong>data-ajax-load-context</strong>: selector CSS que identifica el fragmento HTML a extraer en la página destino.</li>
+                                                                <li><strong>data-ajax-load-url</strong>: URL de la página destino.</li>
+								</ul>
+															
 <pre class="prettyprint linenums">
-
-&lt;div class="accordion" id="accordion2"&gt;
-	&lt;div class="accordion-group"&gt;
-		&lt;div class="accordion-heading"&gt;
-			&lt;h2&gt;Texto sin link&lt;/h2&gt;
-			&lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"&gt;
-				Link mostrar/ocultar Group Item #2
-			&lt;/a&gt;
-		&lt;/div&gt;
-		&lt;div id="collapseOne" class="accordion-body collapse"&gt;
-			&lt;div class="accordion-inner"&gt;
-				Anim pariatur cliche reprehenderit.
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-
-	&lt;div class="accordion-group"&gt;
-		&lt;div class="accordion-heading"&gt;
-			&lt;h2&gt;Texto sin link&lt;/h2&gt;
-			&lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"&gt;
-				Link mostrar/ocultar Group Item #2
-			&lt;/a&gt;
-		&lt;/div&gt;
-		&lt;div id="collapseTwo" class="accordion-body collapse"&gt;
-			&lt;div class="accordion-inner"&gt;
-				Anim pariatur cliche reprehenderit.
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-/*----------------------------- COLLAPSE COMPONENT -----------------------------*/
-.accordion-group {}
-.accordion-heading {}
-.accordion-heading h2 {}
-.accordion-heading .accordion-toggle {}
-.accordion-heading .accordion-toggle:hover {}
-.accordion-heading .accordion-toggle.collapsed {}
-.accordion-body {}
-.accordion-body .accordion-inner {}
-/*------------------------------------------------------------------------------*/
-
+&lt;div id="modal-ajax-content-wrapper" data-ajax-load-context=".css-selector" data-ajax-load-url="URL" /&gt;
 </pre>
 							</section>
 

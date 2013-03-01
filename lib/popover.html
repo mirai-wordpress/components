@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+	<!--[if lt IE 7]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 7]> <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 8]> <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 9]> <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <!--<![endif]-->
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+		<!--[if ie]>
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<![endif]-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="language" content="es" />
+		<title>Mirai Components Library / Popover</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
+		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
+		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
+                
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
+		
+		<!--[if IE 8]>
+			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
+		<![endif]-->
+		
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
+		
+		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
+		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
+		<link rel='canonical' href='http://webs3.mirai.es/' />
+		
+		<meta http-equiv="Content-Language" content="es-ES" />
+	</head>
+
+	<body id="" class="hotel home page cat-hotel">    
+
+		<div id="container" class="">
+		
+			<header id="header" class="">
+				<div class="content container">
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
+				</div>
+			</header><!-- end header -->
+
+			<section id="main" class="">
+				<div class="content container">
+                                    <div class="row">
+                                        <nav>
+                                            <ul><li><a href="..">Home</a></li></ul>
+                                        </nav>
+                                    </div>
+                                    <div class="row">
+						<div class="span12">
+						
+							<section id="colapse">
+								<div class="page-header">
+									<h1>Popover</h1>
+								</div>
+								
+                                                            <p><strong>Caso 1</strong>: carga normal de un contenido html.</p>
+<pre class="prettyprint linenums">
+&lt;p&gt;&lt;a href="#btn-legal-modal-content" id="btn-legal-modal" rel="popover" class="_btn"&gt;Mentions legales&lt;/a&gt;&lt;/p&gt;
+
+&lt;div id="btn-legal-modal-content" class="hide"&lt;
+    &lt;p&gt;&lt;strong&gt;Contenido del popover&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&lt;
+
+jQuery(document).ready(function(){
+    var oTabcontent = jQuery('#btn-legal-modal-content').html();
+    jQuery('#btn-legal-modal-content').remove();
+
+    jQuery('#btn-legal-modal').popover({
+        'content': oTabcontent,
+        'title': cTituloPopover + '&lt;a class="close" onclick="jQuery(\'#btn-legal-modal\').popover(\'hide\');return false;" href="#close-modal"&gt;×&lt;/a&gt;',
+        'placement': 'top',
+        'trigger': 'click'
+    }).click(function(e){e.preventDefault();});
+});
+</pre>
+                                                            <p><strong>Caso 2</strong>: carga de un contenido html por AJAX.</p>
+<pre class="prettyprint linenums">
+
+&lt;p&gt;&lt;a href="#btn-legal-modal-content" id="btn-legal-modal" rel="popover" class="_btn"&gt;Mentions legales&lt;/a&gt;&lt;/p&gt;
+
+&lt;div id="btn-legal-modal-content" class="hide"&lt;
+    &lt;div id="modal-ajax-content-wrapper" data-ajax-load-context=".modal-body" data-ajax-load-url="[get_page page="853"]"&gt;&lt;/div&gt;
+&lt;/div&lt;
+    
+jQuery(document).ready(function(){
+Mirai.DeferredExec.addTrigger('modal-ajax-content-wrapper', function(){
+    var oTabcontent = jQuery('#btn-legal-modal-content').html();
+    jQuery('#btn-legal-modal-content').remove();
+
+    jQuery('#btn-legal-modal').popover({
+        'content': oTabcontent,
+        'title': cTituloPopover + '&lt;a class="close" onclick="jQuery(\'#btn-legal-modal\').popover(\'hide\');return false;" href="#close-modal"&gt;×&lt;/a&gt;',
+        'placement': 'top',
+        'trigger': 'click'
+    }).click(function(e){e.preventDefault();});
+});
+});
+</pre>
+							</section>
+
+			<footer id="footer" class="">
+			</footer><!-- end footer -->
+				
+		</div> <!-- end container -->
+
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
+		<script type='text/javascript'>
+		/* <![CDATA[ */
+			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+		/* ]]> */
+		</script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
+		
+	</body>
+</html>

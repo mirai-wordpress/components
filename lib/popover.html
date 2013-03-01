@@ -64,15 +64,39 @@
 								</div>
 								
                                                             <p><strong>Caso 1</strong>: carga normal de un contenido html.</p>
+                                                            <div class="bs-docs-example">
+                                                                <p><a href="#btn-legal-modal-content" id="btn-legal-modal" rel="popover" class="_btn">Mentions legales</a></p>
+ 
+                                                                <div id="btn-legal-modal-content" class="hide">
+                                                                    <p><strong>Contenido del popover</strong></p>
+                                                                </div>
+                                                                
+                                                                <script type="text/javascript">
+                                                                    
+                                                                    jQuery(document).ready(function(){
+                                                                        var oTabcontent = jQuery('#btn-legal-modal-content').html();
+                                                                        var cTituloPopover = 'Titulo del popover';
+                                                                        jQuery('#btn-legal-modal-content').remove();
+                                                                        
+                                                                        jQuery('#btn-legal-modal').popover({
+                                                                            'content': oTabcontent,
+                                                                            'title': cTituloPopover + '<a class="close" onclick="jQuery(\'#btn-legal-modal\').popover(\'hide\');return false;" href="#close-modal">×</a>',
+                                                                            'placement': 'top',
+                                                                            'trigger': 'click'
+                                                                        }).click(function(e){e.preventDefault();});
+                                                                    });
+                                                                </script>
+                                                            </div>
 <pre class="prettyprint linenums">
 &lt;p&gt;&lt;a href="#btn-legal-modal-content" id="btn-legal-modal" rel="popover" class="_btn"&gt;Mentions legales&lt;/a&gt;&lt;/p&gt;
 
-&lt;div id="btn-legal-modal-content" class="hide"&lt;
+&lt;div id="btn-legal-modal-content" class="hide"&gt;
     &lt;p&gt;&lt;strong&gt;Contenido del popover&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&lt;
+&lt;/div&gt;
 
 jQuery(document).ready(function(){
     var oTabcontent = jQuery('#btn-legal-modal-content').html();
+    var cTituloPopover = 'Titulo del popover';
     jQuery('#btn-legal-modal-content').remove();
 
     jQuery('#btn-legal-modal').popover({
@@ -88,13 +112,14 @@ jQuery(document).ready(function(){
 
 &lt;p&gt;&lt;a href="#btn-legal-modal-content" id="btn-legal-modal" rel="popover" class="_btn"&gt;Mentions legales&lt;/a&gt;&lt;/p&gt;
 
-&lt;div id="btn-legal-modal-content" class="hide"&lt;
+&lt;div id="btn-legal-modal-content" class="hide"&gt;
     &lt;div id="modal-ajax-content-wrapper" data-ajax-load-context=".modal-body" data-ajax-load-url="[get_page page="853"]"&gt;&lt;/div&gt;
-&lt;/div&lt;
+&lt;/div&gt;
     
 jQuery(document).ready(function(){
 Mirai.DeferredExec.addTrigger('modal-ajax-content-wrapper', function(){
     var oTabcontent = jQuery('#btn-legal-modal-content').html();
+    var cTituloPopover = 'Titulo del popover';
     jQuery('#btn-legal-modal-content').remove();
 
     jQuery('#btn-legal-modal').popover({

@@ -18,10 +18,11 @@
 		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
 		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
 		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='bootstrap-doc-css'  href='http://twitter.github.com/bootstrap/assets/css/docs.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
                 
-                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
 		
 		<!--[if IE 8]>
 			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
@@ -37,10 +38,14 @@
 		<meta http-equiv="Content-Language" content="es-ES" />
 	</head>
 
-	<body id="" class="hotel home page cat-hotel">    
+	<body>    
 
-		<div id="container" class="">
+        <!-- Container
+        ===================================================== -->
+		<div id="container">
 		
+            <!-- Header
+            ================================================= -->
 			<header id="header" class="">
 				<div class="content container">
 					<h1>Mirai Components</h1>
@@ -50,111 +55,104 @@
 
 			<section id="main" class="">
 				<div class="content container">
-                                    <div class="row">
-                                        <nav>
-                                            <ul><li><a href="..">Home</a></li></ul>
-                                        </nav>
-                                    </div>
-                                    <div class="row">
+
+                    <!-- Breadcrumb
+                    ================================================= -->
+                    <div class="row">
+                        <nav>
+                            <ul><li><a href="..">Home</a></li></ul>
+                        </nav>
+                    </div>
+
+                    <!-- Component
+                    ================================================ -->
+                    <div class="row">
 						<div class="span12">
 						
 							<section id="colapse">
 								<div class="page-header">
 									<h1>Popover</h1>
 								</div>
+                                    <p class="lead">Construye una ventana a partir de un evento lanzado desde algún elemento del DOM. El valor del <code>href</code> debe coincidir con el                                     selector <code>id</code> de otro elemento.</p>
+                                    <h3 class="lead page-header">Parámetros</h3>
+                                <ul>
+                                    <li><code>data-toggle</code> sólo admite el valor <span class="label label-info">popover</span></li>
+                                    <li><code>data-toggle-title</code> admite cualquier 
+                                    <span class="label label-info">cadena de texto</span>. 
+                                    Se autocompleta con un icono para cerrar la ventana.</li>
+                                    <li><code>data-toggle-placement</code> admite los valores <span class="label label-info">top</span>
+                                    <span class="label label-info">right</span> 
+                                    <span class="label label-info">bottom</span> 
+                                    <span class="label label-info">left</span>. Por defecto, right
+                                    </li>
+                                    <li><code>data-toggle-trigger</code> admite los valores <span class="label label-info">click</span>
+                                    <span class="label label-info">hover</span> 
+                                    <span class="label label-info">focus</span>. Por defecto, click.
+                                    </li>
+                                </ul>
+                                <hr/>
 								
-                                                            <p><strong>Caso 1</strong>: carga normal de un contenido html.</p>
-                                                            <div class="bs-docs-example">
-                                                                <p><a href="#btn-legal-modal-content" id="btn-legal-modal" rel="popover" class="_btn">Mentions legales</a></p>
- 
-                                                                <div id="btn-legal-modal-content" class="hide">
-                                                                    <p><strong>Contenido del popover</strong></p>
-                                                                </div>
-                                                                
-                                                                <script type="text/javascript">
-                                                                    
-                                                                    jQuery(document).ready(function(){
-                                                                        var oTabcontent = jQuery('#btn-legal-modal-content').html();
-                                                                        var cTituloPopover = 'Titulo del popover';
-                                                                        jQuery('#btn-legal-modal-content').remove();
-                                                                        
-                                                                        jQuery('#btn-legal-modal').popover({
-                                                                            'content': oTabcontent,
-                                                                            'title': cTituloPopover + '<a class="close" onclick="jQuery(\'#btn-legal-modal\').popover(\'hide\');return false;" href="#close-modal">×</a>',
-                                                                            'placement': 'top',
-                                                                            'trigger': 'click'
-                                                                        }).click(function(e){e.preventDefault();});
-                                                                    });
-                                                                </script>
-                                                            </div>
-<pre class="prettyprint linenums">
-&lt;p&gt;&lt;a href="#btn-legal-modal-content" id="btn-legal-modal" rel="popover" class="_btn"&gt;Mentions legales&lt;/a&gt;&lt;/p&gt;
+                                <!-- Case 1
+                                ==================================== -->
+                                <p><strong>Caso 1</strong>: popover de contenido HTML estático</p>
 
-&lt;div id="btn-legal-modal-content" class="hide"&gt;
-    &lt;p&gt;&lt;strong&gt;Contenido del popover&lt;/strong&gt;&lt;/p&gt;
+                                <div class="bs-docs-example">
+                                    <p><a href="#legal" data-toggle="popover" 
+                                    data-toggle-title="Aviso legal"
+                                    data-toggle-placement="right"
+                                    data-toggle-trigger="click">Aviso legal</a></p>
+
+                                    <div id="#legal" class="popover">
+                                        <p>Contenido del aviso legal en popover</p>
+                                    </div>
+                                </div>
+
+<!-- Code
+============================================= -->
+<pre class="prettyprint linenums">
+&lt;p&gt;&lt;a href="#legal" data-toggle="popover" data-toggle-title="Aviso legal" data-toggle-placement="right" data-toggle-trigger="click"&gt;Aviso legal&lt;/a&gt;&lt;/p&gt;
+
+&lt;div id="legal" class="popover"&gt;
+    &lt;p&gt;Contenido del aviso legal en popover&lt;/p&gt;
 &lt;/div&gt;
-
-jQuery(document).ready(function(){
-    var oTabcontent = jQuery('#btn-legal-modal-content').html();
-    var cTituloPopover = 'Titulo del popover';
-    jQuery('#btn-legal-modal-content').remove();
-
-    jQuery('#btn-legal-modal').popover({
-        'content': oTabcontent,
-        'title': cTituloPopover + '&lt;a class="close" onclick="jQuery(\'#btn-legal-modal\').popover(\'hide\');return false;" href="#close-modal"&gt;×&lt;/a&gt;',
-        'placement': 'top',
-        'trigger': 'click'
-    }).click(function(e){e.preventDefault();});
-});
 </pre>
-                                                            <p><strong>Caso 2</strong>: carga de un contenido html por AJAX.</p>
+                                <!-- Case 1
+                                ==================================== -->
+                                <p><strong>Caso 2</strong>: popover de contenido HTML cargado por AJAX</p>
+                                <div class="bs-docs-example">
+                                    <p><a href="#legal" data-toggle="popover" 
+                                    data-toggle-title="Aviso legal por AJAX"
+                                    data-toggle-placement="right"
+                                    data-toggle-trigger="click">Aviso legal por AJAX</a></p>
+
+                                    <div id="#legal" class="popover">
+                                        <p>Contenido del aviso legal en popover</p>
+                                    </div>
+                                </div>
+
 <pre class="prettyprint linenums">
+&lt;p&gt;&lt;a href="#legal" data-toggle="popover" data-toggle-title="Aviso legal por AJAX" data-toggle-placement="right" data-toggle-trigger="click"&gt;Aviso legal por AJAX&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="#btn-legal-modal-content" id="btn-legal-modal" rel="popover" class="_btn"&gt;Mentions legales&lt;/a&gt;&lt;/p&gt;
-
-&lt;div id="btn-legal-modal-content" class="hide"&gt;
+&lt;div id="legal" class="popover"&gt;
     &lt;div id="modal-ajax-content-wrapper" data-ajax-load-context=".modal-body" data-ajax-load-url="[get_page page="853"]"&gt;&lt;/div&gt;
 &lt;/div&gt;
-    
-jQuery(document).ready(function(){
-Mirai.DeferredExec.addTrigger('modal-ajax-content-wrapper', function(){
-    var oTabcontent = jQuery('#btn-legal-modal-content').html();
-    var cTituloPopover = 'Titulo del popover';
-    jQuery('#btn-legal-modal-content').remove();
-
-    jQuery('#btn-legal-modal').popover({
-        'content': oTabcontent,
-        'title': cTituloPopover + '&lt;a class="close" onclick="jQuery(\'#btn-legal-modal\').popover(\'hide\');return false;" href="#close-modal"&gt;×&lt;/a&gt;',
-        'placement': 'top',
-        'trigger': 'click'
-    }).click(function(e){e.preventDefault();});
-});
-});
 </pre>
-							</section>
+            </section><!--- end main -->
 
 			<footer id="footer" class="">
 			</footer><!-- end footer -->
 				
 		</div> <!-- end container -->
 
-		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
-		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
-		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
-		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
-		<script type='text/javascript'>
-		/* <![CDATA[ */
-			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
-		/* ]]> */
-		</script>
-		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
-		
-		<!-- Le javascript
-		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-		<script src="../google-code-prettify/prettify.js"></script>		
-		<script src="../application.js"></script>
+    <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js'></script>
+            
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="../google-code-prettify/prettify.js"></script>		
+    <script src="../application.js"></script>
 		
 	</body>
 </html>

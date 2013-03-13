@@ -107,7 +107,7 @@ list-style: decimal outside none;
         border-radius: 4px;
 }
 .bs-docs-example::after {
-        content: "Example";
+        content: "Ejemplo";
         position: absolute;
         top: -1px;
         left: -1px;

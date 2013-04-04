@@ -90,6 +90,11 @@ ol.linenums li {
         -moz-border-radius: 0 0 6px 6px;
         border-radius: 0 0 6px 6px;
 }
+
+.bs-docs-sidebar h2 {
+    margin-top:25px;
+}
+
 h1 {font-size: 36px;line-height: 40px;}
 section {padding-top: 30px;}
 ol {
@@ -97,6 +102,7 @@ list-style: decimal outside none;
 }
 .page-header {color: #5A5A5A;}
 .bs-docs-example {
+        overflow:hidden;
         position: relative;
         margin: 15px 0;
         padding: 39px 19px 14px;
@@ -146,3 +152,7 @@ ul.bullets li {
     margin: 0 0 5px 20px;
     list-style-type: disc;}
 
+/* Pyme */
+.pyme .bs-docs-example {
+    padding: 40px 0;
+}

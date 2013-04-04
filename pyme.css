@@ -1,0 +1,30 @@
+/* Home */
+.box-col {
+    background-color: #fff;
+    margin: 10px 0 0 10px;
+    padding: 35px 20px 20px;
+    position: relative;
+    min-height: 333px;
+    border: 1px solid #999;
+}
+
+.box1 {
+    padding-top:100px !important;
+    background:#fff url(imgs/bg-box1.jpg) bottom right no-repeat;
+    min-height:268px !important;
+}
+
+.box-col h2 {
+    font: 50px/50px Qwigley;
+    background-color: #2E2C2A;
+    border: 1px solid #ccc;
+    color: #fff;
+    width: 70%;
+    padding-left: 20px;
+    position:absolute;
+    top:20px;
+    left:-5px;
+    box-shadow: 1px 1px 5px #333333;
+}
+
+.box-col img {width:100%;}

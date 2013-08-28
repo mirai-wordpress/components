@@ -103,7 +103,7 @@
 								
 								<br/><br/>
 								<h3 class="lead page-header">Instalación</h3>
-								<p><strong>1º Paso: </strong>Añadimos el codigo <code>html</code> donde queremos que se pinte nuestro mapa. Es necesario traducir los valores de los <code>input</code> al idioma deseado</p>
+								<p><strong>1º Paso: </strong>Añadimos el codigo <code>html</code> donde queremos que se pinte nuestro mapa. Es necesario traducir los <strong>value</strong> de cada <code>input</code> al idioma deseado</p>
 
 
 <pre class="prettyprint linenums">
@@ -125,8 +125,8 @@
 								<p><strong>2º Paso: </strong>Añadimos el codigo <code>js</code> antes de la etiqueta <code>&lt;/body&gt;</code>, y modificamos los valores principales: </p>
 								<ul>
                                     <li><code>latlng</code>  admite código html o coordenadas lat/long <span class="label label-info">40.428223,-3.683628</span></li>
-                                    <li><code>zoom</code> adminte un valor numerico  <span class="label label-info">16</span></li>
-                                    <li><code>contentString </code> admite codigo html <span class="label label-info">Nombre Hotel</span></li>
+                                    <li><code>zoom</code> admite un valor numerico  <span class="label label-info">16</span></li>
+                                    <li><code>contentString</code> admite codigo html <span class="label label-info">Nombre Hotel</span></li>
                                     <li><code>icon</code> admite cualquier nombre de icono ubicado en el CDN de MiraiGlobal 
 										<span class="label label-info">hotel_0star.png</span>
 										<span class="label label-info">hotel_1stars.png</span>
@@ -215,7 +215,7 @@
 		var request = {
 			origin: start,
 			destination: end,
-			unitSystem: google.maps.UnitSystem.IMPERIAL,
+			unitSystem: google.maps.UnitSystem.METRIC,
 			travelMode: google.maps.DirectionsTravelMode[travelMode]
 		};
 
@@ -354,7 +354,7 @@
 				var request = {
 					origin: start,
 					destination: end,
-					unitSystem: google.maps.UnitSystem.IMPERIAL,
+					unitSystem: google.maps.UnitSystem.METRIC,
 					travelMode: google.maps.DirectionsTravelMode[travelMode]
 				};
 

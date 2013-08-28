@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+	<!--[if lt IE 7]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 7]> <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 8]> <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 9]> <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <!--<![endif]-->
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+		<!--[if ie]>
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<![endif]-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="language" content="es" />
+		<title>Mirai Components Library / Calculate route map</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
+		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
+		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
+                
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
+		
+		<!--[if IE 8]>
+			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
+		<![endif]-->
+		
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
+		
+		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
+		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
+		<link rel='canonical' href='http://webs3.mirai.es/' />
+		
+		<meta http-equiv="Content-Language" content="es-ES" />
+		
+		
+		<!-- Google Maps JS-->
+		<script type="text/javascript" src="routemap/js/jquery-1.4.4.min.js"></script>        
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=es"></script>
+		<script src="routemap/js/gmap3.min.js" type="text/javascript"></script>
+
+		<style>
+			.main-map{
+				width: 1000px;
+				height: 500px;
+				margin:20px auto;
+			}
+
+			#calcRoute {
+				width: 100%;
+				text-align:center;
+			}
+			#calcRoute label {
+				font-size: inherit !important;
+			}
+
+			#calcRoute .origen {
+			height: 20px;
+			margin: 0 5px 0 15px;
+			width: 260px;
+			}
+		</style>
+		
+		
+	</head>
+
+	<body id="mainr" class="hotel home page cat-hotel">    
+
+		<div id="container" class="">
+		
+			<header id="header" class="">
+				<div class="content container">
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
+				</div>
+			</header><!-- end header -->
+
+			<section id="main" class="">
+				<div class="content container">
+                                    <div class="row">
+                                        <nav>
+                                            <ul><li><a href="..">Home</a></li></ul>
+                                        </nav>
+                                    </div>
+					<div class="row">						
+						<div class="span12">
+							<section id="tabs">
+								<div class="page-header">
+									<h1>Calculate route map</h1>
+								</div>
+								<p class="lead">Construye en una página estática un mapa de localización con una barra de navegación que genera una ruta.</p>
+								
+
+								<h3 class="lead page-header">Requisitos</h3>
+								<p><strong>1. </strong>Versión mínima de jQuery requerida es de 1.4 pero se recomienda la última versión. Puede obtener la versión más reciente <a class="targetblank" href="http://jquery.com/">aquí</a>.</p>
+								<p><strong>2. </strong>También es necesario incluir la biblioteca Google Maps:</p>
+								<pre class="prettyprint">&lt;script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"&gt;&lt;/script&gt;</pre>
+								
+								<p><code>language=en</code> cambiar el valor de este atributo, por el idioma deseado <span class="label label-info">en</span> <span class="label label-info">es</span> <span class="label label-info">de</span> </p>
+								
+								<br/><br/>
+								<h3 class="lead page-header">Instalación</h3>
+								<p><strong>1º Paso: </strong>Añadimos el codigo <code>html</code> donde queremos que se pinte nuestro mapa. Es necesario traducir los valores de los <code>input</code> al idioma deseado</p>
+
+
+<pre class="prettyprint linenums">
+	&lt;div id="map_canvas" class="main-map"&gt; &lt;/div&gt;
+	
+	&lt;form id="calcRoute" name="calcRoute" action="#" method="get"&gt;
+		&lt;label>Cómo llegar:&lt;/label&gt;
+		&lt;input type="text" id="from" name="from" required="required" placeholder="Introduce tu punto de partida" class="origen" /&gt;
+
+		&lt;input type="submit" class="calculaRuta btn" value="En Coche" name="DRIVING"&gt;
+		&lt;input type="submit" class="calculaRuta btn" value="A Pie" name="WALKING"&gt;
+		&lt;input type="submit" class="calculaRuta btn" value="Transporte Público" name="TRANSIT"&gt;
+
+	&lt;/form&gt;
+
+	&lt;div id="directionsPanel"&gt; &lt;/div&gt;
+</pre>								
+								<br/><br/>
+								<p><strong>2º Paso: </strong>Añadimos el codigo <code>js</code> antes de la etiqueta <code>&lt;/body&gt;</code>, y modificamos los valores principales: </p>
+								<ul>
+                                    <li><code>latlng</code>  admite código html o coordenadas lat/long <span class="label label-info">40.428223,-3.683628</span></li>
+                                    <li><code>zoom</code> adminte un valor numerico  <span class="label label-info">16</span></li>
+                                    <li><code>contentString </code> admite codigo html <span class="label label-info">Nombre Hotel</span></li>
+                                    <li><code>icon</code> admite cualquier nombre de icono ubicado en el CDN de MiraiGlobal 
+										<span class="label label-info">hotel_0star.png</span>
+										<span class="label label-info">hotel_1stars.png</span>
+										<span class="label label-info">hotel_2stars.png</span>
+										<span class="label label-info">hotel_3stars.png</span>
+										<span class="label label-info">hotel_4stars.png</span>
+
+                                    </li>
+                                </ul>
+
+								<br/><br/>
+								
+<pre class="prettyprint linenums">
+
+	$(function () {
+
+		// Trigger calculate route action on each clicked submit.
+		// Pass the travelMode as param.
+		$('input[type="submit"]').click(function(event) {
+			event.preventDefault();
+			var travelMode = $(this).attr("name");
+			calcRoute(travelMode);
+		});
+
+		// Prepare the directions content.
+		var directionDisplay;
+		var directionsService = new google.maps.DirectionsService();
+
+		// Set latitude/longitude point.
+		var latlng = new google.maps.LatLng(40.428223,-3.683628);
+
+		// Set direction render options.
+		var rendererOptions = { draggable: true };
+		directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
+
+		// Set options for rendering the map.
+		var myOptions = {
+			zoom: 16,
+			center: latlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			mapTypeControl: true
+		};
+
+		// Add the map to the map placeholder
+		var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+		directionsDisplay.setMap(map);
+		directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+
+		// Create an infowindow for hotel's information.
+		// It can be HTML too.
+		var contentString = 'Nombre Hotel';
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		});
+
+		// Add a custom icons for the marker to the map.
+		var iconBase = 'http://cdn0.miraiglobal.com/libs/gmap_icons/';
+
+		// Add a marker to the map for the end-point of the directions.
+		var marker = new google.maps.Marker({
+			position: latlng, 
+			map: map, 
+			title:"Nombre Hotel", 
+			icon: iconBase + 'hotel_4stars.png',
+		}); 
+
+		// Trigger the click over the map for showing infowindow.
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.open(map, marker);
+		});
+
+		/*
+		* Calculate route using the hotel's geolocation as the endpoint.
+		* The travelmode and startpoint comes from the form.
+		*
+		* @param travelMode
+		* @return HTML|error
+		*/
+		function calcRoute(travelMode) {
+
+		// Get the startpoint from the form.
+		var start = $("#from").val();
+		var end = "40.428223,-3.683628";
+
+		// Set the options for showing the route.
+		var request = {
+			origin: start,
+			destination: end,
+			unitSystem: google.maps.UnitSystem.IMPERIAL,
+			travelMode: google.maps.DirectionsTravelMode[travelMode]
+		};
+
+		// Trigger the route and manage possible errors.
+		directionsService.route(request, function(response, status) {
+			if (status == google.maps.DirectionsStatus.OK) {
+				$('#directionsPanel').empty(); // clear the directions panel before adding new directions
+				directionsDisplay.setDirections(response);
+			} else {
+				// alert an error message when the route could nog be calculated.
+				if (status == 'ZERO_RESULTS') {
+					alert('No route could be found between the origin and destination.');
+					} else if (status == 'UNKNOWN_ERROR') {
+					alert('A directions request could not be processed due to a server error. The request may succeed if you try again.');
+					} else if (status == 'REQUEST_DENIED') {
+					alert('This webpage is not allowed to use the directions service.');
+					} else if (status == 'OVER_QUERY_LIMIT') {
+					alert('The webpage has gone over the requests limit in too short a period of time.');
+					} else if (status == 'NOT_FOUND') {
+					alert('At least one of the origin, destination, or waypoints could not be geocoded.');
+					} else if (status == 'INVALID_REQUEST') {
+					alert('The DirectionsRequest provided was invalid.');         
+					} else {
+					alert("There was an unknown error in your request. Requeststatus: nn"+status);
+					}
+				}
+			});
+		}
+	});
+
+</pre>
+								<br/><br/>
+								<p><strong>3º Paso: </strong>Añadimos el codigo <code>css</code> en nuestra hoja de estilos principal.</p>
+
+<pre class="prettyprint linenums">
+/*-------------------------- ROUTE MAP -------------------------*/
+.main-map{}
+
+#calcRoute {}
+#calcRoute label {}
+#calcRoute .origen {}
+#calcRoute .calculaRuta {}
+#calcRoute .calculaRuta:hover {}
+/*------------------------------------------------------------------------------*/
+
+</pre>
+
+
+								<div class="bs-docs-example">
+									<div id="map_canvas" class="main-map"></div>
+									<form id="calcRoute" name="calcRoute" action="#" method="get">
+										<input type="text" id="from" name="from" required="required" placeholder="Introduce tu punto de partida" class="origen" />
+
+										<input type="submit" class="calculaRuta btn" value="En Coche" name="DRIVING">
+										<input type="submit" class="calculaRuta btn" value="A Pie" name="WALKING">
+										<input type="submit" class="calculaRuta btn" value="Transporte Público" name="TRANSIT">
+
+									</form>
+
+									<div id="directionsPanel">
+									</div>
+									
+								</div>
+								<script type="text/javascript">
+			$(function () {
+
+				// Trigger calculate route action on each clicked submit.
+				// Pass the travelMode as param.
+				$('input[type="submit"]').click(function(event) {
+					event.preventDefault();
+					var travelMode = $(this).attr("name");
+					calcRoute(travelMode);
+				});
+
+				// Prepare the directions content.
+				var directionDisplay;
+				var directionsService = new google.maps.DirectionsService();
+
+				// Set latitude/longitude point.
+				var latlng = new google.maps.LatLng(40.420611,-3.701398);
+
+				// Set direction render options.
+				var rendererOptions = { draggable: true };
+				directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
+
+				// Set options for rendering the map.
+				var myOptions = {
+					zoom: 16,
+					center: latlng,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					mapTypeControl: true
+				};
+
+				// Add the map to the map placeholder
+				var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+				directionsDisplay.setMap(map);
+				directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+
+				// Create an infowindow for hotel's information.
+				// It can be HTML too.
+				var contentString = 'Nombre Hotel';
+				var infowindow = new google.maps.InfoWindow({
+					content: contentString
+				});
+
+				// Add a custom icons for the marker to the map.
+				var iconBase = 'http://cdn0.miraiglobal.com/libs/gmap_icons/';
+
+				// Add a marker to the map for the end-point of the directions.
+				var marker = new google.maps.Marker({
+					position: latlng, 
+					map: map, 
+					title:"Nombre Hotel", 
+					icon: iconBase + 'hotel_0star.png',
+				}); 
+
+				// Trigger the click over the map for showing infowindow.
+				google.maps.event.addListener(marker, 'click', function() {
+					infowindow.open(map, marker);
+				});
+
+				/*
+				* Calculate route using the hotel's geolocation as the endpoint.
+				* The travelmode and startpoint comes from the form.
+				*
+				* @param travelMode
+				* @return HTML|error
+				*/
+				function calcRoute(travelMode) {
+
+				// Get the startpoint from the form.
+				var start = $("#from").val();
+				var end = "40.420611,-3.701398";
+
+				// Set the options for showing the route.
+				var request = {
+					origin: start,
+					destination: end,
+					unitSystem: google.maps.UnitSystem.IMPERIAL,
+					travelMode: google.maps.DirectionsTravelMode[travelMode]
+				};
+
+				// Trigger the route and manage possible errors.
+				directionsService.route(request, function(response, status) {
+					if (status == google.maps.DirectionsStatus.OK) {
+						$('#directionsPanel').empty(); // clear the directions panel before adding new directions
+						directionsDisplay.setDirections(response);
+					} else {
+						// alert an error message when the route could nog be calculated.
+						if (status == 'ZERO_RESULTS') {
+							alert('No route could be found between the origin and destination.');
+							} else if (status == 'UNKNOWN_ERROR') {
+							alert('A directions request could not be processed due to a server error. The request may succeed if you try again.');
+							} else if (status == 'REQUEST_DENIED') {
+							alert('This webpage is not allowed to use the directions service.');
+							} else if (status == 'OVER_QUERY_LIMIT') {
+							alert('The webpage has gone over the requests limit in too short a period of time.');
+							} else if (status == 'NOT_FOUND') {
+							alert('At least one of the origin, destination, or waypoints could not be geocoded.');
+							} else if (status == 'INVALID_REQUEST') {
+							alert('The DirectionsRequest provided was invalid.');         
+							} else {
+							alert("There was an unknown error in your request. Requeststatus: nn"+status);
+							}
+						}
+					});
+				}
+			});
+		</script>
+								
+
+							</section>
+						</div>
+					</div>
+				</div>
+			</section><!-- end section -->
+
+
+
+			<footer id="footer" class="">
+			</footer><!-- end footer -->
+				
+		</div> <!-- end container -->
+
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
+		<script type='text/javascript'>
+		/* <![CDATA[ */
+			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+		/* ]]> */
+		</script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
+		<script type="text/javascript">
+	
+		
+	</body>
+</html>

@@ -34,7 +34,7 @@
     <link rel='canonical' href='http://webs3.mirai.es/' />
     
     <meta http-equiv="Content-Language" content="es-ES" />
-
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css' />
     <style>
         .offers-listing-wrapper {
             margin: 0;
@@ -72,8 +72,10 @@
             display: block;
             height: 50px;
             padding: 0 0 0 20px;
-            font: bold 26px/50px verdana, arial, sans-serif;
-            color: #464ffa;
+            line-height: 50px;
+            font-size: 26px;
+            font-family: 'Open Sans Condensed', sans-serif;
+            color: #006699;
             text-transform: uppercase;
         }
         .offer .offer-box {
@@ -83,17 +85,36 @@
             left: 20px;
             width: 100px;
             height: 140px;
+            font-family: 'Open Sans Condensed', sans-serif;
+            text-align: center;
             background-color: #fff;
             -webkit-box-shadow: 0px 0px 4px 0px #999;
                     box-shadow: 0px 0px 4px 0px #999;
         }
         .offer .offer-box._box-1 {}
-        .offer .offer-box._box-1 .box-title {}
-        .offer .offer-box._box-1 .box-price {}
-        .offer .offer-box._box-1 .box-symbol {}
-        .offer .offer-box._box-1 .box-desc {}
+        .offer .offer-box._box-1 .box-title {
+            display: block;
+            font-size: 18px;
+            line-height: 32px;
+            color: #006699;
+        }
+        .offer .offer-box._box-1 .box-price {
+            font-size: 60px;
+            line-height: 60px;
+            color: #006699;
+        }
+        .offer .offer-box._box-1 .box-symbol {
+            font-size: 18px;
+            line-height: 60px;
+            color: #006699;
+        }
+        .offer .offer-box._box-1 .box-desc {
+            display: block;
+            font-size: 14px;
+            line-height: 14px;
+            color: #9e807e;
+        }
         .offers-listing {
-            /*background-color: #ccc;*/
             display: block;
             position: relative;
             z-index: 1;
@@ -145,8 +166,8 @@
         .offers-listing .offer .offer-description {
             display: block;
             margin: 10px 140px !important;
-            color: #444;
-            font: normal 18px/24px verdana, arial, sans-serif;
+            color: #404040;
+            font: normal 18px/24px 'Open Sans Condensed', sans-serif;
         }
         .offers-listing .offer .offer-photo {
             display: block;
@@ -163,24 +184,24 @@
             bottom: 15px;
             width: 200px;
             height: 40px;
-            font: normal 24px/40px verdana, arial, sans-serif;
+            font: normal 24px/40px 'Open Sans Condensed', sans-serif;
             text-transform: uppercase;
             text-align: center;
             color: #fff;
-            text-shadow: 1px 1px 3px #888;
+            text-shadow: 1px 1px 3px #444;
             background-color: #464ffa;
-            background-image: linear-gradient(bottom, #464FFA 12%, #7D84FF 56%, #FFFFFF 98%);
-            background-image: -o-linear-gradient(bottom, #464FFA 12%, #7D84FF 56%, #FFFFFF 98%);
-            background-image: -moz-linear-gradient(bottom, #464FFA 12%, #7D84FF 56%, #FFFFFF 98%);
-            background-image: -webkit-linear-gradient(bottom, #464FFA 12%, #7D84FF 56%, #FFFFFF 98%);
-            background-image: -ms-linear-gradient(bottom, #464FFA 12%, #7D84FF 56%, #FFFFFF 98%);
+            background-image: linear-gradient(bottom, #006699 12%, #4192c3 56%, #FFFFFF 98%);
+            background-image: -o-linear-gradient(bottom, #006699 12%, #4192c3 56%, #FFFFFF 98%);
+            background-image: -moz-linear-gradient(bottom, #006699 12%, #4192c3 56%, #FFFFFF 98%);
+            background-image: -webkit-linear-gradient(bottom, #006699 12%, #4192c3 56%, #FFFFFF 98%);
+            background-image: -ms-linear-gradient(bottom, #006699 12%, #4192c3 56%, #FFFFFF 98%);
             
             background-image: -webkit-gradient(
                 linear,
                 left bottom,
                 left top,
-                color-stop(0.12, #464FFA),
-                color-stop(0.56, #7D84FF),
+                color-stop(0.12, #006699),
+                color-stop(0.56, #4192c3),
                 color-stop(0.95, #FFFFFF)
             );
             -webkit-box-shadow: 0px 2px 4px 0px #999, 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;

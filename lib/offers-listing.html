@@ -49,9 +49,15 @@
             text-decoration: underline;
         }
         .offers-listing-wrapper .rss-text .rss-icon {
-            background: transparent url(../imgs/icoRss.png) right center no-repeat;
-            font-style: normal;
-            padding: 0 20px 0 0;
+            background-image: url('../imgs/sprite.png');    
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: 0 -112px;
+            text-indent: -9999px;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            line-height: 17px;
         }
         .offer {}
         .offer .offer-title {
@@ -634,7 +640,7 @@
                             <p>El listado de ofertas puede o no tener un texto para suscribirse por RSS (<strong>rss-text</strong>).</p>
 <pre class="prettyprint linenums">
         &lt;div class="offers-listing-wrapper"&gt;
-            <strong>&lt;p class="rss-text"&gt;Be the first to receive our offers through your &lt;a href="#RSS"&gt;RSS&lt;/a&gt; &lt;i class="rss-icon"&gt;reader&lt;/i&gt;&lt;/p&gt;</strong>
+            <strong>&lt;p class="rss-text"&gt;Be the first to receive our offers through your &lt;a href="#RSS"&gt;RSS&lt;/a&gt; reader&nbsp;&lt;i class="rss-icon"&gt;&nbsp;&lt;/i&gt;&lt;/p&gt;</strong>
             &lt;ol class="offers-listing"&gt;
                 &lt;li class="offer"&gt;
                     &lt;h5 class="offer-title"&gt;Escapada romántica&lt;/h5&gt;
@@ -653,7 +659,7 @@
 </pre>
                             <div class="bs-docs-example">
                                 <div class="offers-listing-wrapper">
-                                    <p class="rss-text">Be the first to receive our offers through your <a href="#RSS">RSS</a> <i class="rss-icon">reader</i></p>
+                                    <p class="rss-text">Be the first to receive our offers through your <a href="#RSS">RSS</a> reader&nbsp;<i class="rss-icon">&nbsp;</i></p>
                                     <ol class="offers-listing">
                                         <li class="offer">
                                             <h5 class="offer-title">Escapada romántica</h5>

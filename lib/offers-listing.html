@@ -567,6 +567,8 @@
                  -o-transform:rotate(3deg);
                     transform:rotate(3deg);
         }
+        .simple-listing-offers .offers-listing .offer a:hover,
+        .simple-listing-offers .offers-listing .offer a:active {text-decoration: none;}
         .simple-listing-offers .offers-listing .offer .offer-description {
             display: block;
             margin: 10px 140px !important;
@@ -691,8 +693,8 @@
                                     <p class="rss-text">Be the first to receive our offers through your <a href="#RSS">RSS</a> reader&nbsp;<i class="rss-icon">&nbsp;</i></p>
                                     <ol class="offers-listing">
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer">
-                                            <h5 class="offer-title" itemprop="name">Escapada romántica</h5>
-                                            <div class="offer-box _box-2" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification">
+                                            <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL">Escapada romántica</a></h5>
+                                            <a class="offer-box _box-2" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification" href="#OFFER-DETAIL">
                                                 <span class="box-title-0">Desde</span>
                                                 <span class="box-number" itemprop="minPrice">59</span>
                                                 <span class="box-numberDesc-0" itemprop="priceCurrency" content="EUR">&euro;</span>
@@ -700,10 +702,10 @@
                                                 <meta itemprop="acceptedPaymentMethod" content=" http://purl.org/goodrelations/v1#PaymentMethodCreditCard" />
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" />
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" />
-                                            </div>
+                                            </a>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <img class="offer-photo" src="../imgs/118x175.png" widh="118" height="175" alt="Offer Photo" />
+                                            <a class="offer-photo" href="#OFFER-DETAIL"><img src="../imgs/118x175.png" widh="118" height="175" alt="Offer Photo" /></a>
                                             <a class="offer-detail-link" href="#OFFER-DETAIL" title="Consultar">Consultar</a>
                                         </li>
                                     </ol>

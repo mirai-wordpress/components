@@ -690,15 +690,19 @@
                                 <div class="offers-listing-wrapper simple-listing-offers">
                                     <p class="rss-text">Be the first to receive our offers through your <a href="#RSS">RSS</a> reader&nbsp;<i class="rss-icon">&nbsp;</i></p>
                                     <ol class="offers-listing">
-                                        <li class="offer">
-                                            <h5 class="offer-title">Escapada romántica</h5>
-                                            <div class="offer-box _box-2">
+                                        <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer">
+                                            <h5 class="offer-title" itemprop="name">Escapada romántica</h5>
+                                            <div class="offer-box _box-2" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification">
                                                 <span class="box-title-0">Desde</span>
-                                                <span class="box-number">59</span>
-                                                <span class="box-numberDesc-0">&euro;</span>
+                                                <span class="box-number" itemprop="minPrice">59</span>
+                                                <span class="box-numberDesc-0" itemprop="priceCurrency" content="EUR">&euro;</span>
                                                 <span class="box-desc-0">por habitación y noche</span>
+                                                <meta itemprop="acceptedPaymentMethod" content=" http://purl.org/goodrelations/v1#PaymentMethodCreditCard" />
+                                                <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" />
+                                                <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" />
                                             </div>
-                                            <p class="offer-description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
+                                            <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
+                                            <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <img class="offer-photo" src="../imgs/118x175.png" widh="118" height="175" alt="Offer Photo" />
                                             <a class="offer-detail-link" href="#OFFER-DETAIL" title="Consultar">Consultar</a>
                                         </li>

@@ -588,12 +588,52 @@
             height: 30px;
         }
         .simple-offer-detail .offer .offer-social-links,
-        .simple-offer-detail .offer .offer-extras-wrapper,
-        .simple-offer-detail .offer .offer-rooms-wrapper,
         .simple-offer-detail .offer .offer-calendar-wrapper {background-color: red;}
-        .simple-offer-detail .offer .offer-extras-wrapper,
         .simple-offer-detail .offer .offer-rooms-wrapper,
         .simple-offer-detail .offer .offer-calendar-wrapper {margin: 10px 0 0; padding: 10px;}
+        .simple-offer-detail .offer .offer-extras-wrapper,
+        .simple-offer-detail .offer .offer-rooms-wrapper {
+            display: block;
+            position: relative;
+            margin: 100px 0 0;
+            padding: 10px 0;
+            height: 125px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        .simple-offer-detail .offer .offer-extras-wrapper .offer-extra,
+        .simple-offer-detail .offer .offer-rooms-wrapper .offer-room {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            float: left;
+            width: 47%;
+            margin: -20px 1% 0;/* NEEDS TO BE ADJUSTED */
+        }
+        .simple-offer-detail .offer .offer-extras-wrapper .offer-extra .offer-extra-img,
+        .simple-offer-detail .offer .offer-rooms-wrapper .offer-room .offer-room-img {
+            display: block;
+            position: relative;
+            float: left;
+            margin: 0 10px 0 0;
+        }
+        .simple-offer-detail .offer .offer-extras-wrapper .offer-extra .offer-extra-title,
+        .simple-offer-detail .offer .offer-rooms-wrapper .offer-room .offer-room-title {
+            display: block;
+            position: relative;
+            float: left;
+            margin: 20px 10px 0 0;
+            min-width: 50%;
+        }
+        .simple-offer-detail .offer .offer-extras-wrapper .offer-extra .offer-extra-description,
+        .simple-offer-detail .offer .offer-rooms-wrapper .offer-room .offer-room-description {
+            display: block;
+            position: relative;
+            float: left;
+            margin: 10px 10px 0 0;
+            min-width: 50%;
+        }
         /*
         .simple-offer-detail .offer .offer-detail-link {
             display: block;
@@ -715,8 +755,30 @@
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" />
                                             </a>
                                         </div>
-                                        <div class="offer-extras-wrapper">[OFFER EXTRAS]</div>
-                                        <div class="offer-rooms-wrapper">[OFFER ROOMS]</div>
+                                        <div class="offer-extras-wrapper">
+                                            <div class="offer-extra">
+                                                <img class="offer-extra-img" src="../imgs/191x144.png" width="191" height="144" alt="OFFER EXTRA IMG" />
+                                                <h6 class="offer-extra-title">OFFER EXTRA TITLE</h6>
+                                                <p class="offer-extra-description">Offer extra description</p>
+                                            </div>
+                                            <div class="offer-extra">
+                                                <img class="offer-extra-img" src="../imgs/191x144.png" width="191" height="144" alt="OFFER EXTRA IMG" />
+                                                <h6 class="offer-extra-title">OFFER EXTRA TITLE</h6>
+                                                <p class="offer-extra-description">Offer extra description</p>
+                                            </div>
+                                        </div>
+                                        <div class="offer-rooms-wrapper">
+                                            <div class="offer-room">
+                                                <img class="offer-room-img" src="../imgs/191x144.png" width="191" height="144" alt="OFFER ROOM IMG" />
+                                                <h6 class="offer-room-title">OFFER ROOM TITLE</h6>
+                                                <p class="offer-room-description">Offer room description</p>
+                                            </div>
+                                            <div class="offer-room">
+                                                <img class="offer-room-img" src="../imgs/191x144.png" width="191" height="144" alt="OFFER ROOM IMG" />
+                                                <h6 class="offer-room-title">OFFER ROOM TITLE</h6>
+                                                <p class="offer-room-description">Offer room description</p>
+                                            </div>
+                                        </div>
                                         <div class="offer-calendar-wrapper">[OFFER CALENDAR]</div>
                                         <!--a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a-->
                                     </div>

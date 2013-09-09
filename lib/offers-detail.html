@@ -36,35 +36,20 @@
     <meta http-equiv="Content-Language" content="es-ES" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css' />
     <style>
-        .offers-listing-wrapper {
+        .offers-detail-wrapper {
             margin: 0;
-            padding: 10px 0 0;
+            padding: 0;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
-        .offers-listing-wrapper .rss-text {
-            font-size: 12px;
-            margin: 0;
-            text-align: center;
-        }
-        .offers-listing-wrapper .rss-text a {
-            text-decoration: underline;
-        }
-        .offers-listing-wrapper .rss-text .rss-icon {
-            background-image: url('../imgs/sprite.png');    
-            background-color: transparent;
-            background-repeat: no-repeat;
-            background-position: 0 -112px;
-            text-indent: -9999px;
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            line-height: 17px;
-        }
-        .simple-listing-offers .offer {
+        .simple-offer-detail .offer {
             font-size: 12px;
             font-family: 'Open Sans Condensed', sans-serif;
             line-height: 12px;
         }
-        .simple-listing-offers .offer .offer-title {
+        .simple-offer-detail .offer .offer-title {
             background-image: linear-gradient(bottom, #f0f0f0 0%, #ffffff 40%);
             background-image: -o-linear-gradient(bottom, #f0f0f0 0%, #ffffff 40%);
             background-image: -moz-linear-gradient(bottom, #f0f0f0 0%, #ffffff 40%);
@@ -81,18 +66,25 @@
             border-bottom: 1px solid #f0f0f0;
             display: block;
             height: 50px;
-            padding: 0 0 0 20px;
+            padding: 0 0 0 140px;
             line-height: 50px;
             font-size: 26px;
             font-family: inherit;
             color: #006699;
             text-transform: uppercase;
         }
-        .simple-listing-offers .offer .offer-box {
-            display: block;
+        .simple-offer-detail .offer .offer-boxes-wrapper {
             position: absolute;
             top: 45px;
-            left: 20px;
+            right: 20px;
+        }
+        .simple-offer-detail .offer .offer-box {
+            display: block;
+            float: left;
+            margin: 0 10px 0 0;
+            /*position: absolute;
+            top: 45px;
+            left: 20px;*/
             width: 100px;
             height: 140px;
             font-family: inherit;
@@ -101,448 +93,448 @@
             -webkit-box-shadow: 0px 0px 4px 0px #999;
                     box-shadow: 0px 0px 4px 0px #999;
         }
-        .simple-listing-offers .offer .offer-box .box-title-0,
-        .simple-listing-offers .offer .offer-box .box-title-1,
-        .simple-listing-offers .offer .offer-box .box-title-2,
-        .simple-listing-offers .offer .offer-box .box-title-3,
-        .simple-listing-offers .offer .offer-box .box-desc-0,
-        .simple-listing-offers .offer .offer-box .box-desc-1,
-        .simple-listing-offers .offer .offer-box .box-desc-2,
-        .simple-listing-offers .offer .offer-box .box-desc-3 {
+        .simple-offer-detail .offer .offer-box .box-title-0,
+        .simple-offer-detail .offer .offer-box .box-title-1,
+        .simple-offer-detail .offer .offer-box .box-title-2,
+        .simple-offer-detail .offer .offer-box .box-title-3,
+        .simple-offer-detail .offer .offer-box .box-desc-0,
+        .simple-offer-detail .offer .offer-box .box-desc-1,
+        .simple-offer-detail .offer .offer-box .box-desc-2,
+        .simple-offer-detail .offer .offer-box .box-desc-3 {
             display: block;
             padding: 0 2px;
         }
         /* OFFER BOX 1 */
-        .simple-listing-offers .offer .offer-box._box-1 {
+        .simple-offer-detail .offer .offer-box._box-1 {
             padding-top: 14px;
             height: 126px;
         }
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-3 {
+        .simple-offer-detail .offer .offer-box._box-1 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-1 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-1 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-1 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-1 .box-title-3 {
             display: block;
             font-size: 2.33em;
             line-height: 1.28em;
             color: #006699;
             text-transform: uppercase;
         }
-        .simple-listing-offers .offer .offer-box._box-1 .box-number {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-3 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-1 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-1 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-1 .box-desc-3 {}
+        .simple-offer-detail .offer .offer-box._box-1 .box-number {}
+        .simple-offer-detail .offer .offer-box._box-1 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-1 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-1 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-1 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-1 .box-numberDesc-3 {}
+        .simple-offer-detail .offer .offer-box._box-1 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-1 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-1 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-1 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-1 .box-desc-3 {}
         /* OFFER BOX 2 */
-        .simple-listing-offers .offer .offer-box._box-2 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-2 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-2 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-2 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-2 .box-title-3 {
+        .simple-offer-detail .offer .offer-box._box-2 {}
+        .simple-offer-detail .offer .offer-box._box-1 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-2 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-2 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-2 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-2 .box-title-3 {
             display: block;
             font-size: 1.5em;
             line-height: 1.77em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-2 .box-number {
+        .simple-offer-detail .offer .offer-box._box-2 .box-number {
             font-size: 5em;
             line-height: 1em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-2 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-2 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-2 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-2 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-2 .box-numberDesc-3 {
+        .simple-offer-detail .offer .offer-box._box-2 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-2 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-2 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-2 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-2 .box-numberDesc-3 {
             font-size: 1.5em;
             line-height: 3.33em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-2 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-2 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-2 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-2 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-2 .box-desc-3 {
+        .simple-offer-detail .offer .offer-box._box-2 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-2 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-2 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-2 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-2 .box-desc-3 {
             display: block;
             font-size: 1.166em;
             line-height: 1em;
             color: #9e807e;
         }
         /* OFFER BOX 3 */
-        .simple-listing-offers .offer .offer-box._box-3 {
+        .simple-offer-detail .offer .offer-box._box-3 {
             padding-top: 40px;
             height: 100px;
         }
-        .simple-listing-offers .offer .offer-box._box-3 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-3 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-3 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-3 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-3 .box-title-3 {}
-        .simple-listing-offers .offer .offer-box._box-3 .box-number {
+        .simple-offer-detail .offer .offer-box._box-3 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-3 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-3 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-3 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-3 .box-title-3 {}
+        .simple-offer-detail .offer .offer-box._box-3 .box-number {
             font-size: 4.166em;
             line-height: 1.2em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-3 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-3 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-3 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-3 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-3 .box-numberDesc-3 {
+        .simple-offer-detail .offer .offer-box._box-3 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-3 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-3 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-3 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-3 .box-numberDesc-3 {
             font-size: 2em;
             line-height: 2.5em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-3 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-3 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-3 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-3 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-3 .box-desc-3 {}
+        .simple-offer-detail .offer .offer-box._box-3 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-3 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-3 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-3 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-3 .box-desc-3 {}
         /* OFFER BOX 4 */
-        .simple-listing-offers .offer .offer-box._box-4 {
+        .simple-offer-detail .offer .offer-box._box-4 {
             padding-top: 20px;
             height: 120px;
         }
-        .simple-listing-offers .offer .offer-box._box-4 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-4 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-4 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-4 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-4 .box-title-3 {}
-        .simple-listing-offers .offer .offer-box._box-4 .box-number {
+        .simple-offer-detail .offer .offer-box._box-4 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-4 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-4 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-4 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-4 .box-title-3 {}
+        .simple-offer-detail .offer .offer-box._box-4 .box-number {
             font-size: 4.166em;
             line-height: 1.2em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-4 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-4 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-4 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-4 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-4 .box-numberDesc-3 {
+        .simple-offer-detail .offer .offer-box._box-4 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-4 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-4 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-4 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-4 .box-numberDesc-3 {
             font-size: 2em;
             line-height: 2.5em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-4 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-4 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-4 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-4 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-4 .box-desc-3 {
+        .simple-offer-detail .offer .offer-box._box-4 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-4 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-4 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-4 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-4 .box-desc-3 {
             display: block;
             font-size: 1.166em;
             line-height: 1em;
             color: #9e807e;
         }
         /* OFFER BOX 5 */
-        .simple-listing-offers .offer .offer-box._box-5 {}
-        .simple-listing-offers .offer .offer-box._box-5._box-padding-1 {
+        .simple-offer-detail .offer .offer-box._box-5 {}
+        .simple-offer-detail .offer .offer-box._box-5._box-padding-1 {
             padding-top: 40px;
             height: 100px;
         }
-        .simple-listing-offers .offer .offer-box._box-5._box-padding-2 {
+        .simple-offer-detail .offer .offer-box._box-5._box-padding-2 {
             padding-top: 30px;
             height: 110px;
         }
-        .simple-listing-offers .offer .offer-box._box-5._box-padding-3 {
+        .simple-offer-detail .offer .offer-box._box-5._box-padding-3 {
             padding-top: 20px;
             height: 120px;
         }
-        .simple-listing-offers .offer .offer-box._box-5._box-padding-4 {
+        .simple-offer-detail .offer .offer-box._box-5._box-padding-4 {
             padding-top: 20px;
             height: 120px;
         }
-        .simple-listing-offers .offer .offer-box._box-5 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-5 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-5 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-5 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-5 .box-title-3 {
+        .simple-offer-detail .offer .offer-box._box-5 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-5 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-5 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-5 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-5 .box-title-3 {
             display: block;
             font-size: 1.166em;
             line-height: 1em;
             color: #9e807e;
         }
-        .simple-listing-offers .offer .offer-box._box-5 .box-number {
+        .simple-offer-detail .offer .offer-box._box-5 .box-number {
             font-size: 4.166em;
             line-height: 1.2em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-5 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-5 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-5 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-5 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-5 .box-numberDesc-3 {
+        .simple-offer-detail .offer .offer-box._box-5 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-5 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-5 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-5 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-5 .box-numberDesc-3 {
             font-size: 2em;
             line-height: 2.5em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-5 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-5 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-5 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-5 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-5 .box-desc-3 {}
+        .simple-offer-detail .offer .offer-box._box-5 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-5 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-5 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-5 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-5 .box-desc-3 {}
         /* OFFER BOX 6 */
-        .simple-listing-offers .offer .offer-box._box-6 {}
-        .simple-listing-offers .offer .offer-box._box-6._box-padding-1 {
+        .simple-offer-detail .offer .offer-box._box-6 {}
+        .simple-offer-detail .offer .offer-box._box-6._box-padding-1 {
             padding-top: 40px;
             height: 100px;
         }
-        .simple-listing-offers .offer .offer-box._box-6._box-padding-2 {
+        .simple-offer-detail .offer .offer-box._box-6._box-padding-2 {
             padding-top: 30px;
             height: 110px;
         }
-        .simple-listing-offers .offer .offer-box._box-6._box-padding-3 {
+        .simple-offer-detail .offer .offer-box._box-6._box-padding-3 {
             padding-top: 20px;
             height: 120px;
         }
-        .simple-listing-offers .offer .offer-box._box-6._box-padding-4 {
+        .simple-offer-detail .offer .offer-box._box-6._box-padding-4 {
             padding-top: 20px;
             height: 120px;
         }
-        .simple-listing-offers .offer .offer-box._box-6 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-6 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-6 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-6 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-6 .box-title-3 {
+        .simple-offer-detail .offer .offer-box._box-6 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-6 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-6 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-6 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-6 .box-title-3 {
             display: block;
             font-size: 1.166em;
             line-height: 1em;
             color: #9e807e;
         }
-        .simple-listing-offers .offer .offer-box._box-6 .box-number {
+        .simple-offer-detail .offer .offer-box._box-6 .box-number {
             font-size: 4.166em;
             line-height: 1.2em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-6 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-6 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-6 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-6 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-6 .box-numberDesc-3 {
+        .simple-offer-detail .offer .offer-box._box-6 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-6 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-6 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-6 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-6 .box-numberDesc-3 {
             font-size: 2em;
             line-height: 2.5em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-6 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-6 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-6 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-6 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-6 .box-desc-3 {}
+        .simple-offer-detail .offer .offer-box._box-6 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-6 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-6 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-6 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-6 .box-desc-3 {}
         /* OFFER BOX 7 */
-        .simple-listing-offers .offer .offer-box._box-7 {}
-        .simple-listing-offers .offer .offer-box._box-7._box-padding-1 {
+        .simple-offer-detail .offer .offer-box._box-7 {}
+        .simple-offer-detail .offer .offer-box._box-7._box-padding-1 {
             padding-top: 40px;
             height: 100px;
         }
-        .simple-listing-offers .offer .offer-box._box-7._box-padding-2 {
+        .simple-offer-detail .offer .offer-box._box-7._box-padding-2 {
             padding-top: 30px;
             height: 110px;
         }
-        .simple-listing-offers .offer .offer-box._box-7._box-padding-3 {
+        .simple-offer-detail .offer .offer-box._box-7._box-padding-3 {
             padding-top: 20px;
             height: 120px;
         }
-        .simple-listing-offers .offer .offer-box._box-7._box-padding-4 {
+        .simple-offer-detail .offer .offer-box._box-7._box-padding-4 {
             padding-top: 20px;
             height: 120px;
         }
-        .simple-listing-offers .offer .offer-box._box-7 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-7 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-7 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-7 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-7 .box-title-3 {
+        .simple-offer-detail .offer .offer-box._box-7 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-7 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-7 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-7 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-7 .box-title-3 {
             display: block;
             font-size: 1.166em;
             line-height: 1em;
             color: #9e807e;
         }
-        .simple-listing-offers .offer .offer-box._box-7 .box-number {}
-        .simple-listing-offers .offer .offer-box._box-7 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-7 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-7 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-7 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-7 .box-numberDesc-3 {}
-        .simple-listing-offers .offer .offer-box._box-7 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-7 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-7 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-7 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-7 .box-desc-3 {
+        .simple-offer-detail .offer .offer-box._box-7 .box-number {}
+        .simple-offer-detail .offer .offer-box._box-7 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-7 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-7 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-7 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-7 .box-numberDesc-3 {}
+        .simple-offer-detail .offer .offer-box._box-7 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-7 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-7 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-7 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-7 .box-desc-3 {
             font-size: 2.66em;
             line-height: 1.875em;
             color: #006699;
             text-transform: uppercase;
         }
         /* OFFER BOX 8 */
-        .simple-listing-offers .offer .offer-box._box-8 {
+        .simple-offer-detail .offer .offer-box._box-8 {
             padding-top: 30px;
             height: 110px;
         }
-        .simple-listing-offers .offer .offer-box._box-8 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-8 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-8 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-8 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-8 .box-title-3 {
+        .simple-offer-detail .offer .offer-box._box-8 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-8 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-8 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-8 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-8 .box-title-3 {
             display: block;
             font-size: 1.66em;
             line-height: 1.2em;
             color: #006699;
             text-transform: uppercase;
         }
-        .simple-listing-offers .offer .offer-box._box-8 .box-number {
+        .simple-offer-detail .offer .offer-box._box-8 .box-number {
             font-size: 3.33em;
             line-height: 1.25em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-8 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-8 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-8 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-8 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-8 .box-numberDesc-3 {
+        .simple-offer-detail .offer .offer-box._box-8 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-8 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-8 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-8 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-8 .box-numberDesc-3 {
             font-size: 1.5em;
             line-height: 2.77em;
             color: #006699;
             text-transform: uppercase;
         }
-        .simple-listing-offers .offer .offer-box._box-8 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-8 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-8 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-8 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-8 .box-desc-3 {}
+        .simple-offer-detail .offer .offer-box._box-8 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-8 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-8 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-8 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-8 .box-desc-3 {}
         /* OFFER BOX 9 */
-        .simple-listing-offers .offer .offer-box._box-9 {
+        .simple-offer-detail .offer .offer-box._box-9 {
             padding-top: 20px;
             height: 120px;
         }
-        .simple-listing-offers .offer .offer-box._box-9 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-9 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-9 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-9 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-9 .box-title-3 {
+        .simple-offer-detail .offer .offer-box._box-9 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-9 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-9 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-9 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-9 .box-title-3 {
             display: block;
             font-size: 1.66em;
             line-height: 1.2em;
             color: #006699;
             text-transform: uppercase;
         }
-        .simple-listing-offers .offer .offer-box._box-9 .box-number {
+        .simple-offer-detail .offer .offer-box._box-9 .box-number {
             font-size: 3.33em;
             line-height: 1.25em;
             color: #006699;
         }
-        .simple-listing-offers .offer .offer-box._box-9 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-9 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-9 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-9 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-9 .box-numberDesc-3 {
+        .simple-offer-detail .offer .offer-box._box-9 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-9 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-9 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-9 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-9 .box-numberDesc-3 {
             font-size: 1.5em;
             line-height: 2.77em;
             color: #006699;
             text-transform: uppercase;
         }
-        .simple-listing-offers .offer .offer-box._box-9 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-9 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-9 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-9 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-9 .box-desc-3 {
+        .simple-offer-detail .offer .offer-box._box-9 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-9 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-9 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-9 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-9 .box-desc-3 {
             display: block;
             font-size: 1.166em;
             line-height: 1em;
             color: #9e807e;
         }
         /* OFFER BOX 10 */
-        .simple-listing-offers .offer .offer-box._box-10 {
+        .simple-offer-detail .offer .offer-box._box-10 {
             padding-top: 10px;
             height: 130px;
         }
-        .simple-listing-offers .offer .offer-box._box-10 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-10 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-10 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-10 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-10 .box-title-3 {
+        .simple-offer-detail .offer .offer-box._box-10 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-10 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-10 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-10 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-10 .box-title-3 {
             font-size: 2.66em;
             line-height: 1.375em;
             color: #006699;
             text-transform: uppercase;
         }
-        .simple-listing-offers .offer .offer-box._box-10 .box-number {}
-        .simple-listing-offers .offer .offer-box._box-10 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-10 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-10 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-10 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-10 .box-numberDesc-3 {}
-        .simple-listing-offers .offer .offer-box._box-10 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-10 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-10 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-10 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-10 .box-desc-3 {
+        .simple-offer-detail .offer .offer-box._box-10 .box-number {}
+        .simple-offer-detail .offer .offer-box._box-10 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-10 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-10 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-10 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-10 .box-numberDesc-3 {}
+        .simple-offer-detail .offer .offer-box._box-10 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-10 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-10 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-10 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-10 .box-desc-3 {
             display: block;
             font-size: 1.166em;
             line-height: 1em;
             color: #9e807e;
         }
         /* OFFER BOX 11 */
-        .simple-listing-offers .offer .offer-box._box-11 {
+        .simple-offer-detail .offer .offer-box._box-11 {
             padding-top: 10px;
             height: 130px;
         }
-        .simple-listing-offers .offer .offer-box._box-11 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-11 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-11 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-11 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-11 .box-title-3 {
+        .simple-offer-detail .offer .offer-box._box-11 .box-title-0 {}
+        .simple-offer-detail .offer .offer-box._box-11 .box-title-0,
+        .simple-offer-detail .offer .offer-box._box-11 .box-title-1,
+        .simple-offer-detail .offer .offer-box._box-11 .box-title-2,
+        .simple-offer-detail .offer .offer-box._box-11 .box-title-3 {
             display: inline-block;
             font-size: 2.66em;
             line-height: 1.375em;
             color: #006699;
             text-transform: uppercase;
         }
-        .simple-listing-offers .offer .offer-box._box-11 .box-number {}
-        .simple-listing-offers .offer .offer-box._box-11 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-11 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-11 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-11 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-11 .box-numberDesc-3 {}
-        .simple-listing-offers .offer .offer-box._box-11 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-11 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-11 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-11 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-11 .box-desc-3 {
+        .simple-offer-detail .offer .offer-box._box-11 .box-number {}
+        .simple-offer-detail .offer .offer-box._box-11 .box-numberDesc-0 {}
+        .simple-offer-detail .offer .offer-box._box-11 .box-numberDesc-0,
+        .simple-offer-detail .offer .offer-box._box-11 .box-numberDesc-1,
+        .simple-offer-detail .offer .offer-box._box-11 .box-numberDesc-2,
+        .simple-offer-detail .offer .offer-box._box-11 .box-numberDesc-3 {}
+        .simple-offer-detail .offer .offer-box._box-11 .box-desc-0 {}
+        .simple-offer-detail .offer .offer-box._box-11 .box-desc-0,
+        .simple-offer-detail .offer .offer-box._box-11 .box-desc-1,
+        .simple-offer-detail .offer .offer-box._box-11 .box-desc-2,
+        .simple-offer-detail .offer .offer-box._box-11 .box-desc-3 {
             display: block;
             font-size: 1.166em;
             line-height: 1em;
             color: #9e807e;
         }
-        /* END OFFER BOXES */
-        .simple-listing-offers .offers-listing {
+        /* END OFFER BOXES *//*
+        .simple-offer-detail .offers-listing {
             display: block;
             overflow: hidden;
             position: relative;
             z-index: 1;
-        }
-        .simple-listing-offers .offers-listing .offer {
+        }*/
+        .simple-offer-detail .offer {
             background-color: #fff;
             display: block;
             position: relative;
             float: left;
             width: 100%;
-            height: 200px;
+            min-height: 200px;
             margin: 2em 0 3em;
-            padding: 0;
+            padding: 0 0 10px;
             -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
                -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
                     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
         }
-        .simple-listing-offers .offers-listing .offer:before,
-        .simple-listing-offers .offers-listing .offer:after {
+        .simple-offer-detail .offer:before,
+        .simple-offer-detail .offer:after {
             content:"";
             position:absolute;
             z-index:-2;}
-        .simple-listing-offers .offers-listing .offer:before,
-        .simple-listing-offers .offers-listing .offer:after {
+        .simple-offer-detail .offer:before,
+        .simple-offer-detail .offer:after {
             bottom:15px;
             left:10px;
             width:50%;
@@ -558,7 +550,7 @@
                  -o-transform:rotate(-3deg);
                     transform:rotate(-3deg);
         }
-        .simple-listing-offers .offers-listing .offer:after {
+        .simple-offer-detail .offer:after {
             right:10px;
             left:auto;
             -webkit-transform:rotate(3deg);
@@ -567,25 +559,43 @@
                  -o-transform:rotate(3deg);
                     transform:rotate(3deg);
         }
-        .simple-listing-offers .offers-listing .offer a:hover,
-        .simple-listing-offers .offers-listing .offer a:active {text-decoration: none;}
-        .simple-listing-offers .offers-listing .offer .offer-description {
+        .simple-offer-detail .offer a:hover,
+        .simple-offer-detail .offer a:active {text-decoration: none;}
+        .simple-offer-detail .offer .offer-description {
             display: block;
-            margin: 10px 140px !important;
+            margin: 10px auto 10px 140px !important;
+            max-width: 50%;
+            min-height: 150px;
             color: #404040;
             font-size: 1.5em;
             font-family: inherit;
             line-height: 1.3em;
         }
-        .simple-listing-offers .offers-listing .offer .offer-photo {
+        .simple-offer-detail .offer .offer-photo {
             display: block;
             position: absolute;
-            right: 10px;
-            bottom: 15px;
+            left: 10px;
+            top: 15px;
             width: 118px;
             height: 175px;
         }
-        .simple-listing-offers .offers-listing .offer .offer-detail-link {
+        .simple-offer-detail .offer .offer-social-links {
+            display: block;
+            position: absolute;
+            left: 10px;
+            top: 190px;
+            width: 118px;
+            height: 30px;
+        }
+        .simple-offer-detail .offer .offer-social-links,
+        .simple-offer-detail .offer .offer-extras-wrapper,
+        .simple-offer-detail .offer .offer-rooms-wrapper,
+        .simple-offer-detail .offer .offer-calendar-wrapper {background-color: red;}
+        .simple-offer-detail .offer .offer-extras-wrapper,
+        .simple-offer-detail .offer .offer-rooms-wrapper,
+        .simple-offer-detail .offer .offer-calendar-wrapper {margin: 10px 0 0; padding: 10px;}
+        /*
+        .simple-offer-detail .offer .offer-detail-link {
             display: block;
             position: absolute;
             left: 140px;
@@ -622,23 +632,23 @@
                     border-radius: 8px;
             background-clip: padding-box;
         }
-        .simple-listing-offers .offers-listing .offer .offer-detail-link:hover {text-decoration: none;}
-        .ie8 .simple-listing-offers .offer .offer-title {border-bottom: 1px solid #f0f0f0;}
-        .ie8 .simple-listing-offers .offer,
-        .ie8 .simple-listing-offers .offer .offer-box {border: 1px solid #999;}
-        .ie8 .simple-listing-offers .offers-listing .offer {width: 99%;}
-        .ie8 .simple-listing-offers .offers-listing .offer .offer-description {
+        .simple-offer-detail .offers-listing .offer .offer-detail-link:hover {text-decoration: none;}*/
+        .ie8 .simple-offer-detail .offer .offer-title {border-bottom: 1px solid #f0f0f0;}
+        .ie8 .simple-offer-detail .offer,
+        .ie8 .simple-offer-detail .offer .offer-box {border: 1px solid #999;}
+        .ie8 .simple-offer-detail .offer {width: 99%;}
+        .ie8 .simple-offer-detail .offer .offer-description {
             font-size: 1.5em;
             font-family: inherit;
             line-height: 1.3em;
-        }
-        .ie8 .simple-listing-offers .offers-listing .offer .offer-detail-link {
+        }/*
+        .ie8 .simple-offer-detail .offer .offer-detail-link {
             font-size: 2em;
             line-height: 1.66em;
             font-family: inherit;
             width: 150px;
             border: 0px;
-        }
+        }*/
     </style>    
 </head>
 
@@ -708,6 +718,7 @@
                                         <div class="offer-extras-wrapper">[OFFER EXTRAS]</div>
                                         <div class="offer-rooms-wrapper">[OFFER ROOMS]</div>
                                         <div class="offer-calendar-wrapper">[OFFER CALENDAR]</div>
+                                        <!--a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a-->
                                     </div>
                                 </div>
                             </div>

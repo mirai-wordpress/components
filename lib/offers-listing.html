@@ -669,27 +669,27 @@
                             <p class="lead">Template HTML y CSS para el nuevo listado de ofertas.</p>
                             <p>El listado de ofertas puede o no tener un texto para suscribirse por RSS (<strong>rss-text</strong>).</p>
 <pre class="prettyprint linenums">
-        &lt;div class="offers-listing-wrapper <strong>simple-listing-offers</strong>"&gt;
-            <strong>&lt;p class="rss-text"&gt;Be the first to receive our offers through your &lt;a href="#RSS"&gt;RSS&lt;/a&gt; reader&nbsp;&lt;i class="rss-icon"&gt;&nbsp;&lt;/i&gt;&lt;/p&gt;</strong>
-            &lt;ol class="offers-listing"&gt;
-                &lt;li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer"&gt;
-                    &lt;h5 class="offer-title" itemprop="name"&gt;&lt;a href="#OFFER-DETAIL" title="OFFER TITLE"&gt;Escapada romántica&lt;/a&gt;&lt;/h5&gt;
-                    &lt;a class="offer-box _box-2" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;
-                        &lt;span class="box-title-0"&gt;Desde&lt;/span&gt;
-                        &lt;span class="box-number" itemprop="minPrice"&gt;59&lt;/span&gt;
-                        &lt;span class="box-numberDesc-0" itemprop="priceCurrency" content="EUR"&gt;&euro;&lt;/span&gt;
-                        &lt;span class="box-desc-0"&gt;por habitación y noche&lt;/span&gt;
-                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#PaymentMethodCreditCard" /&gt;
-                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" /&gt;
-                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" /&gt;
-                    &lt;/a&gt;
-                    &lt;p class="offer-description" itemprop="description"&gt;Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.&lt;/p&gt;
-                    &lt;link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" /&gt;
-                    &lt;a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;&lt;img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /&gt;&lt;/a&gt;
-                    &lt;a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;Consultar&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ol&gt;
-        &lt;/div&gt;
+&lt;div class="offers-listing-wrapper <strong>simple-listing-offers</strong>"&gt;
+    <strong>&lt;p class="rss-text"&gt;Be the first to receive our offers through your &lt;a href="#RSS"&gt;RSS&lt;/a&gt; reader&nbsp;&lt;i class="rss-icon"&gt;&nbsp;&lt;/i&gt;&lt;/p&gt;</strong>
+    &lt;ol class="offers-listing"&gt;
+        &lt;li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer"&gt;
+            &lt;h5 class="offer-title" itemprop="name"&gt;&lt;a href="#OFFER-DETAIL" title="OFFER TITLE"&gt;Escapada romántica&lt;/a&gt;&lt;/h5&gt;
+            &lt;a class="offer-box _box-2" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;
+                &lt;span class="box-title-0"&gt;Desde&lt;/span&gt;
+                &lt;span class="box-number" itemprop="minPrice"&gt;59&lt;/span&gt;
+                &lt;span class="box-numberDesc-0" itemprop="priceCurrency" content="EUR"&gt;&euro;&lt;/span&gt;
+                &lt;span class="box-desc-0"&gt;por habitación y noche&lt;/span&gt;
+                &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#PaymentMethodCreditCard" /&gt;
+                &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" /&gt;
+                &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" /&gt;
+            &lt;/a&gt;
+            &lt;p class="offer-description" itemprop="description"&gt;Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.&lt;/p&gt;
+            &lt;link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" /&gt;
+            &lt;a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;&lt;img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /&gt;&lt;/a&gt;
+            &lt;a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;Consultar&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;
 </pre>
                             <div class="bs-docs-example">
                                 <div class="offers-listing-wrapper simple-listing-offers">
@@ -716,7 +716,7 @@
                             </div>
                             <p>Esta versión está usando la fuente <strong>'Open Sans Condensed'</strong> de Google Fonts, <strong>con soporte para texto cirílico</strong> (por el idioma ruso).</p>
 <pre class="prettyprint linenums">
-        http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext
+http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext
 </pre>
                             <p>Cada <strong>offer-box</strong> tiene una composición diferente, y viene determinada por la propia oferta. Se utilizan los mismos estilos que en el detalle de la oferta.</p>
                             <p><strong>Las cajas de tipo 5, 6 y 7</strong> tienen además una dependencia con la subclase <strong>_box-padding-N</strong>, donde "N" es el número de párrafos en el título de la caja, y añade un padding-top para centrar verticalmente el contenido según corresponda.</p>
@@ -900,45 +900,45 @@
                             </div>
                             <p>En <strong>skeleton.css</strong> están todos los estilos básicos, luego se podrá modificar para un hotel en particular parte de estos estilos si fuera necesario. El <strong>font-size</strong> y el <strong>line-height</strong> se definen en <code>.offer {font-size: 12px; line-height: 12px;}</code> por defecto, y se heredan por medio de em en el resto de textos.</p>
 <pre class="prettyprint linenums">
-        .simple-listing-offers .offers-listing-wrapper {}
-        .simple-listing-offers .offers-listing-wrapper .rss-text {}
-        .simple-listing-offers .offers-listing-wrapper .rss-text a {}
-        .simple-listing-offers .offers-listing-wrapper .rss-text .rss-icon {}
-        .simple-listing-offers .offer {}
-        .simple-listing-offers .offer .offer-title {}
-        .simple-listing-offers .offer .offer-box {}
-        <strong>/* OFFER BOX 1 */</strong>
-        .simple-listing-offers .offer .offer-box._box-1 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-0 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-0,
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-1,
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-2,
-        .simple-listing-offers .offer .offer-box._box-1 .box-title-3 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-number {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-0 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-0,
-        .simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-1,
-        .simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-2,
-        .simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-3 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-desc-0 {}
-        .simple-listing-offers .offer .offer-box._box-1 .box-desc-0,
-        .simple-listing-offers .offer .offer-box._box-1 .box-desc-1,
-        .simple-listing-offers .offer .offer-box._box-1 .box-desc-2,
-        .simple-listing-offers .offer .offer-box._box-1 .box-desc-3 {}
-        <strong>/* OFFER BOX 2 ... */</strong>
-        <strong>/* OFFER BOX 3 ... */</strong>
-        <strong>/* OFFER BOX 4 ... */</strong>
-        <strong>/* OFFER BOX 5 ... */</strong>
-        <strong>/* OFFER BOX 6 ... */</strong>
-        <strong>/* OFFER BOX 7 ... */</strong>
-        <strong>/* OFFER BOX 8 ... */</strong>
-        <strong>/* OFFER BOX 9 ... */</strong>
-        <strong>/* OFFER BOX 10 ... */</strong>
-        <strong>/* OFFER BOX 11 ... */</strong>
-        .simple-listing-offers .offers-listing {}
-        .simple-listing-offers .offers-listing .offer .offer-description {}
-        .simple-listing-offers .offers-listing .offer .offer-photo {}
-        .simple-listing-offers .offers-listing .offer .offer-detail-link {}
+.simple-listing-offers .offers-listing-wrapper {}
+.simple-listing-offers .offers-listing-wrapper .rss-text {}
+.simple-listing-offers .offers-listing-wrapper .rss-text a {}
+.simple-listing-offers .offers-listing-wrapper .rss-text .rss-icon {}
+.simple-listing-offers .offer {}
+.simple-listing-offers .offer .offer-title {}
+.simple-listing-offers .offer .offer-box {}
+<strong>/* OFFER BOX 1 */</strong>
+.simple-listing-offers .offer .offer-box._box-1 {}
+.simple-listing-offers .offer .offer-box._box-1 .box-title-0 {}
+.simple-listing-offers .offer .offer-box._box-1 .box-title-0,
+.simple-listing-offers .offer .offer-box._box-1 .box-title-1,
+.simple-listing-offers .offer .offer-box._box-1 .box-title-2,
+.simple-listing-offers .offer .offer-box._box-1 .box-title-3 {}
+.simple-listing-offers .offer .offer-box._box-1 .box-number {}
+.simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-0 {}
+.simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-0,
+.simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-1,
+.simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-2,
+.simple-listing-offers .offer .offer-box._box-1 .box-numberDesc-3 {}
+.simple-listing-offers .offer .offer-box._box-1 .box-desc-0 {}
+.simple-listing-offers .offer .offer-box._box-1 .box-desc-0,
+.simple-listing-offers .offer .offer-box._box-1 .box-desc-1,
+.simple-listing-offers .offer .offer-box._box-1 .box-desc-2,
+.simple-listing-offers .offer .offer-box._box-1 .box-desc-3 {}
+<strong>/* OFFER BOX 2 ... */</strong>
+<strong>/* OFFER BOX 3 ... */</strong>
+<strong>/* OFFER BOX 4 ... */</strong>
+<strong>/* OFFER BOX 5 ... */</strong>
+<strong>/* OFFER BOX 6 ... */</strong>
+<strong>/* OFFER BOX 7 ... */</strong>
+<strong>/* OFFER BOX 8 ... */</strong>
+<strong>/* OFFER BOX 9 ... */</strong>
+<strong>/* OFFER BOX 10 ... */</strong>
+<strong>/* OFFER BOX 11 ... */</strong>
+.simple-listing-offers .offers-listing {}
+.simple-listing-offers .offers-listing .offer .offer-description {}
+.simple-listing-offers .offers-listing .offer .offer-photo {}
+.simple-listing-offers .offers-listing .offer .offer-detail-link {}
 </pre>
                         </section>
                     </div>
@@ -952,14 +952,21 @@
         </footer><!-- end footer -->
             
     </div> <!-- end container -->
+    
+    
+    <link rel='stylesheet' id='jquery-ui-css'  href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/blitzer/jquery-ui.css' type='text/css' media='all' />
+    <script type='text/javascript' src='http://webs5.mirai.es/wp-content/themes/mirai/js/jquery-ui-1.9.1.custom.min.js?ver=3.4.2'></script>
+    <script type='text/javascript' src='http://js.miraiglobal.com/jquery/jquery-ui-i18n.js?ver=3.4.2'></script>
 
     <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
     <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
     <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
-    <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
+    <script type='text/javascript' src='http://webs5.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
     <script type='text/javascript'>
     /* <![CDATA[ */
         var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+        var common_vars = {"ajax":"true","menuAjax":"false"};
+        var engine_vars = {"calendarAnimation":"show","numMesesCalendar":"3","maxDate":"+1y","language":"es","hotelId":"100375444","chainId":"","hsri":"02040","bookingHost":"http:\/\/pyme2.webs5.mirai.es","bookingPage":"","securePage":"","home":"http:\/\/pyme2.webs5.mirai.es","chain_no_selected":"Busca en una localizaci\u00f3n o en un hotel","close":"Cerrar","ieTemplate":"","promoText":"Promo:"};
     /* ]]> */
     </script>
     <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>

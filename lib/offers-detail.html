@@ -639,7 +639,7 @@
             margin: 10px 10px 0 0;
             min-width: 50%;
         }
-        /*
+        /* TODO: define and add custom button *//*
         .simple-offer-detail .offer .offer-detail-link {
             display: block;
             position: absolute;
@@ -686,8 +686,9 @@
             font-size: 1.5em;
             font-family: inherit;
             line-height: 1.3em;
-            width: 50%;
-        }/*
+            width: 45%;
+        }
+        /* TODO: define and add custom button *//*
         .ie8 .simple-offer-detail .offer .offer-detail-link {
             font-size: 2em;
             line-height: 1.66em;
@@ -723,27 +724,77 @@
                                 <h1>Offers Detail</h1>
                             </div>
                             <p class="lead">Template HTML y CSS para la nueva página de detalle de ofertas.</p>
+                            <p>[PENDIENTE: AÑADIR EL DISEÑO FINAL, BOTÓN DE RESERVAR Y LINKS DE COMPARTIR]</p>
 <pre class="prettyprint linenums">
-        ...
+        &lt;div class="offers-detail-wrapper simple-offer-detail"&gt;
+            &lt;div class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer"&gt;
+                &lt;div class="offer-photo"&gt;&lt;img src="../imgs/118x175.png" widh="118" height="175" alt="Offer Photo" /&gt;&lt;/div&gt;
+                &lt;!--div class="offer-social-links"&gt;[SOCIAL LINKS]&lt;/div--&gt;
+                &lt;h5 class="offer-title" itemprop="name"&gt;Escapada romántica&lt;/h5&gt;
+                &lt;p class="offer-description" itemprop="description"&gt;Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.&lt;/p&gt;
+                &lt;link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" /&gt;
+                &lt;div class="offer-boxes-wrapper"&gt;
+                    &lt;div class="offer-box _box-1" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification"&gt;
+                        &lt;span class="box-title-0"&gt;Sin&lt;/span&gt;
+                        &lt;span class="box-title-1"&gt;coste&lt;/span&gt;
+                        &lt;span class="box-title-2"&gt;extra&lt;/span&gt;
+                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#PaymentMethodCreditCard" /&gt;
+                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" /&gt;
+                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" /&gt;
+                    &lt;/div&gt;
+                    &lt;div class="offer-box _box-2" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification"&gt;
+                        &lt;span class="box-title-0"&gt;Desde&lt;/span&gt;
+                        &lt;span class="box-number" itemprop="minPrice"&gt;59&lt;/span&gt;
+                        &lt;span class="box-numberDesc-0" itemprop="priceCurrency" content="EUR"&gt;&euro;&lt;/span&gt;
+                        &lt;span class="box-desc-0"&gt;por habitación y noche&lt;/span&gt;
+                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#PaymentMethodCreditCard" /&gt;
+                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" /&gt;
+                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" /&gt;
+                    &lt;/div&gt;
+                    &lt;div class="offer-box _box-10" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification"&gt;
+                        &lt;span class="box-title-0"&gt;Noche&lt;/span&gt;
+                        &lt;span class="box-title-1"&gt;gratis&lt;/span&gt;
+                        &lt;span class="box-desc-0"&gt;Duerma 5 y pague 4&lt;/span&gt;
+                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#PaymentMethodCreditCard" /&gt;
+                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" /&gt;
+                        &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="offer-more-info-wrapper"&gt;
+                    &lt;div class="offer-extra"&gt;
+                        &lt;img class="offer-extra-img" src="../imgs/191x144.png" width="191" height="144" alt="OFFER EXTRA IMG" /&gt;
+                        &lt;h6 class="offer-extra-title"&gt;OFFER EXTRA TITLE&lt;/h6&gt;
+                        &lt;p class="offer-extra-description"&gt;Offer extra description&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="offer-room"&gt;
+                        &lt;img class="offer-room-img" src="../imgs/191x144.png" width="191" height="144" alt="OFFER ROOM IMG" /&gt;
+                        &lt;h6 class="offer-room-title"&gt;OFFER ROOM TITLE&lt;/h6&gt;
+                        &lt;p class="offer-room-description"&gt;Offer room description&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="offer-calendar-wrapper"&gt;&lt;div class="offer-date" /&gt;&lt;/div&gt;
+                &lt;!--a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;Consultar&lt;/a--&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
 </pre>
                             <div class="bs-docs-example">
                                 <div class="offers-detail-wrapper simple-offer-detail">
                                     <div class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer">
-                                        <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" widh="118" height="175" alt="Offer Photo" /></a>
+                                        <div class="offer-photo"><img src="../imgs/118x175.png" widh="118" height="175" alt="Offer Photo" /></div>
                                         <!--div class="offer-social-links">[SOCIAL LINKS]</div-->
-                                        <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">Escapada romántica</a></h5>
+                                        <h5 class="offer-title" itemprop="name">Escapada romántica</h5>
                                         <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                         <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                         <div class="offer-boxes-wrapper">
-                                            <a class="offer-box _box-1" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification" href="#OFFER-DETAIL" title="OFFER TITLE">
+                                            <div class="offer-box _box-1" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification">
                                                 <span class="box-title-0">Sin</span>
                                                 <span class="box-title-1">coste</span>
                                                 <span class="box-title-2">extra</span>
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#PaymentMethodCreditCard" />
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" />
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" />
-                                            </a>
-                                            <a class="offer-box _box-2" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification" href="#OFFER-DETAIL" title="OFFER TITLE">
+                                            </div>
+                                            <div class="offer-box _box-2" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification">
                                                 <span class="box-title-0">Desde</span>
                                                 <span class="box-number" itemprop="minPrice">59</span>
                                                 <span class="box-numberDesc-0" itemprop="priceCurrency" content="EUR">&euro;</span>
@@ -751,15 +802,15 @@
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#PaymentMethodCreditCard" />
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" />
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" />
-                                            </a>
-                                            <a class="offer-box _box-10" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification" href="#OFFER-DETAIL" title="OFFER TITLE">
+                                            </div>
+                                            <div class="offer-box _box-10" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification">
                                                 <span class="box-title-0">Noche</span>
                                                 <span class="box-title-1">gratis</span>
                                                 <span class="box-desc-0">Duerma 5 y pague 4</span>
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#PaymentMethodCreditCard" />
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" />
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" />
-                                            </a>
+                                            </div>
                                         </div>
                                         <div class="offer-more-info-wrapper">
                                             <div class="offer-extra">
@@ -778,18 +829,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <p>Esta versión está usando la fuente <strong>'Open Sans Condensed'</strong> de Google Fonts, <strong>con soporte para texto cirílico</strong> (por el idioma ruso).</p>
-<pre class="prettyprint linenums">
-        http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext
-</pre>
-                            <p>Cada <strong>offer-box</strong> tiene una composición diferente, y viene determinada por la propia oferta. Se utilizan los mismos estilos que en el detalle de la oferta.</p>
-                            <p><strong>Las cajas de tipo 5, 6 y 7</strong> tienen además una dependencia con la subclase <strong>_box-padding-N</strong>, donde "N" es el número de párrafos en el título de la caja, y añade un padding-top para centrar verticalmente el contenido según corresponda.</p>
+                            <p>Los componentes de este template pueden variar, es posible que haya sólo una caja de datos de la oferta, puede que no tenga descripción, extras o rooms, etc.</p>
                             <div class="bs-docs-example">
-                                ...
+                                [PENDIENTE: AÑADIR VARIACIONES, UNA VEZ TENGAMOS EL DISEÑO FINAL]
                             </div>
                             <p>En <strong>skeleton.css</strong> están todos los estilos básicos, luego se podrá modificar para un hotel en particular parte de estos estilos si fuera necesario. El <strong>font-size</strong> y el <strong>line-height</strong> se definen en <code>.offer {font-size: 12px; line-height: 12px;}</code> por defecto, y se heredan por medio de em en el resto de textos.</p>
 <pre class="prettyprint linenums">
-        ...
+        [PENDIENTE: AÑADIR CSS, UNA VEZ TENGAMOS EL DISEÑO FINAL]
 </pre>
                         </section>
                     </div>

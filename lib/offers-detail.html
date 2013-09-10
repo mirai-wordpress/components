@@ -587,12 +587,17 @@
             width: 118px;
             height: 30px;
         }
-        .simple-offer-detail .offer .offer-social-links,
-        .simple-offer-detail .offer .offer-calendar-wrapper {background-color: red;}
-        .simple-offer-detail .offer .offer-rooms-wrapper,
-        .simple-offer-detail .offer .offer-calendar-wrapper {margin: 10px 0 0; padding: 10px;}
-        .simple-offer-detail .offer .offer-extras-wrapper,
-        .simple-offer-detail .offer .offer-rooms-wrapper {
+        .simple-offer-detail .offer .offer-social-links {background-color: red; color: #fff; text-align: center;}
+        .simple-offer-detail .offer .offer-calendar-wrapper {
+            margin: 10px 0 0; 
+            padding: 10px;
+        }
+        .simple-offer-detail .offer .offer-calendar-wrapper .ui-datepicker-inline {
+            margin: 0 auto;
+            font-size: 1.6em;
+            line-height: 1.3;
+        }
+        .simple-offer-detail .offer .offer-more-info-wrapper {
             display: block;
             position: relative;
             margin: 50px 0 0;
@@ -602,8 +607,8 @@
             border-top: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
         }
-        .simple-offer-detail .offer .offer-extras-wrapper .offer-extra,
-        .simple-offer-detail .offer .offer-rooms-wrapper .offer-room {
+        .simple-offer-detail .offer .offer-more-info-wrapper .offer-extra,
+        .simple-offer-detail .offer .offer-more-info-wrapper .offer-room {
             display: block;
             position: relative;
             overflow: hidden;
@@ -611,23 +616,23 @@
             width: 47%;
             margin: -20px 1% 0;/* NEEDS TO BE ADJUSTED */
         }
-        .simple-offer-detail .offer .offer-extras-wrapper .offer-extra .offer-extra-img,
-        .simple-offer-detail .offer .offer-rooms-wrapper .offer-room .offer-room-img {
+        .simple-offer-detail .offer .offer-more-info-wrapper .offer-extra .offer-extra-img,
+        .simple-offer-detail .offer .offer-more-info-wrapper .offer-room .offer-room-img {
             display: block;
             position: relative;
             float: left;
             margin: 0 10px 0 0;
         }
-        .simple-offer-detail .offer .offer-extras-wrapper .offer-extra .offer-extra-title,
-        .simple-offer-detail .offer .offer-rooms-wrapper .offer-room .offer-room-title {
+        .simple-offer-detail .offer .offer-more-info-wrapper .offer-extra .offer-extra-title,
+        .simple-offer-detail .offer .offer-more-info-wrapper .offer-room .offer-room-title {
             display: block;
             position: relative;
             float: left;
             margin: 20px 10px 0 0;
             min-width: 50%;
         }
-        .simple-offer-detail .offer .offer-extras-wrapper .offer-extra .offer-extra-description,
-        .simple-offer-detail .offer .offer-rooms-wrapper .offer-room .offer-room-description {
+        .simple-offer-detail .offer .offer-more-info-wrapper .offer-extra .offer-extra-description,
+        .simple-offer-detail .offer .offer-more-info-wrapper .offer-room .offer-room-description {
             display: block;
             position: relative;
             float: left;
@@ -724,7 +729,7 @@
                                 <div class="offers-detail-wrapper simple-offer-detail">
                                     <div class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer">
                                         <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" widh="118" height="175" alt="Offer Photo" /></a>
-                                        <div class="offer-social-links">[SOCIAL LINKS]</div>
+                                        <!--div class="offer-social-links">[SOCIAL LINKS]</div-->
                                         <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">Escapada romántica</a></h5>
                                         <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                         <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
@@ -755,23 +760,11 @@
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" />
                                             </a>
                                         </div>
-                                        <div class="offer-extras-wrapper">
+                                        <div class="offer-more-info-wrapper">
                                             <div class="offer-extra">
                                                 <img class="offer-extra-img" src="../imgs/191x144.png" width="191" height="144" alt="OFFER EXTRA IMG" />
                                                 <h6 class="offer-extra-title">OFFER EXTRA TITLE</h6>
                                                 <p class="offer-extra-description">Offer extra description</p>
-                                            </div>
-                                            <div class="offer-extra">
-                                                <img class="offer-extra-img" src="../imgs/191x144.png" width="191" height="144" alt="OFFER EXTRA IMG" />
-                                                <h6 class="offer-extra-title">OFFER EXTRA TITLE</h6>
-                                                <p class="offer-extra-description">Offer extra description</p>
-                                            </div>
-                                        </div>
-                                        <div class="offer-rooms-wrapper">
-                                            <div class="offer-room">
-                                                <img class="offer-room-img" src="../imgs/191x144.png" width="191" height="144" alt="OFFER ROOM IMG" />
-                                                <h6 class="offer-room-title">OFFER ROOM TITLE</h6>
-                                                <p class="offer-room-description">Offer room description</p>
                                             </div>
                                             <div class="offer-room">
                                                 <img class="offer-room-img" src="../imgs/191x144.png" width="191" height="144" alt="OFFER ROOM IMG" />
@@ -779,7 +772,7 @@
                                                 <p class="offer-room-description">Offer room description</p>
                                             </div>
                                         </div>
-                                        <div class="offer-calendar-wrapper">[OFFER CALENDAR]</div>
+                                        <div class="offer-calendar-wrapper"><div class="offer-date" /></div>
                                         <!--a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a-->
                                     </div>
                                 </div>
@@ -809,14 +802,20 @@
         </footer><!-- end footer -->
             
     </div> <!-- end container -->
-
+    
+    <link rel='stylesheet' id='jquery-ui-css'  href='http://code.jquery.com/ui/1.9.0/themes/sunny/jquery-ui.css?ver%5B0%5D=main' type='text/css' media='all' />
+    <script type='text/javascript' src='http://webs5.mirai.es/wp-content/themes/mirai/js/jquery-ui-1.9.1.custom.min.js?ver=3.4.2'></script>
+    <script type='text/javascript' src='http://js.miraiglobal.com/jquery/jquery-ui-i18n.js?ver=3.4.2'></script>
+    
     <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
     <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
     <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
-    <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
+    <script type='text/javascript' src='http://webs5.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
     <script type='text/javascript'>
     /* <![CDATA[ */
         var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+        var common_vars = {"ajax":"true","menuAjax":"false"};
+        var engine_vars = {"calendarAnimation":"show","numMesesCalendar":"3","maxDate":"+1y","language":"es","hotelId":"100375444","chainId":"","hsri":"02040","bookingHost":"http:\/\/pyme2.webs5.mirai.es","bookingPage":"","securePage":"","home":"http:\/\/pyme2.webs5.mirai.es","chain_no_selected":"Busca en una localizaci\u00f3n o en un hotel","close":"Cerrar","ieTemplate":"","promoText":"Promo:"};
     /* ]]> */
     </script>
     <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
@@ -827,7 +826,5 @@
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="../google-code-prettify/prettify.js"></script>		
     <script src="../application.js"></script>
-	
-		
 	</body>
 </html>

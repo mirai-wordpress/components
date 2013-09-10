@@ -639,23 +639,6 @@
             margin: 10px 10px 0 0;
             min-width: 50%;
         }
-        /* TODO: define and add custom button *//*
-        <div class="offer-calendar-wrapper">
-            <h6 class="offer-calendar-title">Elige llegada <span class="calendar-legend-arrival-day">&nbsp;</span>:</h6>
-            <div class="calendar-legend-wrapper">
-                <div class="calendar-legend-item"><span class="calendar-legend-offer-day">3</span> Oferta</div>
-                <div class="calendar-legend-item"><span class="calendar-legend-no-rooms-day">3</span> Sin habs.</div>
-            </div>
-            <div class="offer-date"></div>
-            <label class="calendar-nights-label">Noches</label>
-            <select class="calendar-nights-field">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
-            <a class="offer-detail-link" href="#BOOK-OFFER" title="BOOK TITLE">Reservar</a>
-        </div>
-        */
         .simple-offer-detail .offer-calendar-wrapper {
             display: block;
             position: relative;
@@ -719,6 +702,17 @@
             margin: 20px 2% 20px 0;
             text-align: right;
             text-transform: uppercase;
+        }
+        .simple-offer-detail .offer .offer-calendar-wrapper .ui-datepicker-inline .calendar-legend-arrival-day {border: 2px solid #ffc000;}
+        /*.simple-offer-detail .offer .offer-calendar-wrapper .ui-datepicker-inline .ui-state-default,*/
+        .simple-offer-detail .offer .offer-calendar-wrapper .ui-datepicker-inline .calendar-legend-offer-day {
+            background-color: #6ce0b9;
+            background-image: none;
+        }
+        /*.simple-offer-detail .offer .offer-calendar-wrapper .ui-datepicker-inline .ui-datepicker-unselectable,*/
+        .simple-offer-detail .offer .offer-calendar-wrapper .ui-datepicker-inline .calendar-legend-no-rooms-day {
+            background-color: #e9e9e6;
+            background-image: none;
         }
         .simple-offer-detail .offer-calendar-wrapper .calendar-nights-field {
             display: block;

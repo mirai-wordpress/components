@@ -69,12 +69,20 @@
         .simple-listing-offers .offer {
             display: block;
             position: relative;
-            float: left;/*
-            width: 100%;*/
+            float: left;
             min-height: 200px;
+            width: 99.9%;
             margin: 2em 0 3em;
             padding: 0;
             border: 1px solid #999;
+        }
+        .simple-listing-offers .offer .offer-link {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
         }
         .simple-listing-offers .offer .offer-title {
             display: block;
@@ -496,7 +504,7 @@
             width: 118px;
             height: 175px;
         }
-        .simple-listing-offers .offer .offer-detail-link {
+        .simple-listing-offers .offer .offer-button {
             display: block;
             position: absolute;
             left: 140px;
@@ -507,13 +515,76 @@
             line-height: 1.66em;
             font-family: inherit;
         }
-        .simple-listing-offers .offer .offer-detail-link:hover {}
+        .simple-listing-offers .offer .offer-button:hover {}
+        /* IE8 Fixes */
+        .ie8 .simple-listing-offers .offer .offer-title {}
+        .ie8 .simple-listing-offers .offer,
+        .ie8 .simple-listing-offers .offer .offer-box {}
+        .ie8 .simple-listing-offers .offer {}
+        .ie8 .simple-listing-offers .offer .offer-description {}
+        .ie8 .simple-listing-offers .offer .offer-button {}
         /* END simple-listing-offers */
         /* START template1-listing-offers */
+        .template1-listing-offers .offers-listing {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
         .template1-listing-offers .offer {
             font-size: 12px;
             font-family: 'Open Sans Condensed', sans-serif;
             line-height: 12px;
+            background-color: #fff;
+            display: block;
+            position: relative;
+            float: left;
+            width: 100%;
+            height: 200px;
+            margin: 2em 0 3em;
+            padding: 0;
+            -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+               -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        }
+        .template1-listing-offers .offer:before,
+        .template1-listing-offers .offer:after {
+            content:"";
+            position:absolute;
+            z-index:-2;}
+        .template1-listing-offers .offer:before,
+        .template1-listing-offers .offer:after {
+            bottom:15px;
+            left:10px;
+            width:50%;
+            height:20%;
+            max-width:300px;
+            max-height:100px;
+            -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+               -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+                    box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+            -webkit-transform:rotate(-3deg);
+               -moz-transform:rotate(-3deg);
+                -ms-transform:rotate(-3deg);
+                 -o-transform:rotate(-3deg);
+                    transform:rotate(-3deg);
+        }
+        .template1-listing-offers .offer:after {
+            right:10px;
+            left:auto;
+            -webkit-transform:rotate(3deg);
+               -moz-transform:rotate(3deg);
+                -ms-transform:rotate(3deg);
+                 -o-transform:rotate(3deg);
+                    transform:rotate(3deg);
+        }
+        .template1-listing-offers .offer .offer-link {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
         }
         .template1-listing-offers .offer .offer-title {
             background-image: linear-gradient(bottom, #f0f0f0 0%, #ffffff 40%);
@@ -968,59 +1039,9 @@
             color: #9e807e;
         }
         /* END OFFER BOXES */
-        .template1-listing-offers .offers-listing {
-            display: block;
-            overflow: hidden;
-            position: relative;
-            z-index: 1;
-        }
-        .template1-listing-offers .offers-listing .offer {
-            background-color: #fff;
-            display: block;
-            position: relative;
-            float: left;
-            width: 100%;
-            height: 200px;
-            margin: 2em 0 3em;
-            padding: 0;
-            -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-               -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-                    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-        }
-        .template1-listing-offers .offers-listing .offer:before,
-        .template1-listing-offers .offers-listing .offer:after {
-            content:"";
-            position:absolute;
-            z-index:-2;}
-        .template1-listing-offers .offers-listing .offer:before,
-        .template1-listing-offers .offers-listing .offer:after {
-            bottom:15px;
-            left:10px;
-            width:50%;
-            height:20%;
-            max-width:300px;
-            max-height:100px;
-            -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-               -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-                    box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-            -webkit-transform:rotate(-3deg);
-               -moz-transform:rotate(-3deg);
-                -ms-transform:rotate(-3deg);
-                 -o-transform:rotate(-3deg);
-                    transform:rotate(-3deg);
-        }
-        .template1-listing-offers .offers-listing .offer:after {
-            right:10px;
-            left:auto;
-            -webkit-transform:rotate(3deg);
-               -moz-transform:rotate(3deg);
-                -ms-transform:rotate(3deg);
-                 -o-transform:rotate(3deg);
-                    transform:rotate(3deg);
-        }
-        .template1-listing-offers .offers-listing .offer a:hover,
-        .template1-listing-offers .offers-listing .offer a:active {text-decoration: none;}
-        .template1-listing-offers .offers-listing .offer .offer-description {
+        .template1-listing-offers .offer a:hover,
+        .template1-listing-offers .offer a:active {text-decoration: none;}
+        .template1-listing-offers .offer .offer-description {
             display: block;
             margin: 10px 140px !important;
             color: #404040;
@@ -1028,7 +1049,7 @@
             font-family: inherit;
             line-height: 1.3em;
         }
-        .template1-listing-offers .offers-listing .offer .offer-photo {
+        .template1-listing-offers .offer .offer-photo {
             display: block;
             position: absolute;
             right: 10px;
@@ -1036,7 +1057,7 @@
             width: 118px;
             height: 175px;
         }
-        .template1-listing-offers .offers-listing .offer .offer-detail-link {
+        .template1-listing-offers .offer .offer-button {
             display: block;
             position: absolute;
             left: 140px;
@@ -1073,17 +1094,18 @@
                     border-radius: 8px;
             background-clip: padding-box;
         }
-        .template1-listing-offers .offers-listing .offer .offer-detail-link:hover {text-decoration: none;}
+        .template1-listing-offers .offer .offer-button:hover {text-decoration: none;}
+        /* IE8 Fixes */
         .ie8 .template1-listing-offers .offer .offer-title {border-bottom: 1px solid #f0f0f0;}
         .ie8 .template1-listing-offers .offer,
         .ie8 .template1-listing-offers .offer .offer-box {border: 1px solid #999;}
-        .ie8 .template1-listing-offers .offers-listing .offer {width: 99%;}
-        .ie8 .template1-listing-offers .offers-listing .offer .offer-description {
+        .ie8 .template1-listing-offers .offer {width: 99%;}
+        .ie8 .template1-listing-offers .offer .offer-description {
             font-size: 1.5em;
             font-family: inherit;
             line-height: 1.3em;
         }
-        .ie8 .template1-listing-offers .offers-listing .offer .offer-detail-link {
+        .ie8 .template1-listing-offers .offer .offer-button {
             font-size: 2em;
             line-height: 1.66em;
             font-family: inherit;
@@ -1138,7 +1160,7 @@
             &lt;p class="offer-description" itemprop="description"&gt;Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.&lt;/p&gt;
             &lt;link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" /&gt;
             &lt;a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;&lt;img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /&gt;&lt;/a&gt;
-            &lt;a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;Consultar&lt;/a&gt;
+            &lt;a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;Consultar&lt;/a&gt;
         &lt;/li&gt;
     &lt;/ol&gt;
 &lt;/div&gt;
@@ -1158,9 +1180,10 @@
                                 <div class="offers-listing-wrapper simple-listing-offers">
                                     <p class="rss-text">Be the first to receive our offers through your <a href="#RSS">RSS</a> reader&nbsp;<i class="rss-icon">&nbsp;</i></p>
                                     <ol class="offers-listing">
-                                        <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer">
-                                            <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">Escapada romántica</a></h5>
-                                            <a class="offer-box _box-2" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification" href="#OFFER-DETAIL" title="OFFER TITLE">
+                                        <li class="offer">
+                                            <a class="offer-link" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" href="#OFFER-DETAIL" title="OFFER TITLE">
+                                            <h5 class="offer-title" itemprop="name">Escapada romántica</h5>
+                                            <div class="offer-box _box-2" itemscope itemprop="PriceSpecification" itemtype="http://purl.org/goodrelations/v1#UnitPriceSpecification">
                                                 <span class="box-title-0">Desde</span>
                                                 <span class="box-number" itemprop="minPrice">59</span>
                                                 <span class="box-numberDesc-0" itemprop="priceCurrency" content="EUR">&euro;</span>
@@ -1168,11 +1191,12 @@
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#PaymentMethodCreditCard" />
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" />
                                                 <meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" />
-                                            </a>
+                                            </div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
+                                            <div class="offer-button">Consultar</div>
+                                            </a>
                                         </li>
                                     </ol>
                                 </div>
@@ -1199,7 +1223,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" style="width: 47%; margin: 2em 1% 3em;">
                                             <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">BOX 2</a></h5>
@@ -1215,7 +1239,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" style="width: 47%; margin: 2em 1% 3em;">
                                             <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">BOX 3</a></h5>
@@ -1229,7 +1253,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" style="width: 47%; margin: 2em 1% 3em;">
                                             <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">BOX 4</a></h5>
@@ -1244,7 +1268,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" style="width: 47%; margin: 2em 1% 3em;">
                                             <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">BOX 5</a></h5>
@@ -1259,7 +1283,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" style="width: 47%; margin: 2em 1% 3em;">
                                             <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">BOX 6</a></h5>
@@ -1275,7 +1299,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" style="width: 47%; margin: 2em 1% 3em;">
                                             <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">BOX 7</a></h5>
@@ -1292,7 +1316,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" style="width: 47%; margin: 2em 1% 3em;">
                                             <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">BOX 8</a></h5>
@@ -1308,7 +1332,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" style="width: 47%; margin: 2em 1% 3em;">
                                             <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">BOX 9</a></h5>
@@ -1325,7 +1349,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" style="width: 47%; margin: 2em 1% 3em;">
                                             <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">BOX 10</a></h5>
@@ -1340,7 +1364,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                         <li class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" style="width: 47%; margin: 2em 1% 3em;">
                                             <h5 class="offer-title" itemprop="name"><a href="#OFFER-DETAIL" title="OFFER TITLE">BOX 11</a></h5>
@@ -1356,7 +1380,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
                                             <a class="offer-photo" href="#OFFER-DETAIL" title="OFFER TITLE"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></a>
-                                            <a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
+                                            <a class="offer-button" href="#OFFER-DETAIL" title="OFFER TITLE">Consultar</a>
                                         </li>
                                     </ol>
                                 </div>

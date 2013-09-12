@@ -724,7 +724,7 @@
             margin: 30px 0;
             text-align: center;
         }
-        .simple-offer-detail .offer-calendar-wrapper .offer-detail-link {
+        .simple-offer-detail .offer-calendar-wrapper .offer-button {
             display: block;
             position: relative;
             clear: both;
@@ -773,7 +773,7 @@
             width: 45%;
         }
         /* TODO: define and add custom button */
-        .ie8 .simple-offer-detail .offer-calendar-wrapper .offer-detail-link {
+        .ie8 .simple-offer-detail .offer-calendar-wrapper .offer-button {
             font-size: 2em;
             line-height: 1.66em;
             font-family: inherit;
@@ -857,10 +857,28 @@
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class="offer-calendar-wrapper"&gt;&lt;div class="offer-date" /&gt;&lt;/div&gt;
-        &lt;!--a class="offer-detail-link" href="#OFFER-DETAIL" title="OFFER TITLE"&gt;Consultar&lt;/a--&gt;
+        &lt;label class="calendar-nights-label"&gt;Noches&lt;/label&gt;
+        &lt;select class="calendar-nights-field"&gt;
+            &lt;option value="1"&gt;1&lt;/option&gt;
+            &lt;option value="2"&gt;2&lt;/option&gt;
+            &lt;option value="3"&gt;3&lt;/option&gt;
+        &lt;/select>
+        &lt;a class="offer-button" href="#BOOK-OFFER" title="BOOK TITLE"&gt;Reservar&lt;/a&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+							<div class="span12">
+                                <p>Puedes <strong>cambiar de template en este campo</strong>, simulando cómo cambiaría dentro de la web de un hotel (<i>tendrás que desarrollar el CSS correspondiente</i>):</p>
+                                <div class="span6">
+                                    <p style="text-align: right; padding: 0 5px; line-height: 30px;"><strong>Cambiar TEMPLATE:</strong></p>
+                                </div>
+                                <div class="span6">
+                                    <select id="templateSwitcher">
+                                        <option value="simple-offer-detail" selected>simple-offer-detail</option>
+                                        <option value="template1-offer-detail">template1-offer-detail</option>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="bs-docs-example">
                                 <div class="offers-detail-wrapper simple-offer-detail">
                                     <div class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer">
@@ -921,7 +939,7 @@
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
                                             </select>
-                                            <a class="offer-detail-link" href="#BOOK-OFFER" title="BOOK TITLE">Reservar</a>
+                                            <a class="offer-button" href="#BOOK-OFFER" title="BOOK TITLE">Reservar</a>
                                         </div>
                                     </div>
                                 </div>
@@ -970,5 +988,13 @@
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="../google-code-prettify/prettify.js"></script>		
     <script src="../application.js"></script>
+	
+    <script>
+        (function (poWindow) {
+            Mirai.query('#templateSwitcher').change(function (poEvent) {
+                Mirai.query('.offers-detail-wrapper').attr('class', 'offers-detail-wrapper ' + Mirai.query(this).val());
+            });
+        }(this));
+    </script>
 	</body>
 </html>

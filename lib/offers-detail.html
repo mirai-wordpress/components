@@ -712,18 +712,20 @@
         .ie8 .offers-detail-wrapper .offer,
         .ie8 .offers-detail-wrapper .offer .offer-box {}
         .ie8 .offers-detail-wrapper .offer {}
-        .ie8 .offers-detail-wrapper .offer .offer-description {}
+        .ie8 .offers-detail-wrapper .offer .offer-more-info-wrapper {
+            height: auto !important;
+        }
         .ie8 .offers-detail-wrapper .offer-more-info-wrapper .offer-extra,
         .ie8 .offers-detail-wrapper .offer-more-info-wrapper .offer-room {
-            float: none;
-            width: 90%;
+            float: none !important;
+            width: 90% !important;
         }
         .ie8 .offers-detail-wrapper .offer-calendar-wrapper .calendar-legend-wrapper {
-            width: 20%;
+            width: 20% !important;
         }
         .ie8 .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline {
-            font-size: 1em;
-            line-height: 1em;
+            font-size: 1em !important;
+            line-height: 1em !important;
         }
         .ie8 .offers-detail-wrapper .offer-calendar-wrapper .offer-button {}
         /* SMALL SCREEN FIXES */
@@ -1151,22 +1153,29 @@
             background-clip: padding-box;
         }
         .template1-offer-detail .offer-calendar-wrapper .offer-button:hover {text-decoration: none;}
-        .ie8 .template1-offer-detail .offer .offer-title {border-bottom: 1px solid #f0f0f0;}
+        /* IE8 Fixes */
+        .ie8 .template1-offer-detail .offer .offer-title {
+            border-bottom: 1px solid #f0f0f0 !important;
+        }
         .ie8 .template1-offer-detail .offer,
-        .ie8 .template1-offer-detail .offer .offer-box {border: 1px solid #999;}
-        .ie8 .template1-offer-detail .offer {width: 99%;}
+        .ie8 .template1-offer-detail .offer .offer-box {
+            border: 1px solid #999 !important;
+        }
+        .ie8 .template1-offer-detail .offer {
+            width: 99% !important;
+        }
         .ie8 .template1-offer-detail .offer .offer-description {
-            font-size: 1.5em;
-            font-family: inherit;
-            line-height: 1.3em;
-            width: 45%;
+            font-size: 1.5em !important;
+            font-family: inherit !important;
+            line-height: 1.3em !important;
+            width: 45% !important;
         }
         .ie8 .template1-offer-detail .offer-calendar-wrapper .offer-button {
-            font-size: 2em;
-            line-height: 1.66em;
-            font-family: inherit;
-            width: 150px;
-            border: 0px;
+            font-size: 2em !important;
+            line-height: 1.66em !important;
+            font-family: inherit !important;
+            width: 150px !important;
+            border: 0px !important;
         }
         /* END template1-offer-detail */
         
@@ -1282,10 +1291,7 @@
         .ie8 .template2-offer-detail .offer-box {border: 1px solid #999;}
         .ie8 .template2-offer-detail .offer {}
         .ie8 .template2-offer-detail .offer-description {}
-        .ie8 .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline {
-            font-size: 0.9em;
-            line-height: 0.9em;
-        }
+        .ie8 .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline {}
         .ie8 .template2-offer-detail .offer-calendar-wrapper .offer-button {}
 		/* END template2-offer-detail */
     </style>

@@ -731,6 +731,7 @@
             font-family: 'Open Sans Condensed', sans-serif;
             line-height: 12px;
             background-color: #fff;
+            border: none;
             display: block;
             position: relative;
             float: left;
@@ -1286,44 +1287,58 @@
         
         /* START template2-offer-detail */
         .template2-offer-detail .offer {
-            border: 1px solid #999;
+            margin: 0;
+            padding: 15px;
+            border: none;
         }
         .template2-offer-detail .offer .offer-title {
-            padding: 0 0 0 170px;
+            padding: 0;
         }
         .template2-offer-detail .offer .offer-info-wrapper {
-            overflow: visible;
-            margin: 0;
+            overflow: hidden;
+            margin: 20px 0 0;
         }
         .template2-offer-detail .offer .offer-photo {
-            margin: -40px 20px 0 10px;
+            margin: 0 20px 0 0;
         }
         .template2-offer-detail .offer .offer-description {
-            margin: 10px auto 10px 0px !important;
-            min-height: 150px;
+            margin: 20px 0 0;
         }
         .template2-offer-detail .offer .offer-social-links {/* OJO: SIN HACER */
             display: block;
             position: absolute;
             left: 10px;
-            top: 190px;
+            top: 260px;
             width: 118px;
             height: 30px;
         }
         .template2-offer-detail .offer .offer-social-links {background-color: red; color: #fff; text-align: center;}
         .template2-offer-detail .offer .offer-boxes-wrapper {
-            width: 340px;
-            margin-top: -10px;
+            margin: 0;
+            width: 424px;
+        }
+        ._4-boxes.template2-detail-wrapper .offer .offer-boxes-wrapper {
+            width: 284px;
         }
         .template2-offer-detail .offer .offer-box {
-            border: 1px solid #999;
-            margin: 5px;
-            padding: 0;
-            width: 99px;
+            margin: 0 0 20px 0px;
+            padding: 10px 20px;
+            width: 141px;
+            height: 140px;
+            border: none;
+            border-left: 1px solid #000;
+        }
+        .template2-offer-detail .offer .offer-box:nth-child(3),
+        .template2-offer-detail .offer .offer-box:last-child,
+        ._4-boxes.template2-offer-detail .offer .offer-box:nth-child(2) {
+            border-right: 1px solid #000;
+        }
+        ._4-boxes.template2-offer-detail .offer .offer-box:nth-child(3) {
+            border-right: none;
         }
         /* OFFER BOXES */
         /* ... */
-        /* END OFFER BOXES */
+        /* END OFFER BOXES *//*
         .template2-offer-detail .offer .offer-more-info-wrapper:before {
             content: ".";
             display: block;
@@ -1331,67 +1346,122 @@
             visibility: hidden;
             line-height: 0;
             height: 0;
-        }
+        }*/
         .template2-offer-detail .offer .offer-more-info-wrapper {
-            display: inline-block;
-            margin: 50px 0 0;
-            padding: 10px 0;
-            height: auto;
-            width: 100%;
-            border-top: 1px solid #999;
-            border-bottom: 1px solid #999;
+            display: block;
+            position: relative;
+            border: none;
+            clear: both;
         }
         .template2-offer-detail .offer .offer-more-info-wrapper .offer-extra,
         .template2-offer-detail .offer .offer-more-info-wrapper .offer-room {
-            float: left;
-            width: 47%;
-            margin: 0 1%;
-            padding: 0;
-            height: auto;
-            overflow: visible;
-            border: none;
+            display: block;
+            position: relative;
+            float: none;
+            width: auto;
+            padding: 10px;
+            margin: 0 0 20px 162px;
+            border: 1px solid #000;
         }
-        .template2-offer-detail .offer .offer-more-info-wrapper .offer-extra .offer-extra-img,
-        .template2-offer-detail .offer .offer-more-info-wrapper .offer-room .offer-room-img {}
-        .template2-offer-detail .offer .offer-more-info-wrapper .offer-room .offer-room-img {
+        .template2-offer-detail .offer .offer-more-info-wrapper .offer-extra {
+            height: 162px;
+            overflow: hidden;
+        }
+        .template2-offer-detail .offer .offer-more-info-wrapper .offer-extra .offer-extra-img {
+            display: block;
+            position: relative;
             float: left;
             margin: 0 20px 0 0;
+            width: 189px;
+            height: 142px;
+            box-sizing: border-box;
         }
-        .template2-offer-detail .offer .offer-more-info-wrapper .offer-extra .offer-extra-title,
+        .template2-offer-detail .offer .offer-more-info-wrapper .offer-extra .offer-extra-title {
+            display: block;
+            position: relative;
+            float: left;
+            width: 70%;
+            text-transform: uppercase;
+            box-sizing: border-box;
+        }
+        .template2-offer-detail .offer .offer-more-info-wrapper .offer-extra .offer-extra-description {
+            display: block;
+            position: relative;
+            float: left;
+            width: 70%;
+            margin-top: 10px !important;
+            box-sizing: border-box;
+        }
+        .template2-offer-detail .offer .offer-more-info-wrapper .offer-room {
+            height: 162px;
+            min-height: 162px;
+            overflow: visible;
+        }
+        .template2-offer-detail .offer .offer-more-info-wrapper .offer-room .offer-room-img {
+            display: block;
+            position: relative;
+            float: right;
+            margin: 0 0 -30px 20px;
+            width: 260px;
+            height: 190px;
+            box-sizing: border-box;
+        }
         .template2-offer-detail .offer .offer-more-info-wrapper .offer-room .offer-room-title {
             display: block;
             position: relative;
-            float: left;
-            margin: 20px 10px 0 0;
-            min-width: 40%;
-            width: auto;
+            margin: 0; 
+            text-transform: uppercase;
+            box-sizing: border-box;
         }
-        .template2-offer-detail .offer .offer-more-info-wrapper .offer-extra .offer-extra-description,
         .template2-offer-detail .offer .offer-more-info-wrapper .offer-room .offer-room-description {
             display: block;
             position: relative;
-            float: left;
-            margin: 10px 10px 0 0;
-            min-width: 40%;
-            width: auto;
+            margin: 10px 0 0 0 !important;
+            box-sizing: border-box;
         }
         .template2-offer-detail .offer-calendar-wrapper {
             display: block;
             position: relative;
-            margin: 10px 0 0; 
+            margin: 50px 0 0 162px;
             padding: 10px;
-            border: none;
+            border: 1px solid #000;
+            box-sizing: border-box;
         }
         .template2-offer-detail .offer-calendar-wrapper .offer-calendar-title {
-            margin-right: 15%;
+            display: block;
+            position: relative;
+            float: left;
+            padding: 0;
+            margin: 10px 0;
+            font-family: inherit;
+            font-size: 2em;
+            line-height: 50px;
+            height: 58px;
+            width: 60%;
+            text-align: right;
+            box-sizing: border-box;
         }
-        .template2-offer-detail .offer-calendar-wrapper .offer-calendar-title .calendar-legend-arrival-day {}
+        .template2-offer-detail .offer-calendar-wrapper .offer-calendar-title .calendar-legend-arrival-day {
+            display: inline-block;
+            border: 2px solid #ffc000;
+            width: 24px;
+            height: 24px;
+            line-height: 20px;
+            margin: 0 2px;
+            box-sizing: border-box;
+        }
         .template2-offer-detail .offer-calendar-wrapper .calendar-legend-wrapper {
-            width: 10%;
+            display: block;
+            position: relative;
+            float: left;
+            margin: 10px 0 10px 20px;
+            width: 35%;
+            box-sizing: border-box;
         }
         .template2-offer-detail .offer-calendar-wrapper .calendar-legend-wrapper .calendar-legend-item {
             display: block;
             margin: 0 0 5px;
+            box-sizing: border-box;
         }
         .template2-offer-detail .offer-calendar-wrapper .calendar-legend-wrapper .calendar-legend-offer-day {}
         .template2-offer-detail .offer-calendar-wrapper .calendar-legend-wrapper .calendar-legend-no-rooms-day {}
@@ -1403,7 +1473,18 @@
             margin: 20px 2% 20px 0;
             text-align: right;
         }
-        .template2-offer-detail .offer-calendar-wrapper .ui-datepicker-inline {}
+        .template2-offer-detail .offer-calendar-wrapper .offer-date {
+            display: block;
+            position: relative;
+            clear: both;
+            margin: 20px 0 0;
+            box-sizing: border-box;
+        }
+        .template2-offer-detail .offer-calendar-wrapper .ui-datepicker-inline {
+            margin: 0 auto;
+            font-size: 1.3em;
+            line-height: 1.3em;
+        }
         .template2-offer-detail .offer .offer-calendar-wrapper .ui-datepicker-inline .calendar-legend-arrival-day {}
         /*.template2-offer-detail .offer .offer-calendar-wrapper .ui-datepicker-inline .ui-state-default,*/
         .template2-offer-detail .offer .offer-calendar-wrapper .ui-datepicker-inline .calendar-legend-offer-day {}

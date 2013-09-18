@@ -713,7 +713,21 @@
         .ie8 .offers-detail-wrapper .offer .offer-box {}
         .ie8 .offers-detail-wrapper .offer {}
         .ie8 .offers-detail-wrapper .offer .offer-description {}
+        .ie8 .offers-detail-wrapper .offer-more-info-wrapper .offer-extra,
+        .ie8 .offers-detail-wrapper .offer-more-info-wrapper .offer-room {
+            float: none;
+            width: 90%;
+        }
+        .ie8 .offers-detail-wrapper .offer-calendar-wrapper .calendar-legend-wrapper {
+            width: 20%;
+        }
+        .ie8 .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline {
+            font-size: 1em;
+            line-height: 1em;
+        }
         .ie8 .offers-detail-wrapper .offer-calendar-wrapper .offer-button {}
+        /* SMALL SCREEN FIXES */
+        
         /* END offers-detail-wrapper */
         
         /* START template1-offer-detail */
@@ -1243,12 +1257,14 @@
             margin: 0 0 -30px 20px;
         }
         .template2-offer-detail .offer-more-info-wrapper .offer-room .offer-room-title {
-            width: 70%;
+            float: none;
+            min-width: auto;
             margin: 0;
             text-transform: uppercase;
         }
         .template2-offer-detail .offer-more-info-wrapper .offer-room .offer-room-description {
-            width: 70%;
+            float: none;
+            min-width: auto;
         }
         .template2-offer-detail .offer-calendar-wrapper {
             margin: 50px 0 0 162px;
@@ -1262,10 +1278,14 @@
         }
         /* IE8 Fixes */
         .ie8 .template2-offer-detail .offer-title {}
-        .ie8 .template2-offer-detail .offer,
-        .ie8 .template2-offer-detail .offer-box {}
+        .ie8 .template2-offer-detail .offer {}
+        .ie8 .template2-offer-detail .offer-box {border: 1px solid #999;}
         .ie8 .template2-offer-detail .offer {}
         .ie8 .template2-offer-detail .offer-description {}
+        .ie8 .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline {
+            font-size: 0.9em;
+            line-height: 0.9em;
+        }
         .ie8 .template2-offer-detail .offer-calendar-wrapper .offer-button {}
 		/* END template2-offer-detail */
     </style>

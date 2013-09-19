@@ -1562,9 +1562,7 @@
     <script src="../application.js"></script>
 	
     <script>
-        (function (poWindow) {
-            var lang = Mirai.query('html').attr('lang') || 'es';
-            
+        (function (poWindow) {            
             Mirai.query('#templateSwitcher').change(function (poEvent) {
                 Mirai.query('.offers-detail-wrapper').attr('class', 'offers-detail-wrapper ' + Mirai.query(this).val());
             });

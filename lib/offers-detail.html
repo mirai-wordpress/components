@@ -664,17 +664,18 @@
         .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .ui-datepicker-buttonpane {
             display: none;
         }
-        /* TODO: ASIGNAR COLORES A LOS DIAS DEL CALENDARIO */
-        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-arrival-day {
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-arrival-day a {
             border: 2px solid #ffc000;
         }
         .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-offer-day,
-        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-offer-day span {
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-offer-day span,
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-offer-day a {
             background-image: none !important;
             background-color: #6ce0b9 !important;
         }
         .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-no-rooms-day,
-        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-no-rooms-day span {
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-no-rooms-day span,
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-no-rooms-day a {
             background-image: none !important;
             background-color: #e9e9e6 !important;
         }
@@ -1545,15 +1546,14 @@
     <script type='text/javascript' src='http://webs5.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
     <script type='text/javascript'>
     /* <![CDATA[ */
-        var ghOfferPriceRanges = {
+        var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+        var common_vars = {"ajax":"true","menuAjax":"false"};
+        var engine_vars = {"calendarAnimation":"show","numMesesCalendar":"3","maxDate":"+1y","language":"es","hotelId":"100375444","chainId":"","hsri":"02040","bookingHost":"http:\/\/pyme2.webs5.mirai.es","bookingPage":"","securePage":"","home":"http:\/\/pyme2.webs5.mirai.es","chain_no_selected":"Busca en una localizaci\u00f3n o en un hotel","close":"Cerrar","ieTemplate":"","promoText":"Promo:"};
+        var engine_vars.availability = {
             'noAvailability': ['2013-09-01','2013-09-02','2013-09-03','2013-09-04'],
             'validDays': ['2013-09-05','2013-09-06','2013-09-07','2013-09-08','2013-09-09','2013-09-10'],
             'checkin': ['2013-09-05','2013-09-12','2013-09-19']
         };
-        
-        var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
-        var common_vars = {"ajax":"true","menuAjax":"false"};
-        var engine_vars = {"calendarAnimation":"show","numMesesCalendar":"3","maxDate":"+1y","language":"es","hotelId":"100375444","chainId":"","hsri":"02040","bookingHost":"http:\/\/pyme2.webs5.mirai.es","bookingPage":"","securePage":"","home":"http:\/\/pyme2.webs5.mirai.es","chain_no_selected":"Busca en una localizaci\u00f3n o en un hotel","close":"Cerrar","ieTemplate":"","promoText":"Promo:"};
     /* ]]> */
     </script>
     <script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>

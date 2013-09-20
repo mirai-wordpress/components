@@ -35,15 +35,18 @@
     
     <meta http-equiv="Content-Language" content="es-ES" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css' />
-    <style>
+    <style>        
+
+        /*-------------------------------  OFFERS PAGE V2 ------------------------------*/
         /* START offers-listing-wrapper */
         .offers-listing-wrapper {
             margin: 0;
             padding: 10px 0 0;
             box-sizing: border-box;
         }
+        /* rss text */
         .offers-listing-wrapper .rss-text {
-            font-size: 12px;
+            font-size: inherit;
             margin: 0;
             text-align: center;
             box-sizing: border-box;
@@ -52,7 +55,7 @@
             text-decoration: underline;
         }
         .offers-listing-wrapper .rss-text .rss-icon {
-            background-image: url('images/sprite.png');    
+            background-image: url('../images/sprite.png');    
             background-color: transparent;
             background-repeat: no-repeat;
             background-position: 0 -112px;
@@ -63,6 +66,8 @@
             line-height: 17px;
             box-sizing: border-box;
         }
+
+        /* offers listing */
         .offers-listing-wrapper .offers-listing {
             display: block;
             overflow: hidden;
@@ -70,440 +75,65 @@
             z-index: 1;
             box-sizing: border-box;
         }
+        /* offer */
         .offers-listing-wrapper .offer {
             display: block;
             position: relative;
             float: left;
             width: 99.9%;
             margin: 2em 0 3em;
-            padding: 0;
-            border: 1px solid #999;
+            padding: 0;            
             box-sizing: border-box;
         }
         .offers-listing-wrapper .offer .offer-link {
             display: block;
             position: relative;
             overflow: hidden;
+            color: inherit;
             box-sizing: border-box;
         }
         .offers-listing-wrapper .offer .offer-link:active,
-        .offers-listing-wrapper .offer .offer-link:hover {
-            background: none;
+        .offers-listing-wrapper .offer .offer-link:hover {            
             text-decoration: none;
         }
         .offers-listing-wrapper .offer .offer-title {
             display: block;
-            height: 50px;
-            padding: 0 0 0 20px;
-            line-height: 50px;
-            font-size: 2em;
+            margin: 10px 158px 10px 20px;
             font-family: inherit;
-            box-sizing: border-box;
+            font-size: 2.2em;
+            font-weight: bold;
+            line-height: 1.1em;
+            box-sizing: border-box;    
         }
-        .offers-listing-wrapper .offer .offer-box {
-            display: block;
-            margin: 0 20px 20px 20px;
-            position: relative;
-            float: left;
-            width: 100px;
-            height: 140px;
-            font-family: inherit;
-            text-align: center;
-            border: 1px solid #999;
-            box-sizing: border-box;
-        }
-        .offers-listing-wrapper .offer .offer-box .box-title-0,
-        .offers-listing-wrapper .offer .offer-box .box-title-1,
-        .offers-listing-wrapper .offer .offer-box .box-title-2,
-        .offers-listing-wrapper .offer .offer-box .box-title-3,
-        .offers-listing-wrapper .offer .offer-box .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box .box-desc-3 {
-            display: block;
-            padding: 0 2px;
-        }
-        /* OFFER BOX 1 */
-        .offers-listing-wrapper .offer .offer-box._box-1 {
-            padding-top: 14px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-title-3 {
-            display: block;
-            font-size: 2em;
-            line-height: 1.28em;
-            text-transform: uppercase;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-number {}
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-numberDesc-3 {}
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-desc-3 {}
-		
-        /* OFFER BOX 2 */
-        .offers-listing-wrapper .offer .offer-box._box-2 {}
-        .offers-listing-wrapper .offer .offer-box._box-1 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-title-3 {
-            display: block;
-            font-size: 1.5em;
-            line-height: 1.77em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-number {
-            font-size: 3em;
-            line-height: 1em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-numberDesc-3 {
-            font-size: 1.5em;
-            line-height: 1em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-2 .box-desc-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-        }
-        /* OFFER BOX 3 */
-        .offers-listing-wrapper .offer .offer-box._box-3 {
-            padding-top: 40px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-title-3 {}
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-number {
-            font-size: 3em;
-            line-height: 1.2em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-numberDesc-3 {
-            font-size: 2em;
-            line-height: 2.5em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-3 .box-desc-3 {}
-		
-        /* OFFER BOX 4 */
-        .offers-listing-wrapper .offer .offer-box._box-4 {
-            padding-top: 20px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-title-3 {}
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-number {
-            font-size: 3em;
-            line-height: 1.2em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-numberDesc-3 {
-            font-size: 2em;
-            line-height: 1em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-4 .box-desc-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-        }
-        /* OFFER BOX 5 */
-        .offers-listing-wrapper .offer .offer-box._box-5 {}
-        .offers-listing-wrapper .offer .offer-box._box-5._box-padding-1 {
-            padding-top: 40px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-5._box-padding-2 {
-            padding-top: 30px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-5._box-padding-3,
-        .offers-listing-wrapper .offer .offer-box._box-5._box-padding-4 {
-            padding-top: 20px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-title-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-number {
-            font-size: 3em;
-            line-height: 1.2em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-numberDesc-3 {
-            font-size: 2em;
-            line-height: 1em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-5 .box-desc-3 {}
-        /* OFFER BOX 6 */
-        .offers-listing-wrapper .offer .offer-box._box-6 {}
-        .offers-listing-wrapper .offer .offer-box._box-6._box-padding-1 {
-            padding-top: 40px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-6._box-padding-2 {
-            padding-top: 30px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-6._box-padding-3,
-        .offers-listing-wrapper .offer .offer-box._box-6._box-padding-4 {
-            padding-top: 20px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-title-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-number {
-            font-size: 3em;
-            line-height: 1.2em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-numberDesc-3 {
-            font-size: 2em;
-            line-height: 1em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-6 .box-desc-3 {}
-        /* OFFER BOX 7 */
-        .offers-listing-wrapper .offer .offer-box._box-7 {}
-        .offers-listing-wrapper .offer .offer-box._box-7._box-padding-1 {
-            padding-top: 40px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-7._box-padding-2 {
-            padding-top: 30px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-7._box-padding-3,
-        .offers-listing-wrapper .offer .offer-box._box-7._box-padding-4 {
-            padding-top: 20px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-title-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-number {}
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-numberDesc-3 {}
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-7 .box-desc-3 {
-            font-size: 1.8em;
-            line-height: 1em;
-            text-transform: uppercase;
-        }
-        /* OFFER BOX 8 */
-        .offers-listing-wrapper .offer .offer-box._box-8 {
-            padding-top: 20px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-title-3 {
-            display: block;
-            font-size: 1.5em;
-            line-height: 1em;
-            text-transform: uppercase;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-number {
-            font-size: 3em;
-            line-height: 1em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-numberDesc-3 {
-            font-size: 1.5em;
-            line-height: 1em;
-            text-transform: uppercase;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-8 .box-desc-3 {}
-        /* OFFER BOX 9 */
-        .offers-listing-wrapper .offer .offer-box._box-9 {
-            padding-top: 20px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-title-3 {
-            display: block;
-            font-size: 1em;
-            line-height: 1em;
-            text-transform: uppercase;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-number {
-            font-size: 3em;
-            line-height: 1em;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-numberDesc-3 {
-            font-size: 1.5em;
-            line-height: 1em;
-            text-transform: uppercase;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-9 .box-desc-3 {
-            display: block;
-            font-size: 1em;
-            line-height: 1em;
-        }
-        /* OFFER BOX 10 */
-        .offers-listing-wrapper .offer .offer-box._box-10 {
-            padding-top: 10px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-title-3 {
-            font-size: 1.8em;
-            line-height: 1.5em;
-            text-transform: uppercase;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-number {}
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-numberDesc-3 {}
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-10 .box-desc-3 {
-            display: block;
-            font-size: 1em;
-            line-height: 1em;
-        }
-        /* OFFER BOX 11 */
-        .offers-listing-wrapper .offer .offer-box._box-11 {
-            padding-top: 10px;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-title-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-title-0,
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-title-1,
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-title-2,
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-title-3 {
-            display: inline-block;
-            font-size: 2em;
-            line-height: 1.2em;
-            text-transform: uppercase;
-        }
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-number {}
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-numberDesc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-numberDesc-0,
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-numberDesc-1,
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-numberDesc-2,
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-numberDesc-3 {}
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-desc-0 {}
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-desc-0,
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-desc-1,
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-desc-2,
-        .offers-listing-wrapper .offer .offer-box._box-11 .box-desc-3 {
-            display: block;
-            font-size: 1.2em;
-            line-height: 1.2em;
-        }
-		/* END OFFER BOXES */
         .offers-listing-wrapper .offer .offer-description {
             display: block;
             position: relative;
-            margin: 10px 0px !important;
+            margin: 10px 158px 70px 140px !important;
             font-size: 1.3em;
             font-family: inherit;
-            line-height: 1.1em;
+            line-height: 1.3em;
             box-sizing: border-box;
         }
-        .offers-listing-wrapper .offer .offer-photo {
-            display: block;
-            position: relative;
-            float: right;
-            margin: -30px 20px 0;
+        .offers-listing-wrapper .offer .offer-photo {    
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            margin: 0;
             width: 118px;
             height: 175px;
             box-sizing: border-box;
         }
         .offers-listing-wrapper .offer .offer-button {
-		    font-size: 2em;
-            line-height: 1.66em;
+            font-size: 1.2em;
+            height: 25px;
+            line-height: 1.5em;
             font-family: inherit;
             display: block;
-            position: relative;
-            float: left;
-            margin: 20px 0 0;/*
-            width: 200px;*/
-            height: 40px;
+            position: absolute;
+            left: 140px;
+            bottom: 20px;
+            margin: 0;
+            width: 12%;
         }
         .offers-listing-wrapper .offer .offer-button:hover {}
         /* IE8 Fixes */
@@ -520,868 +150,601 @@
             height: 30px;
             font-size: 1.5em;
         }
-        /* END offers-listing-wrapper */
-		
-		
-        /* START simple-listing-offers2 */
-		
-		.simple-listing-offers2 .offer {
-		  border: 0 none;
-		  box-shadow: 0 0 3px #AAAAAA;
-		  display: block;
-		  float: left;
-		  margin: 20px 1%;
-		  min-height: 200px;
-		  padding: 1% 3%;
-		  position: relative;
-		  width: 25.3%;
-		  height: 430px !important;
-		}
+        /* END offers-listing */
 
-		.simple-listing-offers2 .offer .offer-link {
-		  bottom: inherit;
-		  left: inherit;
-		  min-height: 300px;
-		  overflow: hidden;
-		  position: relative;
-		  right: inherit;
-		  top: inherit;
-		}
-
-		.simple-listing-offers2 .offer .offer-title {
-		  margin-bottom: 5px;
-		  padding: 0;
-		  text-align: center;
-		}
-
-		.simple-listing-offers2 .offer .offer-box {
-		  float: left; /* CAJA DE OFERTAS A LA IZQUIERDA */
-		  /*float: right; CAJA DE OFERTAS A LA DERECHA */
-		  height: 163px !important;
-		  left: inherit;
-		  margin: 0 0 10px;
-		  padding: 5px;
-		  position: relative;
-		  top: inherit;
-		  width: 118px;
-		}
-
-		.simple-listing-offers2 .offer .offer-description {
-		  float: left;
-		  margin: 0 !important;
-		  padding: 10px 0 20px;
-		  position: relative;
-		}
-
-		/* FOTO A LA DERECHA, COMO EN CAPTURA */
-		.simple-listing-offers2 .offer .offer-photo {
-		  bottom: inherit;
-		  right: 0;
-		  top: 55px;
-		}
-
-		/* FOTO A LA IZQUIERDA */
-		/*.simple-listing-offers2 .offer .offer-photo {
-		  bottom: inherit;
-		  left: 0;
-		  right: inherit;
-		  top: 55px;
-		}*/
-
-		.simple-listing-offers2 .offer .offer-button {
-		  bottom: inherit;
-		  float: left;
-		  margin: 10px 0 5px;
-		  position: relative;
-		  right: inherit;
-		  text-align: right;
-		  width: 100%;
-		}
-
-		
-		
-        /* END simple-listing-offers2 */
-		
-        /* START simple-listing-offers3 */
-		
-		.simple-listing-offers3 .offer {
-		  margin: 1% 2%;
-		  padding: 1% 2%;
-		  text-align: center;
-		  width: 16%;
-		}
-
-		.simple-listing-offers3 .offer .offer-title {
-		  font-size: 26px;
-		  height: auto;
-		  line-height: 25px;
-		  margin: 14px 0;
-		  padding: 0;
-		  text-align: center;
-		}
-
-		.simple-listing-offers3 .offer .offer-box, .simple-listing-offers3 .offer .offer-photo, .simple-listing-offers3 .offer .offer-link {
-			bottom: inherit;
-			left: inherit;
-			margin: 0 auto;
-			overflow: hidden;
-			position: relative;
-			right: inherit;
-			top: inherit;
-		}
-
-		.simple-listing-offers3 .offer .offer-box {width: 140px;}
-		.simple-listing-offers3 .offer .offer-description {margin: 20px 0 !important;}
-		.simple-listing-offers3 .offer .offer-button {margin-top: 20px;}
-		
-        /* END simple-listing-offers3 */
-		
-		/* START simple-listing-offers4 */
-		.simple-listing-offers4 .offer {
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-			margin:1%;
-			width: 48%;
-		}
-		.simple-listing-offers4 .offer .offer-title {
-			padding: 0 0 0 140px;
-		}
-		.simple-listing-offers4 .offer .offer-description {
-			margin: 10px 20px 10px 140px !important;
-		}
-		.simple-listing-offers4 .offer .offer-box {
-			background: rgba(255,255,255,0.8);
-			top: 24px;
-			left: 19px;		
-			z-index:2;
-		}
-		.simple-listing-offers4 .offer .offer-button {
-			position:absolute;
-			left:420px;
-			width: auto;
-		}
-		.simple-listing-offers4 .offer .offer-photo {
-			left: 10px;
-			z-index:1;
-		}
-		
-        /* END simple-listing-offers4 */
-		
-		
-		/* START simple-listing-offers5 */
-		.simple-listing-offers5 .offer {
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-			margin-right:1%;
-			min-height: 330px;
-			width: 48%;
-		}
-		.simple-listing-offers5 .offer .offer-title {
-			padding: 0 20px;
-			margin:0;
-			text-align:center;
-		}
-		.simple-listing-offers5 .offer .offer-description {
-			padding:10px 2%;
-			margin:0 auto!important;
-			text-align:center;
-			width:96%;
-		}
-		.simple-listing-offers5 .offer .offer-box {
-			position:relative;
-			top: 0;
-			left: 0;
-			margin:0 auto;
-		}
-		.simple-listing-offers5 .offer .offer-button {
-			position:relative;
-			display:block;
-			margin:0 auto!important;
-			text-align:center;	
-			width: 180px;
-			left: 0;
-			bottom: 0;
-		}
-		.simple-listing-offers5 .offer .offer-photo {
-			display:none;
-		}
-        /* END simple-listing-offers5 */
-		
-        /* START simple-listing-offers6 */
-		.simple-listing-offers6 .offer{
-		    min-height: 339px;
-		    width: 47%;
-		    margin: 1em 1em 1em .5em;
-		}
-		.simple-listing-offers6 .offer .offer-photo{
-		    top:15px;
-			left:15px;
-			right:auto;
-			bottom:auto;
-			width:142px; /* photo size 20% up */
-			height:210px; /* photo size 20% up */
-			background-color:#CCC;
-		}
-		.simple-listing-offers6 .offer .offer-title {
-		    /*font-size:1.8em;*/
-			left:149px;
-			line-height:27px;
-			margin-right:15px;
-			text-transform:uppercase;
-			position:absolute;
-			top:106px;
-		}
-		.simple-listing-offers6 .offer .offer-box {
-			border:none;
-			border-bottom:1px solid #d7d4d0;
-			box-sizing: border-box;
-			height:80px !important;
-		    left:0;
-			padding-left:170px;
-			top:15px;
-			width:100%;
-		}
-		.simple-listing-offers6 .offer .offer-box span {
-		    float:left;
-		}
-		.simple-listing-offers6 .offer .offer-description{
-		    font-size: 1em;
-		    font-family: inherit;
-		    line-height: 1.8em;
-			margin:181px 15px auto 170px !important;
-		}
-		.simple-listing-offers6 .offer .offer-button {
-		    text-indent:-100000000000px;
-		}
-		.simple-listing-offers6 .offer a.offer-link {
-		    background:none;
-		}
-		.simple-listing-offers6 .offer a.offer-link:hover {
-		    background: url(../imgs/arrow.png) no-repeat 240px 280px transparent;
-		}
-		.simple-listing-offers6 .offer .offer-box {
-		    padding-top:0 !important;
-		}
-		   
-        /* END simple-listing-offers6 */
-		
-        /* START simple-listing-offers7 */
-		
-		.simple-listing-offers7 .offer {
-		  margin: 1%;
-		  padding: 0;
-		  width: 31%;
-		}
-
-		.simple-listing-offers7 .offer .offer-link {
-			bottom: inherit;
-			left: inherit;
-			overflow: hidden;
-			position: relative;
-			right: inherit;
-			top: inherit;
-		}
-
-		.simple-listing-offers7 .offer .offer-photo {
-		  position: absolute;
-		  right: 0;
-		  top: 0;
-		  width: 35%;
-		}
-
-		.simple-listing-offers7 .offer .offer-photo img {
-		  width: 100%;
-		}
-
-		.simple-listing-offers7 .offer .offer-box {
-		  border-color: #999999;
-		  border-style: none none solid;
-		  border-width: 0 0 1px;
-		  height: 156px !important;
-		  left: 0;
-		  padding: 29px 0 0 !important;
-		  position: absolute;
-		  top: 0 !important;
-		  width: 65%;
-		}
-
-		.simple-listing-offers7 .offer .offer-title {
-		  margin: 197px 0 4px;
-		  padding: 0 10px;
-		  text-align: center;
-		}
-
-		.simple-listing-offers7 .offer .offer-description {
-		  margin: 0 auto !important;
-		  width: 86%;
-		}
-
-		.simple-listing-offers7 .offer .offer-button {
-		  display: block;
-		  margin: 13px auto 7px;
-		  position: relative;
-		  text-align: center;
-		}        
-
-
-		/* END simple-listing-offers7 */
-		
-		
-        /* START template1-listing-offers */
-        .template1-listing-offers .offers-listing {
+        /* STAR offers box */
+        .offer-box {
             display: block;
-            overflow: hidden;
+            margin: 0 20px 20px 20px;
+            padding: 0 2px;
             position: relative;
-            z-index: 1;
-        }
-        .template1-listing-offers .offer {
-            font-size: 12px;
-            font-family: 'Open Sans Condensed', sans-serif;
+            float: left;
+            width: 100px;
+            height: 140px;
+            font-family: arial narrow, 'Open Sans Condensed', sans-serif;
+            font-size:12px;
             line-height: 12px;
-            background-color: #fff;
+            text-align: center;
+            border: none;
+            background-color:#fff;
+            -webkit-box-shadow: 0px 0px 4px 0px #999;
+            box-shadow: 0px 0px 4px 0px #999;
+            box-sizing: border-box;
+
+        }
+
+        /* OFFER BOX 1 */
+        .offer-box._box-1 {padding-top: 14px;}
+        .offer-box._box-1 .box-title-0,
+        .offer-box._box-1 .box-title-1,
+        .offer-box._box-1 .box-title-2 {
+            display: block;
+            font-size: 2.4em;
+            line-height: 1.25em;
+            text-transform: uppercase;
+        }
+        /* OFFER BOX 2 */
+        .offer-box._box-2 {}        
+        .offer-box._box-2 .box-title-0 {
+            display: block;
+            font-size: 1.8em;
+            line-height: 1.7em;
+        }
+        .offer-box._box-2 .box-number {
+            font-size: 5em;
+            line-height: 1em;
+        }
+        .offer-box._box-2 .box-numberDesc-0 {
+            font-size: 1.5em;
+            line-height: 2em;
+        }
+        .offer-box._box-2 .box-desc-0 {
+            display: block;
+            font-size: 1.25em;
+            line-height: 1.2em;
+        }
+        /* OFFER BOX 3 */
+        .offer-box._box-3 {
+            padding-top: 40px;
+        }
+        .offer-box._box-3 .box-number {
+            font-size: 4.166em;
+            line-height: 1.2em;
+        }
+        .offer-box._box-3 .box-numberDesc-0 {
+            font-size: 2em;
+            line-height: 2.5em;
+        }
+        /* OFFER BOX 4 */
+        .offer-box._box-4 {
+            padding-top: 15px;
+        }
+        .offer-box._box-4 .box-number {
+            font-size: 4.166em;
+            line-height: 1.2em;
+        }
+        .offer-box._box-4 .box-numberDesc-0 {
+            font-size: 2em;
+            line-height: 2.5em;
+        }
+        .offer-box._box-4 .box-desc-0 { 
+            display: block;
+            font-size: 1.25em;
+            line-height: 1.2em;
+        }
+        /* OFFER BOX 5 */
+        .offer-box._box-5 {padding-top: 25px;}
+        .offer-box._box-5 .box-title-0 {
+            display: block;
+            font-size: 1.25em;
+            line-height: 1.5em;
+        }
+        .offer-box._box-5 .box-number {
+            font-size: 4.166em;
+            line-height: 1.2em;
+        }
+        .offer-box._box-5 .box-numberDesc-0 {
+            font-size: 2em;
+            line-height: 2.5em;
+        }
+        /* OFFER BOX 6 */
+        .offer-box._box-6 {padding-top: 10px;}
+        .offer-box._box-6 .box-title-0,
+        .offer-box._box-6 .box-title-1,
+        .offer-box._box-6 .box-title-2 {
+            display: block;
+            font-size: 1.25em;
+            line-height: 1.2em;
+        }
+        .offer-box._box-6 .box-number {
+            font-size: 4.166em;
+            line-height: 1.6em;
+        }
+        .offer-box._box-6 .box-numberDesc-0 {
+            font-size: 2em;
+            line-height: 2.5em;
+        }
+        /* OFFER BOX 7 */
+        .offer-box._box-7 {padding-top: 5px;}
+        .offer-box._box-7 .box-title-0,
+        .offer-box._box-7 .box-title-1,
+        .offer-box._box-7 .box-title-2,
+        .offer-box._box-7 .box-title-3 {
+            display: block;
+            font-size: 1.25em;
+            line-height: 1.1em;
+        }
+        .offer-box._box-7 .box-desc-0 {
+            font-size: 2.5em;
+            line-height: 1.8em;
+            text-transform: uppercase;
+        }
+        /* OFFER BOX 8 */
+        .offer-box._box-8 {
+            padding-top: 35px;
+        }
+        .offer-box._box-8 .box-title-0 {
+            display: block;
+            font-size: 1.66em;
+            line-height: 1.2em;
+            text-transform: uppercase;
+        }
+        .offer-box._box-8 .box-number {
+            font-size: 3.33em;
+            line-height: 1.25em;
+        }
+        .offer-box._box-8 .box-numberDesc-0,
+        .offer-box._box-8 .box-numberDesc-1 {
+            font-size: 1.5em;
+            line-height: 2.77em;
+            text-transform: uppercase;
+        }
+        /* OFFER BOX 9 */
+        .offer-box._box-9 {
+            padding-top: 20px;
+        }
+        .offer-box._box-9 .box-title-0 {
+            display: block;
+            font-size: 1.66em;
+            line-height: 1.2em;
+            text-transform: uppercase;
+        }
+        .offer-box._box-9 .box-number {
+            font-size: 3.33em;
+            line-height: 1.25em;
+        }
+        .offer-box._box-9 .box-numberDesc-0,
+        .offer-box._box-9 .box-numberDesc-1 {
+            font-size: 1.5em;
+            line-height: 2.2em;
+            text-transform: uppercase;
+        }
+        .offer-box._box-9 .box-desc-0 {
+            display: block;
+            font-size: 1.25em;
+            line-height: 1.2em;
+        }
+        /* OFFER BOX 10 */
+        .offer-box._box-10 {
+            padding-top: 10px;
+        }
+        .offer-box._box-10 .box-title-0,
+        .offer-box._box-10 .box-title-1 {
+            font-size: 2.5em;
+            line-height: 1.375em;
+            text-transform: uppercase;
+        }
+        .offer-box._box-10 .box-desc-0 {
+            display: block;
+            font-size: 1.25em;
+            line-height: 1.2em;
+        }
+        /* OFFER BOX 11 */
+        .offer-box._box-11 {
+            padding-top: 10px;
+        }
+        .offer-box._box-11 .box-title-0,
+        .offer-box._box-11 .box-title-1,
+        .offer-box._box-11 .box-title-2 {
+            display: inline-block;
+            font-size: 2.5em;
+            line-height: 1.375em;
+            text-transform: uppercase;
+        }
+        .offer-box._box-11 .box-desc-0 {
+            display: block;
+            font-size: 1.25em;
+            line-height: 1.2em;
+        }
+        /* END OFFER BOXES */
+
+
+
+
+        /* START offers-detail-wrapper */
+        .offers-detail-wrapper {
+            margin: 0;
+            padding: 0;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer {
             display: block;
             position: relative;
             float: left;
             width: 100%;
-            height: 200px;
             margin: 2em 0 3em;
-            padding: 0;
-            border: none !important;
-            -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-               -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-                    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            padding: 0 0 10px;
+            border: 1px solid #999;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
         }
-        .template1-listing-offers .offer:before,
-        .template1-listing-offers .offer:after {
-            content:"";
-            position:absolute;
-            z-index:-2;}
-        .template1-listing-offers .offer:before,
-        .template1-listing-offers .offer:after {
-            bottom:15px;
-            left:10px;
-            width:50%;
-            height:20%;
-            max-width:300px;
-            max-height:100px;
-            -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-               -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-                    box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-            -webkit-transform:rotate(-3deg);
-               -moz-transform:rotate(-3deg);
-                -ms-transform:rotate(-3deg);
-                 -o-transform:rotate(-3deg);
-                    transform:rotate(-3deg);
-        }
-        .template1-listing-offers .offer:after {
-            right:10px;
-            left:auto;
-            -webkit-transform:rotate(3deg);
-               -moz-transform:rotate(3deg);
-                -ms-transform:rotate(3deg);
-                 -o-transform:rotate(3deg);
-                    transform:rotate(3deg);
-        }
-        .template1-listing-offers .offer .offer-link {}
-        .template1-listing-offers .offer .offer-title {
-            background-image: linear-gradient(bottom, #f0f0f0 0%, #ffffff 40%);
-            background-image: -o-linear-gradient(bottom, #f0f0f0 0%, #ffffff 40%);
-            background-image: -moz-linear-gradient(bottom, #f0f0f0 0%, #ffffff 40%);
-            background-image: -webkit-linear-gradient(bottom, #f0f0f0 0%, #ffffff 40%);
-            background-image: -ms-linear-gradient(bottom, #f0f0f0 0%, #ffffff 40%);
-            
-            background-image: -webkit-gradient(
-                linear,
-                left bottom,
-                left top,
-                color-stop(0, #f0f0f0),
-                color-stop(0.40, #ffffff)
-            );
-            border-bottom: 1px solid #f0f0f0;
+        .offers-detail-wrapper .offer-title {
+            display: block;
             height: 50px;
-            padding: 0 0 0 20px;
+            padding: 0 0 0 170px;
             line-height: 50px;
-            font-size: 26px;
+            font-size: 2em;
             font-family: inherit;
-            color: #006699;
             text-transform: uppercase;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
         }
-        .template1-listing-offers .offer .offer-box {
-            width: 100px;
-            height: 140px;
-            font-family: inherit;
-            text-align: center;
-            background-color: #fff;
-            border: none !important;
-            -webkit-box-shadow: 0px 0px 4px 0px #999;
-                    box-shadow: 0px 0px 4px 0px #999;
-        }
-        .template1-listing-offers .offer .offer-box .box-title-0,
-        .template1-listing-offers .offer .offer-box .box-title-1,
-        .template1-listing-offers .offer .offer-box .box-title-2,
-        .template1-listing-offers .offer .offer-box .box-title-3,
-        .template1-listing-offers .offer .offer-box .box-desc-0,
-        .template1-listing-offers .offer .offer-box .box-desc-1,
-        .template1-listing-offers .offer .offer-box .box-desc-2,
-        .template1-listing-offers .offer .offer-box .box-desc-3 {
+        .offers-detail-wrapper .offer-info-wrapper {
             display: block;
-            padding: 0 2px;
+            position: relative;
+            float: left;
+            overflow: visible;
+            margin: 0;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
         }
-        /* OFFER BOX 1 */
-        .template1-listing-offers .offer .offer-box._box-1 {
-            padding-top: 14px;
-        }
-        .template1-listing-offers .offer .offer-box._box-1 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-1 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-1 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-1 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-1 .box-title-3 {
+        .offers-detail-wrapper .offer-photo {
             display: block;
-            font-size: 2.33em;
-            line-height: 1.28em;
-            color: #006699;
-            text-transform: uppercase;
+            position: relative;
+            float: left;
+            overflow: hidden;
+            margin: -40px 20px 0 10px;
+            width: 142px;
+            height: 210px;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
         }
-        .template1-listing-offers .offer .offer-box._box-1 .box-number {}
-        .template1-listing-offers .offer .offer-box._box-1 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-1 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-1 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-1 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-1 .box-numberDesc-3 {}
-        .template1-listing-offers .offer .offer-box._box-1 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-1 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-1 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-1 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-1 .box-desc-3 {}
-        /* OFFER BOX 2 */
-        .template1-listing-offers .offer .offer-box._box-2 {}
-        .template1-listing-offers .offer .offer-box._box-1 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-2 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-2 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-2 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-2 .box-title-3 {
+        .offers-detail-wrapper .offer-photo img {
+            width: 142px;
+            height: 210px;
+        }
+        .offers-detail-wrapper .offer-description {
             display: block;
-            font-size: 1.5em;
-            line-height: 1.77em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-2 .box-number {
-            font-size: 5em;
-            line-height: 1em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-2 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-2 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-2 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-2 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-2 .box-numberDesc-3 {
-            font-size: 1.5em;
-            line-height: 3.33em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-2 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-2 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-2 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-2 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-2 .box-desc-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-            color: #9e807e;
-        }
-        /* OFFER BOX 3 */
-        .template1-listing-offers .offer .offer-box._box-3 {
-            padding-top: 40px;
-        }
-        .template1-listing-offers .offer .offer-box._box-3 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-3 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-3 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-3 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-3 .box-title-3 {}
-        .template1-listing-offers .offer .offer-box._box-3 .box-number {
-            font-size: 4.166em;
-            line-height: 1.2em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-3 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-3 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-3 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-3 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-3 .box-numberDesc-3 {
-            font-size: 2em;
-            line-height: 2.5em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-3 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-3 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-3 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-3 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-3 .box-desc-3 {}
-        /* OFFER BOX 4 */
-        .template1-listing-offers .offer .offer-box._box-4 {
-            padding-top: 20px;
-        }
-        .template1-listing-offers .offer .offer-box._box-4 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-4 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-4 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-4 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-4 .box-title-3 {}
-        .template1-listing-offers .offer .offer-box._box-4 .box-number {
-            font-size: 4.166em;
-            line-height: 1.2em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-4 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-4 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-4 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-4 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-4 .box-numberDesc-3 {
-            font-size: 2em;
-            line-height: 2.5em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-4 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-4 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-4 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-4 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-4 .box-desc-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-            color: #9e807e;
-        }
-        /* OFFER BOX 5 */
-        .template1-listing-offers .offer .offer-box._box-5 {}
-        .template1-listing-offers .offer .offer-box._box-5._box-padding-1 {
-            padding-top: 40px;
-        }
-        .template1-listing-offers .offer .offer-box._box-5._box-padding-2 {
-            padding-top: 30px;
-        }
-        .template1-listing-offers .offer .offer-box._box-5._box-padding-3 {
-            padding-top: 20px;
-        }
-        .template1-listing-offers .offer .offer-box._box-5._box-padding-4 {
-            padding-top: 20px;
-        }
-        .template1-listing-offers .offer .offer-box._box-5 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-5 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-5 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-5 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-5 .box-title-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-            color: #9e807e;
-        }
-        .template1-listing-offers .offer .offer-box._box-5 .box-number {
-            font-size: 4.166em;
-            line-height: 1.2em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-5 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-5 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-5 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-5 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-5 .box-numberDesc-3 {
-            font-size: 2em;
-            line-height: 2.5em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-5 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-5 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-5 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-5 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-5 .box-desc-3 {}
-        /* OFFER BOX 6 */
-        .template1-listing-offers .offer .offer-box._box-6 {}
-        .template1-listing-offers .offer .offer-box._box-6._box-padding-1 {
-            padding-top: 40px;
-        }
-        .template1-listing-offers .offer .offer-box._box-6._box-padding-2 {
-            padding-top: 30px;
-        }
-        .template1-listing-offers .offer .offer-box._box-6._box-padding-3 {
-            padding-top: 20px;
-        }
-        .template1-listing-offers .offer .offer-box._box-6._box-padding-4 {
-            padding-top: 20px;
-        }
-        .template1-listing-offers .offer .offer-box._box-6 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-6 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-6 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-6 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-6 .box-title-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-            color: #9e807e;
-        }
-        .template1-listing-offers .offer .offer-box._box-6 .box-number {
-            font-size: 4.166em;
-            line-height: 1.2em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-6 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-6 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-6 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-6 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-6 .box-numberDesc-3 {
-            font-size: 2em;
-            line-height: 2.5em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-6 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-6 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-6 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-6 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-6 .box-desc-3 {}
-        /* OFFER BOX 7 */
-        .template1-listing-offers .offer .offer-box._box-7 {}
-        .template1-listing-offers .offer .offer-box._box-7._box-padding-1 {
-            padding-top: 40px;
-        }
-        .template1-listing-offers .offer .offer-box._box-7._box-padding-2 {
-            padding-top: 30px;
-        }
-        .template1-listing-offers .offer .offer-box._box-7._box-padding-3 {
-            padding-top: 20px;
-        }
-        .template1-listing-offers .offer .offer-box._box-7._box-padding-4 {
-            padding-top: 20px;
-        }
-        .template1-listing-offers .offer .offer-box._box-7 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-7 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-7 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-7 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-7 .box-title-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-            color: #9e807e;
-        }
-        .template1-listing-offers .offer .offer-box._box-7 .box-number {}
-        .template1-listing-offers .offer .offer-box._box-7 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-7 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-7 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-7 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-7 .box-numberDesc-3 {}
-        .template1-listing-offers .offer .offer-box._box-7 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-7 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-7 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-7 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-7 .box-desc-3 {
-            font-size: 2.66em;
-            line-height: 1.875em;
-            color: #006699;
-            text-transform: uppercase;
-        }
-        /* OFFER BOX 8 */
-        .template1-listing-offers .offer .offer-box._box-8 {
-            padding-top: 30px;
-        }
-        .template1-listing-offers .offer .offer-box._box-8 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-8 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-8 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-8 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-8 .box-title-3 {
-            display: block;
-            font-size: 1.66em;
-            line-height: 1.2em;
-            color: #006699;
-            text-transform: uppercase;
-        }
-        .template1-listing-offers .offer .offer-box._box-8 .box-number {
-            font-size: 3.33em;
-            line-height: 1.25em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-8 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-8 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-8 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-8 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-8 .box-numberDesc-3 {
-            font-size: 1.5em;
-            line-height: 2.77em;
-            color: #006699;
-            text-transform: uppercase;
-        }
-        .template1-listing-offers .offer .offer-box._box-8 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-8 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-8 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-8 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-8 .box-desc-3 {}
-        /* OFFER BOX 9 */
-        .template1-listing-offers .offer .offer-box._box-9 {
-            padding-top: 20px;
-        }
-        .template1-listing-offers .offer .offer-box._box-9 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-9 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-9 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-9 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-9 .box-title-3 {
-            display: block;
-            font-size: 1.66em;
-            line-height: 1.2em;
-            color: #006699;
-            text-transform: uppercase;
-        }
-        .template1-listing-offers .offer .offer-box._box-9 .box-number {
-            font-size: 3.33em;
-            line-height: 1.25em;
-            color: #006699;
-        }
-        .template1-listing-offers .offer .offer-box._box-9 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-9 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-9 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-9 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-9 .box-numberDesc-3 {
-            font-size: 1.5em;
-            line-height: 2.77em;
-            color: #006699;
-            text-transform: uppercase;
-        }
-        .template1-listing-offers .offer .offer-box._box-9 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-9 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-9 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-9 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-9 .box-desc-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-            color: #9e807e;
-        }
-        /* OFFER BOX 10 */
-        .template1-listing-offers .offer .offer-box._box-10 {
-            padding-top: 10px;
-        }
-        .template1-listing-offers .offer .offer-box._box-10 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-10 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-10 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-10 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-10 .box-title-3 {
-            font-size: 2.66em;
-            line-height: 1.375em;
-            color: #006699;
-            text-transform: uppercase;
-        }
-        .template1-listing-offers .offer .offer-box._box-10 .box-number {}
-        .template1-listing-offers .offer .offer-box._box-10 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-10 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-10 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-10 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-10 .box-numberDesc-3 {}
-        .template1-listing-offers .offer .offer-box._box-10 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-10 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-10 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-10 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-10 .box-desc-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-            color: #9e807e;
-        }
-        /* OFFER BOX 11 */
-        .template1-listing-offers .offer .offer-box._box-11 {
-            padding-top: 10px;
-        }
-        .template1-listing-offers .offer .offer-box._box-11 .box-title-0 {}
-        .template1-listing-offers .offer .offer-box._box-11 .box-title-0,
-        .template1-listing-offers .offer .offer-box._box-11 .box-title-1,
-        .template1-listing-offers .offer .offer-box._box-11 .box-title-2,
-        .template1-listing-offers .offer .offer-box._box-11 .box-title-3 {
-            display: inline-block;
-            font-size: 2.66em;
-            line-height: 1.375em;
-            color: #006699;
-            text-transform: uppercase;
-        }
-        .template1-listing-offers .offer .offer-box._box-11 .box-number {}
-        .template1-listing-offers .offer .offer-box._box-11 .box-numberDesc-0 {}
-        .template1-listing-offers .offer .offer-box._box-11 .box-numberDesc-0,
-        .template1-listing-offers .offer .offer-box._box-11 .box-numberDesc-1,
-        .template1-listing-offers .offer .offer-box._box-11 .box-numberDesc-2,
-        .template1-listing-offers .offer .offer-box._box-11 .box-numberDesc-3 {}
-        .template1-listing-offers .offer .offer-box._box-11 .box-desc-0 {}
-        .template1-listing-offers .offer .offer-box._box-11 .box-desc-0,
-        .template1-listing-offers .offer .offer-box._box-11 .box-desc-1,
-        .template1-listing-offers .offer .offer-box._box-11 .box-desc-2,
-        .template1-listing-offers .offer .offer-box._box-11 .box-desc-3 {
-            display: block;
-            font-size: 1.166em;
-            line-height: 1em;
-            color: #9e807e;
-        }
-        /* END OFFER BOXES */
-        .template1-listing-offers .offer a:hover,
-        .template1-listing-offers .offer a:active {text-decoration: none;}
-        .template1-listing-offers .offer .offer-description {
-            color: #404040;
+            position: relative;
+            float: left;
+            overflow: hidden;
+            margin: 10px auto 10px 0px !important;
+            min-height: 150px;
+            width: 400px;/* OJO: REVISAR SEGUN ANCHO DE PANTALLA */
             font-size: 1.5em;
             font-family: inherit;
             line-height: 1.3em;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
         }
-        .template1-listing-offers .offer .offer-photo {
-            margin-top: -40px;
+        .offers-detail-wrapper .offer-social-links {/* OJO: SIN HACER */
+            display: block;
+            position: absolute;
+            left: 10px;
+            top: 220px;
+            width: 142px;
+            height: 30px;
         }
-        .template1-listing-offers .offer .offer-button {
+        .offers-detail-wrapper .offer-social-links {background-color: red; color: #fff; text-align: center;}
+        .offers-detail-wrapper .offer-boxes-wrapper {
+            display: block;
+            position: relative;
+            float: right;
+            overflow: hidden;
+            width: 352px;
+            margin-top: -10px;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        ._4-boxes.offers-detail-wrapper .offer-boxes-wrapper {
+            width: 238px;
+        }
+        .offers-detail-wrapper .offer-box {
+            display: block;
+            position: relative;
+            float: left;
+            border: 1px solid #999;
+            margin: 5px;    
+            width: 106px;
+            height: 140px;
+            text-align: center;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-box:nth-child(3),
+        .offers-detail-wrapper .offer-box:last-child,
+        ._4-boxes.offers-detail-wrapper .offer-box:nth-child(2) {}
+        ._4-boxes.offers-detail-wrapper .offer-box:nth-child(3) {}
+        .offers-detail-wrapper .box-title-0,
+        .offers-detail-wrapper .box-title-1,
+        .offers-detail-wrapper .box-title-2,
+        .offers-detail-wrapper .box-title-3,
+        .offers-detail-wrapper .box-desc-0,
+        .offers-detail-wrapper .box-desc-1,
+        .offers-detail-wrapper .box-desc-2,
+        .offers-detail-wrapper .box-desc-3 {
+            display: block;
+            padding: 0 2px;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        /* MORE INFO  */
+        .offers-detail-wrapper .offer-more-info-wrapper:before {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+        .offers-detail-wrapper .offer-more-info-wrapper {
+            display: inline-block;
+            position: relative;
+            margin: 50px 0 0;
+            padding: 10px 0;
+            height: auto;
+            width: 100%;
+            border-top: 1px solid #999;
+            border-bottom: 1px solid #999;
+            clear: both;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        ._4-boxes.offers-detail-wrapper .offer-more-info-wrapper,
+        ._5-boxes.offers-detail-wrapper .offer-more-info-wrapper,
+        ._6-boxes.offers-detail-wrapper .offer-more-info-wrapper {
+            margin-top: 50px;
+        }
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-extra,
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-room {
+            display: block;
+            position: relative;
+            float: left;
+            width: 47%;
+            margin: 0 1%;
+            padding: 0;
+            height: auto;
+            overflow: visible;
+            border: none;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-extra {
+            min-height: 162px;
+            overflow: hidden;
+        }
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-extra .offer-extra-img {
+            display: block;
+            position: relative;
+            float: left;
+            margin: 0 20px 0 0;
+            width: 189px;
+            height: 142px;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-extra .offer-extra-title,
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-room .offer-room-title {
+            display: block;
+            position: relative;
+            float: left;
+            width: 260px;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-extra .offer-extra-description,
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-room .offer-room-description {
+            display: block;
+            position: relative;
+            float: left;
+            width: 260px;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-room {
+            overflow: hidden;
+        }
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-room .offer-room-img {
+            display: block;
+            position: relative;
+            float: left;
+            margin: 0 20px 0 0;
+            width: 260px;
+            height: 190px;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-room .offer-room-title {}
+        .offers-detail-wrapper .offer-more-info-wrapper .offer-room .offer-room-description {}
+        /* CALENDAR */
+        .offers-detail-wrapper .offer-calendar-wrapper {
+            display: block;
+            position: relative;
+            margin: 10px 0 0; 
+            padding: 10px;
+            border: none;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-calendar-title {
+            display: block;
+            position: relative;
+            float: left;
+            padding: 0;
+            margin: 10px 15% 0 0;
+            font-family: inherit;
+            font-size: 2em;
+            line-height: 50px;
+            height: 58px;
+            width: 60%;
+            text-align: right;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-calendar-title .calendar-legend-arrival-day {
+            display: inline-block;
+            border: 2px solid #ffc000;
+            width: 24px;
+            height: 24px;
+            line-height: 20px;
+            margin: 0 2px;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .calendar-legend-wrapper {
+            display: block;
+            position: relative;
+            float: left;
+            margin: 10px 0 10px 20px;
+            width: 10%;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .calendar-legend-wrapper .calendar-legend-item {
+            display: block;
+            margin: 0 0 5px;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .calendar-legend-wrapper .calendar-legend-offer-day {
+            display: inline-block;
+            background-color: #6ce0b9;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 12px;
+            margin: 0 2px;
+            text-align: center;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .calendar-legend-wrapper .calendar-legend-no-rooms-day {
+            display: inline-block;
+            background-color: #e9e9e6;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 12px;
+            margin: 0 2px;
+            text-align: center;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date {
+            display: block;
+            position: relative;
+            clear: both;
+            margin: 20px 0 0;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline {
+            margin: 0 auto;
+            font-size: 1.3em;
+            line-height: 1.3em;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .ui-datepicker-buttonpane {
+            display: none;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-arrival-day a {
+            border: 2px solid #ffc000;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline td,
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline td span,
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline td a {
+            background-image: none !important;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-offer-day span,
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-offer-day a {
+            background-color: #6ce0b9 !important;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-no-rooms-day span,
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-no-rooms-day a {
+            background-color: #e9e9e6 !important;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .calendar-nights-label {
+            display: block;
+            position: relative;
+            float: left;
+            width: 50%;
+            margin: 20px 2% 20px 0;
+            text-align: right;
+            line-height: 50px;
+            font-size: 2em;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .calendar-nights-field {
+            display: block;
+            position: relative;
+            float: left;
+            margin: 30px 0;
+            width: 70px;
+            line-height: 50px;
+            font-size: 1.3em;
+            text-align: center;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        }
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-button {
+            display: block;
+            position: relative;
+            clear: both;
+            margin: 20px auto;
+            width: 200px;
             height: 40px;
             font-size: 2em;
             line-height: 1.66em;
             font-family: inherit;
-            text-transform: uppercase;
-            text-align: center;
-            color: #fff;
-            text-shadow: 1px 1px 3px #444;
-            background-color: #464ffa;
-            background-image: linear-gradient(bottom, #006699 12%, #4192c3 56%, #FFFFFF 98%);
-            background-image: -o-linear-gradient(bottom, #006699 12%, #4192c3 56%, #FFFFFF 98%);
-            background-image: -moz-linear-gradient(bottom, #006699 12%, #4192c3 56%, #FFFFFF 98%);
-            background-image: -webkit-linear-gradient(bottom, #006699 12%, #4192c3 56%, #FFFFFF 98%);
-            background-image: -ms-linear-gradient(bottom, #006699 12%, #4192c3 56%, #FFFFFF 98%);
-            
-            background-image: -webkit-gradient(
-                linear,
-                left bottom,
-                left top,
-                color-stop(0.12, #006699),
-                color-stop(0.56, #4192c3),
-                color-stop(0.95, #FFFFFF)
-            );
-            -webkit-box-shadow: 0px 2px 4px 0px #999, 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-               -moz-box-shadow: 0px 2px 4px 0px #999, 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-                    box-shadow: 0px 2px 4px 0px #999, 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            border: 4px solid #fff;
-            -webkit-border-radius: 8px;
-                    border-radius: 8px;
-            background-clip: padding-box;
-            padding: 0 30px;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
         }
-        .template1-listing-offers .offer .offer-button:hover {}
-        /* IE8 Fixes */
-        .ie8 .template1-listing-offers .offer .offer-title {
-            border-bottom: 1px solid #f0f0f0 !important;
+        .offers-detail-wrapper .offer-calendar-wrapper .offer-button:hover {
+            text-decoration: none;
         }
-        .ie8 .template1-listing-offers .offer,
-        .ie8 .template1-listing-offers .offer .offer-box {
-            border: 1px solid #f0f0f0 !important;
+        /* IE8 FIXES */
+        .ie8 .offers-detail-wrapper .offer .offer-title {}
+        .ie8 .offers-detail-wrapper .offer,
+        .ie8 .offers-detail-wrapper .offer .offer-box {}
+        .ie8 .offers-detail-wrapper .offer {}
+        .ie8 .offers-detail-wrapper .offer .offer-more-info-wrapper {
+            height: auto !important;
         }
-        .ie8 .template1-listing-offers .offer {width: 98%;}
-        .ie8 .template1-listing-offers .offer .offer-description {
-            font-size: 1.2em;
-            font-family: inherit;
-            line-height: 1.1em;
+        .ie8 .offers-detail-wrapper .offer-more-info-wrapper .offer-extra,
+        .ie8 .offers-detail-wrapper .offer-more-info-wrapper .offer-room {
+            float: none !important;
+            width: 90% !important;
         }
-        .ie8 .template1-listing-offers .offer .offer-button {
-            font-size: 1.5em;
-            line-height: 1.5em;
-            font-family: inherit;
-            width: 150px;
-            border: 0px;
+        .ie8 .offers-detail-wrapper .offer-calendar-wrapper .calendar-legend-wrapper {
+            width: 20% !important;
         }
-        /* END template1-listing-offers */
+        .ie8 .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline {
+            font-size: 16px !important;
+            line-height: 16px !important;
+        }
+        .ie8 .offers-detail-wrapper .offer-calendar-wrapper .offer-button {}
+        /* SMALL SCREEN FIXES */
+
+        /* END offers-detail-wrapper */
+
+        /*------------------------------ END OFFERS PAGE V2 ----------------------------*/
+
+
+        /* ------------- STYLE.CSS -------------- */
+        .offers-listing-wrapper .offer {
+            border: 1px solid #CCC;
+        }
+        .offers-listing-wrapper .offer .offer-link {
+            background-color: #fff;
+        }
+        .offers-listing-wrapper .offer .offer-link:hover {
+            background-color: #f9f9f9;
+        }
+        .offers-listing-wrapper .offer .offer-title {}
+        .offers-listing-wrapper .offer .offer-photo {}
+        .offers-listing-wrapper .offer .offer-button {}
+        .offers-listing-wrapper .offer .offer-button:hover {}
+        .offer-box,
+        .offer-box._box-7 .box-desc-0 {color:#069;}
+        .offer-box .box-desc-0,
+        ._box-5 .box-title-0,
+        ._box-6 .box-title-0,
+        ._box-6 .box-title-1,
+        ._box-7 .box-title-0,
+        ._box-7 .box-title-1,
+        ._box-7 .box-title-2,
+        ._box-7 .box-title-3 {color:#9E807E;}
+        /* ------------- STYLE.CSS -------------- */
+
     </style>
 </head>
 
@@ -1427,10 +790,10 @@
                 &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#MasterCard" /&gt;
                 &lt;meta itemprop="acceptedPaymentMethod" content="http://purl.org/goodrelations/v1#AmericanExpress" /&gt;
             &lt;/div&gt;
-            &lt;p class="offer-description" itemprop="description"&gt;Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.&lt;/p&gt;
-            &lt;link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" /&gt;
             &lt;div class="offer-photo"&gt;&lt;img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /&gt;&lt;/div&gt;
-            &lt;div class="offer-button"&gt;Consultar&lt;/div&gt;
+            &lt;p class="offer-description" itemprop="description"&gt;Descubre lo que tenemos preparado para nuestros clientes más queridos.&lt;/p&gt;
+            &lt;link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" /&gt;            
+            &lt;div class="offer-button btn"&gt;Consultar&lt;/div&gt;
             &lt;/a&gt;
         &lt;/li&gt;
     &lt;/ol&gt;
@@ -1443,19 +806,13 @@
                                 </div>
                                 <div class="span6">
                                     <select id="templateSwitcher">
-                                        <option value="simple-listing-offers" selected>simple-listing-offers</option>
-                                        <option value="simple-listing-offers2">simple-listing-offers2</option>
-                                        <option value="simple-listing-offers3">simple-listing-offers3</option>
-                                        <option value="simple-listing-offers4">simple-listing-offers4</option>
-                                        <option value="simple-listing-offers5">simple-listing-offers5</option>
-                                        <option value="simple-listing-offers6">simple-listing-offers6</option>   
-                                        <option value="simple-listing-offers7">simple-listing-offers7</option>
-                                        <option value="template1-listing-offers">template1-listing-offers</option>
+                                        <option value="listing-offers-1" selected>listing-offers-1</option>
+                                        <option value="listing-offers-2">listing-offers-2</option>                                        
                                     </select>
                                 </div>
                             </div>
                             <div class="bs-docs-example">
-                                <div class="offers-listing-wrapper simple-listing-offers">
+                                <div class="offers-listing-wrapper listing-offers-1">
                                     <p class="rss-text">Be the first to receive our offers through your <a href="#RSS">RSS</a> reader&nbsp;<i class="rss-icon">&nbsp;</i></p>
                                     <ol class="offers-listing">
                                         <li class="offer">
@@ -1473,7 +830,7 @@
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                     </ol>
@@ -1486,7 +843,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                             <p>Cada <strong>offer-box</strong> tiene una composición diferente, y viene determinada por la propia oferta. Se utilizan los mismos estilos que en el detalle de la oferta.</p>
                             <p><strong>Las cajas de tipo 5, 6 y 7</strong> tienen además una dependencia con la subclase <strong>_box-padding-N</strong>, donde "N" es el número de párrafos en el título de la caja, y añade un padding-top para centrar verticalmente el contenido según corresponda.</p>
                             <div class="bs-docs-example _example">
-                                <div class="offers-listing-wrapper simple-listing-offers">
+                                <div class="offers-listing-wrapper listing-offers-1">
                                     <ol class="offers-listing">
                                         <li class="offer">
                                             <a class="offer-link" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemid="#offer" href="#OFFER-DETAIL" title="OFFER TITLE">
@@ -1502,7 +859,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                         <li class="offer">
@@ -1520,7 +877,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                         <li class="offer">
@@ -1536,7 +893,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                         <li class="offer">
@@ -1553,7 +910,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                         <li class="offer">
@@ -1570,7 +927,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                         <li class="offer">
@@ -1588,7 +945,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                         <li class="offer">
@@ -1607,7 +964,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                         <li class="offer">
@@ -1625,7 +982,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                         <li class="offer">
@@ -1644,7 +1001,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                         <li class="offer">
@@ -1661,7 +1018,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                         <li class="offer">
@@ -1679,7 +1036,7 @@ http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyri
                                             <div class="offer-photo"><img src="../imgs/118x175.png" width="118" height="175" alt="Offer Photo" /></div>
                                             <p class="offer-description" itemprop="description">Descubre lo que tenemos preparado para nuestros clientes más queridos. 3 días de relax en la mejor compañía.</p>
                                             <link itemprop="businessFunction"  href="http://purl.org/goodrelations/v1#ProvideService" />
-                                            <div class="offer-button">Consultar</div>
+                                            <div class="offer-button btn">Consultar</div>
                                             </a>
                                         </li>
                                     </ol>

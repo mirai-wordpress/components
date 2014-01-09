@@ -155,3 +155,53 @@ ul.bullets li {
 .pyme .bs-docs-example {
     padding: 40px 0;
 }
+
+
+
+/* Shortcode Coordinates */
+#show_coords {
+    text-align:right;
+    margin-bottom:-2px;
+}
+#show_coords * {
+	border: 0;
+	border-radius:0;
+	-webkit-border-radius:0;
+	color:#333;
+}
+#show_coords .accordion-heading {
+}
+#show_coords .accordion-heading a {
+	background:#444;
+	color: #FFF;
+    display: inline-block;
+}
+
+#show_coords .accordion-heading .accordion-toggle {
+	padding: 5px 10px;
+}
+
+#show_coords .accordion-body {
+	background: rgb(220,220,220);
+	border-bottom: 1px solid #444;
+}
+
+.latlon-wrapper li {
+    color: #FFF;
+	padding: 8px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    float:left;
+    width:50%;
+    text-shadow:1px 1px #FFF;  
+}
+
+.latlon-wrapper li label {
+    display: inline-block;
+	font-weight: bold;
+    text-transform: uppercase;
+}
+.latlon-wrapper li span {
+    padding-left:10px;
+}

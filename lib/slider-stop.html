@@ -12,7 +12,7 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<meta name="language" content="es" />
-		<title>Mirai Components Library / Carousel</title>
+		<title>Mirai Components Library / Pausar Slider</title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
 		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
@@ -34,7 +34,7 @@
 		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
 		<link rel='canonical' href='http://webs3.mirai.es/' />		
 		<script type="text/javascript">
-			common_vars = {'carousel': 'true'};
+			common_vars = {'tooltip': 'true'};
 		</script>
 
 		<meta http-equiv="Content-Language" content="es-ES" />
@@ -65,10 +65,15 @@
 
 <section id="colapse" class="special-page">
 	<div class="page-header">
-		<h1>Carousel</h1>
+		<h1>Pausar Slider</h1>
 	</div>
 	
-	<p>Permite tener en cada dispositiva de un slider código HTML customizado.</p>
+	<p>Pausa el pase de diapositivas que por defecto comienza automáticamente. Funciona para:</p>
+    <ul class="bullets">
+	    <li><strong>mi_slideshow</strong>: [mi_slideshow id=13 shadowbox="on" class="slider"]</li>
+	    <li><strong>widget Ngg Slider</strong>: Para Sliders de Background con navegación. <a href="http://www.hoteldelacroixrousse.com/" target="_blank">Ver ejemplo</a></em></li>
+	    <li><strong>carousel</strong>: <a href="carousel.html">Carousel de Bootstrap</a></li>
+	</ul>
 
 	<div class="bs-docs-example tooltip-demo">
 		<div class="carousel slide" id="myCarousel">
@@ -98,29 +103,21 @@
             <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
             <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
           </div>
-    </div>
+    </div>						
 
-	<h2>Marcado HTML</h2>		
+	<h2>Javascript para "mi_slideshow" y "widget Ngg Slider"</h2>
 	<pre class="prettyprint linenums">
-&lt;div id="myCarousel" class="carousel slide"&gt;
-    &lt;!-- Carousel items --&gt;
-    &lt;div class="carousel-inner"&gt;
-	    &lt;div class="active item"&gt;…&lt;/div&gt;
-	    &lt;div class="item"&gt;…&lt;/div&gt;
-	    &lt;div class="item"&gt;…&lt;/div&gt;
-    &lt;/div>
-    &lt;!-- Carousel nav --&gt;
-    &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&lsaquo;&lt;/a&gt;
-    &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&rsaquo;&lt;/a&gt;
-&lt;/div&gt;</pre>
+&lt;jQuery(document).ready(function() {/&gt;
+     &lt;jQuery('.slideshow').cycle('pause');/&gt;
+&lt;});/&gt;</pre>
 
-	<h2>Javascript opcional</h2>		
+	<h2>Javascript para "carousel"</h2>
 	<pre class="prettyprint linenums">
 &lt;jQuery(document).ready(function() {/&gt;
      &lt;jQuery('.carousel').carousel('pause');/&gt;
 &lt;});/&gt;</pre>
 
-	<strong>ANOTACIÓN:</strong> <em>Este Javascript <strong>sólo es necesario</strong> si queremos que el carousel no pase diapositivas automáticamente, habrá que utilizar las flechas de navegación para pasar cada una de ellas.</em>
+	<strong>ANOTACIÓN:</strong> <em>Si paramos el arranque automático del slider tendremos que utilizar la navegación (ya sean arrows o numbers) para cambiar de diapositiva.</em>
 </section>
 
 <div class="box-bottom-tooltip"></div>
@@ -147,7 +144,6 @@
 		/* ]]> */
 		</script>
 		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
-
 		
 		<!-- Le javascript
 		================================================== -->
@@ -155,6 +151,10 @@
 		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 		<script src="../google-code-prettify/prettify.js"></script>		
 		<script src="../application.js"></script>
-
+		<script>
+			jQuery(document).ready(function(){
+			    jQuery('.carousel').carousel('pause');
+			});
+		</script>
 	</body>
 </html>

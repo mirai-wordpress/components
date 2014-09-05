@@ -12,17 +12,16 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<meta name="language" content="es" />
-		<title>Mirai Components Library</title>
+		<title>Mirai Components Library / Tooltip</title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
 		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
 		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
 		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
-		<link rel='stylesheet' id='bootstrap-doc-css'  href='docs.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
                 
-                <link rel='stylesheet' id='components-css'  href='./components.css' type='text/css' media='all' />
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
 		
 		<!--[if IE 8]>
 			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
@@ -33,58 +32,91 @@
 		
 		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
 		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
-		<link rel='canonical' href='http://webs3.mirai.es/' />
-		
+		<link rel='canonical' href='http://webs3.mirai.es/' />		
+		<script type="text/javascript">
+			common_vars = {'tooltip': 'true'};
+		</script>
+
 		<meta http-equiv="Content-Language" content="es-ES" />
 	</head>
 
-	<body id="body" class="hotel home page cat-hotel">    
+	<body id="" class="hotel home page cat-hotel">    
 
 		<div id="container" class="">
 		
 			<header id="header" class="">
 				<div class="content container">
-					<h1>Componentes Mirai</h1>
-					<p>Librería de Patrones y Componentes para la generación rápida y estándar de webs</p>	                                        
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
 				</div>
 			</header><!-- end header -->
 
 			<section id="main" class="">
-				<div class="content container">					
-					<div class="row">
-						
-						<div class="span4 bs-docs-sidebar">
-                            <h2><strong>Componentes Globales</strong></h2>
-                            <ul class="nav nav-list bs-docs-sidenav affix-top">
-                                <li><a href="lib/collapse.html"><i class="icon-chevron-right"></i> Collapse</a></li>
-                                <li><a href="lib/tabs.html"><i class="icon-chevron-right"></i> Tabs / Pills</a></li>	
-                                <li><a href="lib/tooltip.html"><i class="icon-chevron-right"></i> Tooltip</a></li>						
-                                <li><a href="lib/popover.html"><i class="icon-chevron-right"></i> Popover</a></li>
-                                <li><a href="lib/ajax.html"><i class="icon-chevron-right"></i> Ajax content loader</a></li>
+				<div class="content container">
+                    <div class="row">
+                        <nav>
+                            <ul><li><a href="..">Home</a></li></ul>
+                        </nav>
+                    </div>
+                    <div class="row">
+						<div class="span12">
 
-                            </ul>
 
-                            <h2><strong>Componentes Específicos</strong></h2>
-                            <ul class="nav nav-list bs-docs-sidenav affix-top">
-                                <li><a href="lib/shortcode-coor.html"><i class="icon-chevron-right"></i> Shortcode Coordinates</a></li>
-                                <li><a href="lib/routemap.html"><i class="icon-chevron-right"></i> Calculate route map</a></li>
-                                <li><a href="lib/offers-listing.html"><i class="icon-chevron-right"></i> Offers Listing</a></li>
-                                <li><a href="lib/offers-detail.html"><i class="icon-chevron-right"></i> Offers Detail</a></li>
 
-                            </ul>
+<section id="colapse" class="special-page">
+	<div class="page-header">
+		<h1>Tooltip</h1>
+	</div>
+	
+	<p>Permite mostrar un pequeño texto en forma de bocadillo al realizar una acción sobre un elemento. Pueden pasarse diferentes parámetros a través de los atributos <code>data-</code>.</p>
+    <ul class="bullets">
+	    <li><strong>data-title</strong>: Texto a mostrar dentro del tooltip.</li>
+	    <li><strong>data-trigger</strong>: Acción con la que mostrarlo -  click | hover | focus | manual. --- <em>Por defecto: "hover".</em></li>
+	    <li><strong>data-placement</strong>: Posición del tooltip - top | bottom | left | right. --- <em>Por defecto: "top".</em></li>
+	</ul>
+	<h2>Tooltip con :hover</h2>
+	<div class="bs-docs-example tooltip-demo">
+        <ul class="bs-docs-tooltip-examples">
+          <li><a data-placement="top" rel="tooltip" href="#" data-title="Tooltip on top" class="mi_tooltip">Tooltip on TOP</a></li>
+          <li><a data-placement="right" rel="tooltip" href="#" data-title="Tooltip on right" class="mi_tooltip">Tooltip on RIGHT</a></li>
+          <li><a data-placement="bottom" rel="tooltip" href="#" data-title="Tooltip on bottom" class="mi_tooltip">Tooltip on BOTTOM</a></li>
+          <li><a data-placement="left" rel="tooltip" href="#" data-title="Tooltip on left" class="mi_tooltip">Tooltip on LEFT</a></li>
+        </ul>
+    </div>						
+    <h3>Marcado HTML del ejemplo:</h3>
+	<pre class="prettyprint linenums">
+&lt;a href="#" rel="tooltip" class="mi_tooltip" data-title="Tooltip on TOP" data-delay="{show: 500, hide: 100}" /&gt;Tooltip&lt;a /&gt;
+&lt;a href="#" rel="tooltip" class="mi_tooltip" data-title="Tooltip on RIGHT" data-delay="{show: 500, hide: 100}" /&gt;Tooltip&lt;a /&gt;
+&lt;a href="#" rel="tooltip" class="mi_tooltip" data-title="Tooltip on BOTTOM" data-delay="{show: 500, hide: 100}" /&gt;Tooltip&lt;a /&gt;
+&lt;a href="#" rel="tooltip" class="mi_tooltip" data-title="Tooltip on LEFT" data-delay="{show: 500, hide: 100}" /&gt;Tooltip&lt;a /&gt;</pre>
 
-						</div>
-						
-						<div class="span8">
-                            <section class="welcome-message">
-                                <h1>Componentes</h1>
-                                <p class="lead">Esta es la biblioteca de componentes frontend usados para la generación
-                                de webs en Mirai.</p>
-                            </section>
+    <h3>CSS:</h3>
+	<pre class="prettyprint linenums">.tooltip .tooltip-inner {
+  font-size: 1.4em;
+  max-width: none;
+  padding: 5px 8px;
+}</pre>
+
+
+	<h2>Javascript necesario</h2>		
+	<pre class="prettyprint linenums">
+&lt;jQuery(document).ready(function() {/&gt;
+     &lt;jQuery('.mi_tooltip').tooltip();/&gt;
+     &lt;jQuery(".mi_tooltip").click(function(event){/&gt;
+       &lt;event.preventDefault();/&gt;
+     &lt;});/&gt;
+&lt;});/&gt;</pre>
+	<strong>ANOTACIÓN:</strong> <em>El <code>preventDefault</code> es necesario cuando el <code>data-trigger</code> es "click".</em>
+</section>
+
+<div class="box-bottom-tooltip"></div>
+
+
+
 						</div>
 					</div>
 				</div>
-			</section><!-- end section -->
+			</section>
 
 			<footer id="footer" class="">
 			</footer><!-- end footer -->
@@ -106,8 +138,8 @@
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-		<script src="google-code-prettify/prettify.js"></script>		
-		<script src="application.js"></script>
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
 		
 	</body>
 </html>

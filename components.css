@@ -205,3 +205,26 @@ ul.bullets li {
 .latlon-wrapper li span {
     padding-left:10px;
 }
+
+/*special page*/
+.special-page .prettyprint.linenums {
+  padding-left: 1px;
+}
+
+
+/*tooltip*/
+.bs-docs-tooltip-examples {text-align: center;}
+.bs-docs-tooltip-examples li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 40px;
+}
+.bs-docs-tooltip-examples li a {}
+
+.box-bottom-tooltip {margin-bottom: 100px;}
+
+.tooltip .tooltip-inner {
+  font-size: 1.4em;
+  max-width: none;
+  padding: 5px 8px;
+}

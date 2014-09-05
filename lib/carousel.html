@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+	<!--[if lt IE 7]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 7]> <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 8]> <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 9]> <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <!--<![endif]-->
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+		<!--[if ie]>
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<![endif]-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="language" content="es" />
+		<title>Mirai Components Library / Carousel</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
+		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
+		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
+                
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
+		
+		<!--[if IE 8]>
+			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
+		<![endif]-->
+		
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
+		
+		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
+		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
+		<link rel='canonical' href='http://webs3.mirai.es/' />		
+		<script type="text/javascript">
+			common_vars = {'carousel': 'true'};
+		</script>
+
+		<meta http-equiv="Content-Language" content="es-ES" />
+	</head>
+
+	<body id="" class="hotel home page cat-hotel">    
+
+		<div id="container" class="">
+		
+			<header id="header" class="">
+				<div class="content container">
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
+				</div>
+			</header><!-- end header -->
+
+			<section id="main" class="">
+				<div class="content container">
+                    <div class="row">
+                        <nav>
+                            <ul><li><a href="..">Home</a></li></ul>
+                        </nav>
+                    </div>
+                    <div class="row">
+						<div class="span12">
+
+
+
+<section id="colapse" class="special-page">
+	<div class="page-header">
+		<h1>Carousel</h1>
+	</div>
+	
+	<p>Permite tener en cada dispositiva de un slider código HTML customizado.</p>
+
+	<div class="bs-docs-example tooltip-demo">
+<div class="carousel slide" id="myCarousel">
+                <div class="carousel-inner">
+                  <div class="item">
+                    <img alt="" src="http://bootstrapdocs.com/v2.1.0/docs/assets/img/bootstrap-mdo-sfmoma-01.jpg">
+                    <div class="carousel-caption">
+                      <h4>First Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                  <div class="item active">
+                    <img alt="" src="http://bootstrapdocs.com/v2.1.0/docs/assets/img/bootstrap-mdo-sfmoma-02.jpg">
+                    <div class="carousel-caption">
+                      <h4>Second Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img alt="" src="http://bootstrapdocs.com/v2.1.0/docs/assets/img/bootstrap-mdo-sfmoma-03.jpg">
+                    <div class="carousel-caption">
+                      <h4>Third Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                </div>
+                <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
+              </div>
+    </div>
+
+	<h2>Marcado HTML</h2>		
+	<pre class="prettyprint linenums">
+&lt;div id="myCarousel" class="carousel slide"&gt;
+    &lt;!-- Carousel items --&gt;
+    &lt;div class="carousel-inner"&gt;
+	    &lt;div class="active item"&gt;…&lt;/div&gt;
+	    &lt;div class="item"&gt;…&lt;/div&gt;
+	    &lt;div class="item"&gt;…&lt;/div&gt;
+    &lt;/div>
+    &lt;!-- Carousel nav --&gt;
+    &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&lsaquo;&lt;/a&gt;
+    &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&rsaquo;&lt;/a&gt;
+&lt;/div&gt;</pre>
+
+	<h2>Javascript opcional</h2>		
+	<pre class="prettyprint linenums">
+&lt;jQuery(document).ready(function() {/&gt;
+     &lt;jQuery('.carousel').carousel('pause');/&gt;
+&lt;});/&gt;</pre>
+
+	<strong>ANOTACIÓN:</strong> <em>Este Javascript <strong>sólo es necesario</strong> si queremos que el carousel no pase diapositivas automáticamente, habrá que utilizar las flechas de navegación para pasar cada una de ellas.</em>
+</section>
+
+<div class="box-bottom-tooltip"></div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer id="footer" class="">
+			</footer><!-- end footer -->
+				
+		</div> <!-- end container -->
+
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
+		<script type='text/javascript'>
+		/* <![CDATA[ */
+			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+		/* ]]> */
+		</script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
+
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
+
+	</body>
+</html>

@@ -228,3 +228,8 @@ ul.bullets li {
   max-width: none;
   padding: 5px 8px;
 }
+
+/*carousel*/
+.carousel .item > img {
+  width: 100%;
+}

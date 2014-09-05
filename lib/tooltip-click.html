@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+	<!--[if lt IE 7]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 7]> <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 8]> <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 9]> <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <!--<![endif]-->
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+		<!--[if ie]>
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<![endif]-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="language" content="es" />
+		<title>Mirai Components Library / Ocultar Tooltip en click</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
+		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
+		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
+                
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
+		
+		<!--[if IE 8]>
+			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
+		<![endif]-->
+		
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
+		
+		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
+		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
+		<link rel='canonical' href='http://webs3.mirai.es/' />		
+		<script type="text/javascript">
+			common_vars = {'tooltip': 'true'};
+		</script>
+
+		<meta http-equiv="Content-Language" content="es-ES" />
+	</head>
+
+	<body id="" class="hotel home page cat-hotel">    
+
+		<div id="container" class="">
+		
+			<header id="header" class="">
+				<div class="content container">
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
+				</div>
+			</header><!-- end header -->
+
+			<section id="main" class="">
+				<div class="content container">
+                    <div class="row">
+                        <nav>
+                            <ul><li><a href="..">Home</a></li></ul>
+                        </nav>
+                    </div>
+                    <div class="row">
+						<div class="span12">
+
+
+
+<section id="colapse" class="special-page">
+	<div class="page-header">
+		<h1>Ocultar Tooltip en click</h1>
+	</div>
+	
+	<p>Si se indica <code>data-trigger="click"</code> en el <a href="tooltip.html">Tooltip</a> de Bootstrap y quieres que al hacer click fuera de ese elemento se oculte el Tooltip, necesitarás lo siguiente:</p>
+    <ul class="bullets">
+    	<li><strong>HAY UN PAR DE BUGS CON ESTE CONTENIDO</strong></li>
+	</ul>
+
+	<div class="bs-docs-example tooltip-demo">
+      <ul class="list-rooms map_wrapper">
+        <li class="desk"><a href="#" class="mi_tooltip"  rel="tooltip" data-title="Escritorio" data-trigger="click" data-placement="bottom" data-delay="{show: 500, hide: 100}"/><span></span></a></li>
+        <li class="wifi"><a href="#" class="mi_tooltip"  rel="tooltip" data-title="Wifi Gratis" data-trigger="click" data-delay="{show: 500, hide: 100}"/><span></span></a></li>
+        <li class="phone"><a href="#" class="mi_tooltip"  rel="tooltip" data-title="Teléfono" data-trigger="click" data-placement="bottom" data-delay="{show: 500, hide: 100}"/><span></span></a></li>
+        <li class="wakeup"><a href="#" class="mi_tooltip"  rel="tooltip" data-title="Servicio despertador" data-trigger="click" data-delay="{show: 500, hide: 100}"/><span></span></a></li>
+      </ul>
+    </div>
+
+	<h2>Marcado HTML del ejemplo</h2>		
+	<pre class="prettyprint linenums">
+&lt;ul class="list-rooms"/&gt;
+    &lt;li class="desk"/&gt;
+	&lt;a href="#" class="mi_tooltip"  rel="tooltip" data-title="Escritorio" data-trigger="click" data-placement="bottom" data-delay="{show: 500, hide: 100}"/&gt;
+	    &lt;span&gt;&lt;/span&gt;
+	&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="wifi"/&gt;
+	&lt;a href="#" class="mi_tooltip"  rel="tooltip" data-title="Wifi Gratis" data-trigger="click" data-delay="{show: 500, hide: 100}"/&gt;
+	    &lt;span&gt;&lt;/span&gt;
+	&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="phone"/&gt;
+	&lt;a href="#" class="mi_tooltip"  rel="tooltip" data-title="Teléfono" data-trigger="click" data-placement="bottom" data-delay="{show: 500, hide: 100}"/&gt;
+	    &lt;span&gt;&lt;/span&gt;
+	&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="wakeup"/&gt;
+	&lt;a href="#" class="mi_tooltip"  rel="tooltip" data-title="Servicio despertador" data-trigger="focus" data-placement="bottom" data-delay="{show: 500, hide: 100}"/&gt;
+	    &lt;span&gt;&lt;/span&gt;
+	&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul/&gt;</pre>
+
+	<h2>Javascript necesario</h2>		
+	<pre class="prettyprint linenums">
+jQuery(document).ready(function() {
+     jQuery('.mi_tooltip').tooltip();
+     jQuery(".mi_tooltip").click(function(event){
+       event.preventDefault();
+     jQuery('body').on('click', function (e) {
+         jQuery('.mi_tooltip').each(function () {
+             //the 'is' for buttons that trigger popups
+             //the 'has' for icons within a button that triggers a popup
+             if (!jQuery(this).is(e.target) && jQuery(this).has(e.target).length === 0 && jQuery('.erase-tooltip').has(e.target).length === 0) {
+                 jQuery(this).tooltip('hide');
+             }
+         });
+     });
+ });</pre>
+	<strong>ANOTACIÓN:</strong> <em>El <code>preventDefault</code> es necesario cuando el <code>data-trigger</code> es "click".</em>
+</section>
+
+<div class="box-bottom-tooltip"></div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer id="footer" class="">
+			</footer><!-- end footer -->
+				
+		</div> <!-- end container -->
+
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
+		<script type='text/javascript'>
+		/* <![CDATA[ */
+			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+		/* ]]> */
+		</script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
+		<script>
+			jQuery(document).ready(function(){
+			    jQuery('.carousel').carousel('pause');
+			});
+		</script>
+	</body>
+</html>

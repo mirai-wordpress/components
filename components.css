@@ -233,3 +233,32 @@ ul.bullets li {
 .carousel .item > img {
   width: 100%;
 }
+
+/*ocultar tooltip en click */
+.list-rooms {
+  margin: 30px auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.list-rooms li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.list-rooms li span {
+    background: url(http://www.hoteldefrancenice.com/files/icons-services.png) no-repeat 0 0 transparent;
+    display: block;
+    height: 80px;
+    margin: 0 auto 5px;
+    width: 80px;
+}
+
+.list-rooms li.calefaccion span {background-position: 0 -80px;}
+.list-rooms li.desk span {background-position: 0 -640px;}
+.list-rooms li.wifi span {background-position: 0 -720px;}
+.list-rooms li.phone span {background-position: 0 -800px;}
+.list-rooms li.bath span {background-position: 0 -880px;}
+.list-rooms li.hairdryer span {background-position: 0 -960px;}
+.list-rooms li.amenities span {background-position: 0 -1040px;}
+.list-rooms li.wakeup span {background-position: 0 -1120px;}

@@ -100,12 +100,12 @@
 
 	<h2>Javascript necesario</h2>		
 	<pre class="prettyprint linenums">
-&lt;jQuery(document).ready(function() {/&gt;
-     &lt;jQuery('.mi_tooltip').tooltip();/&gt;
-     &lt;jQuery(".mi_tooltip").click(function(event){/&gt;
-       &lt;event.preventDefault();/&gt;
-     &lt;});/&gt;
-&lt;});/&gt;</pre>
+jQuery(document).ready(function() {
+     jQuery('.mi_tooltip').tooltip();
+     jQuery(".mi_tooltip").click(function(event){
+       event.preventDefault();
+     });
+});</pre>
 	<strong>ANOTACIÓN:</strong> <em>El <code>preventDefault</code> es necesario cuando el <code>data-trigger</code> es "click".</em>
 </section>
 

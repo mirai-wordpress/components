@@ -211,6 +211,7 @@ ul.bullets li {
   padding-left: 1px;
 }
 
+.special-page h2 {margin: 40px 0 15px;}
 
 /*tooltip*/
 .bs-docs-tooltip-examples {text-align: center;}
@@ -262,3 +263,11 @@ ul.bullets li {
 .list-rooms li.hairdryer span {background-position: 0 -960px;}
 .list-rooms li.amenities span {background-position: 0 -1040px;}
 .list-rooms li.wakeup span {background-position: 0 -1120px;}
+
+
+/* Back to top */
+.bg_arrows {background-color: lightblue;}
+.bg_arrows img {display: block; margin: 0 auto;}
+
+.footer_back_top {text-align: center;}
+.footer_back_top img {}

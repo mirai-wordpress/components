@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+	<!--[if lt IE 7]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 7]> <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 8]> <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 9]> <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <!--<![endif]-->
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+		<!--[if ie]>
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<![endif]-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="language" content="es" />
+		<title>Mirai Components Library / Back to Top</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
+		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
+		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
+                
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
+		
+		<!--[if IE 8]>
+			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
+		<![endif]-->
+		
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
+		
+		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
+		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
+		<link rel='canonical' href='http://webs3.mirai.es/' />		
+		<script type="text/javascript">
+			common_vars = {'tooltip': 'true'};
+		</script>
+
+		<meta http-equiv="Content-Language" content="es-ES" />
+	</head>
+
+	<body id="" class="hotel home page cat-hotel">    
+
+		<div id="container" class="">
+		
+			<header id="header" class="">
+				<div class="content container">
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
+				</div>
+			</header><!-- end header -->
+
+			<section id="main" class="">
+				<div class="content container">
+                    <div class="row">
+                        <nav>
+                            <ul><li><a href="..">Home</a></li></ul>
+                        </nav>
+                    </div>
+                    <div class="row">
+						<div class="span12">
+
+
+
+<section id="colapse" class="special-page">
+	<div class="page-header">
+		<h1>Back to Top</h1>
+	</div>
+	
+	<p>Muestra un link en la parte inferior de la pantalla cuando hacemos scroll que permite subir al inicio de la página automáticamente.<br/>
+	
+	</p>
+
+	<div class="bs-docs-example tooltip-demo footer_back_top">
+		<img src="../imgs/footer_back_top.png" alt="">
+    </div>
+
+	<h2>Marcado HTML</h2>		
+	<pre class="prettyprint linenums">
+&lt;a href="#"  id="back-top"&gt;^&lt;/a&gt;</pre>
+
+	<h2>CSS</h2>		
+	<pre class="prettyprint linenums">
+#back-top {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#back-top {
+    /*background: url("/files/back_top.png") no-repeat scroll center -71px #333;*/
+    background-color: #333;
+    border-radius: 30px 0 0 30px;
+    -webkit-border-radius: 30px 0 0 30px;
+    bottom: 80px;
+    color: #fff;
+    display: none;
+    font-size: 100px;
+    height: 50px;
+    line-height: 100px;
+    opacity: 0.8;
+    padding: 5px 5px 10px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    /*text-indent: -9999px;*/
+    width: 60px;
+    z-index: 10;
+}
+#back-top:hover {opacity:1;}</pre>
+
+	<h2>Javascript necesario</h2>		
+	<pre class="prettyprint linenums">
+/* Smooth scrolling for Back Top link */
+Mirai.query('#back-top').click(function(evt) {
+    evt.preventDefault();
+Mirai.query('html,body').animate({scrollTop:0}, '800', 'swing');
+});
+
+jQuery(document).ready(function() {
+    if (!Mirai.query('body').hasClass('bookingstep1')) { 
+     
+    	Mirai.query(window).scroll(function() {
+           var iScrollY = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  
+           if(iScrollY >= enginePosition) {
+                Mirai.query('.engine_mashup > div').addClass('fixed_engine');
+            Mirai.query('#back-top').fadeIn();
+           } else {
+                Mirai.query('.engine_mashup > div').removeClass('fixed_engine');
+            Mirai.query('#back-top').fadeOut();
+           }
+    	});
+    }
+});</pre>
+	<strong>ANOTACIÓN:</strong> <em>El <code>preventDefault</code> es necesario cuando el <code>data-trigger</code> es "click".</em>
+
+
+	<h2>Recurso Opcional</h2>
+	<p>Si en lugar de mostrar una flecha con la tipografía de la web queremos hacerlo con una imagen la podéis descargar aquí:</p>
+
+	<div class="bs-docs-example tooltip-demo bg_arrows">
+		<img src="../imgs/back_top.png" alt="">
+	</div>
+	<p>Y ya sólo tendríamos que modificar el CSS para que cargase la imagen, con descomentar el <code>background</code> y <code>text-indent</code> y eliminar el <code>background-color</code> vale :)</p>
+	<strong>ANOTACIÓN:</strong> <em>Podéis modificar tanto el color el background como el color de la flecha para adaptarlo a la web.</em>
+
+</section>
+
+<div class="box-bottom-tooltip"></div>
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer id="footer" class="">
+			</footer><!-- end footer -->
+				
+		</div> <!-- end container -->
+
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
+		<script type='text/javascript'>
+		/* <![CDATA[ */
+			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+		/* ]]> */
+		</script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
+	</body>
+</html>

@@ -114,7 +114,8 @@ jQuery(document).ready(function() {
 	<h2>Javascript para "carousel"</h2>
 	<pre class="prettyprint linenums">
 jQuery(document).ready(function() {
-     jQuery('.carousel').carousel('pause');
+    jQuery('.carousel').carousel('pause');
+    jQuery('.carousel').carousel({pause: hover})
 });</pre>
 
 	<strong>ANOTACIÓN:</strong> <em>Si paramos el arranque automático del slider tendremos que utilizar la navegación (ya sean arrows o numbers) para cambiar de diapositiva.</em>

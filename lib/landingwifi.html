@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+	<!--[if lt IE 7]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 7]> <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 8]> <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 9]> <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <!--<![endif]-->
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+		<!--[if ie]>
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<![endif]-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="language" content="es" />
+		<title>Mirai Components Library / Landing Wifi</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
+		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
+		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
+                
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
+		
+		<!--[if IE 8]>
+			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
+		<![endif]-->
+		
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
+		
+		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
+		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
+		<link rel='canonical' href='http://webs3.mirai.es/' />		
+		<script type="text/javascript">
+			common_vars = {'carousel': 'true'};
+		</script>
+
+		<meta http-equiv="Content-Language" content="es-ES" />
+	</head>
+
+	<body id="" class="hotel home page cat-hotel">    
+
+		<div id="container" class="">
+		
+			<header id="header" class="">
+				<div class="content container">
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
+				</div>
+			</header><!-- end header -->
+
+			<section id="main" class="">
+				<div class="content container">
+                    <div class="row">
+                        <nav>
+                            <ul><li><a href="..">Home</a></li></ul>
+                        </nav>
+                    </div>
+                    <div class="row">
+						<div class="span12">
+
+
+
+<section id="colapse" class="special-page">
+	<div class="page-header">
+		<h1>Landing Wifi</h1>
+	</div>
+	
+	<p>Se van a empezar a hacer landings para mostrarlas cuando un cliente entra a internet a través del Wifi del hotel.</p>
+
+	<div class="bs-docs-example tooltip-demo">
+		<a href="http://www.loszocos.com/wifi/" target="_blank">
+			<img src="../imgs/landingwifi.jpg" alt="Landing Wifi - Los Zocos">
+		</a>
+    </div>
+
+	<h2>Opción 1 - Formulario sin respuesta</h2>	
+	<h3>Marcado HTML</h3>	
+	<pre class="prettyprint linenums">
+&lt;h2&gt;Frase o título de la página&lt;/h2&gt;
+&lt;div class="row-fluid"&gt;
+	[contact-form-7 id="1044" title="Landing Wifi"]
+&lt;/div&gt;</pre>
+
+	<h3>HTML del Formulario</h3>	
+	<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+	&lt;div class="rooms span3"&gt;
+		&lt;span&gt;&lt;!--:es--&gt;Nº de Habitación&lt;!--:--&gt;&lt;!--:en--&gt;Room Number&lt;!--:--&gt;&lt;!--:fr--&gt;Nombre de chambre&lt;!--:--&gt;&lt;!--:de--&gt;Zimmernummer&lt;!--:--&gt;&lt;!--:pl--&gt;Liczba Pokoi&lt;!--:--&gt;&lt;/span&gt;
+		[text* your-room]
+	&lt;/div&gt;
+	&lt;div class="email span6"&gt;
+		&lt;span&gt;email&lt;/span&gt;
+		[email* your-email]
+	&lt;/div&gt;
+	&lt;div class="send span3"&gt;
+		[submit "&lt;!--:es--&gt;Enviar&lt;!--:--&gt;&lt;!--:en--&gt;Send&lt;!--:--&gt;&lt;!--:fr--&gt;Envoyer&lt;!--:--&gt;&lt;!--:de--&gt;Senden&lt;!--:--&gt;&lt;!--:pl--&gt;Wysłać&lt;!--:--&gt;"]
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+	&lt;a href="http:www.google.com" class="back-home"&gt;&lt;!--:es--&gt;Seguir navegando&lt;!--:--&gt;&lt;!--:en--&gt;Continue browsing&lt;!--:--&gt;&lt;!--:fr--&gt;Continuer la navigation&lt;!--:--&gt;&lt;!--:de--&gt;Weitersurfen&lt;!--:--&gt;&lt;!--:pl--&gt;Back Home&lt;!--:--&gt;&lt;/a&gt;&lt;span class="accept-privacy pull-right"&gt;&lt;a href="&lt;!--:es--&gt;/politica-de-privacidad/&lt;!--:--&gt;&lt;!--:en--&gt;/en/privacy-policy/&lt;!--:--&gt;&lt;!--:fr--&gt;/fr/politique-de-confidentialite/&lt;!--:--&gt;&lt;!--:de--&gt;/de/datenschutzerklärung/&lt;!--:--&gt;&lt;!--:pl--&gt;/pl/privacy-policy/&lt;!--:--&gt;" target="_blank"&gt;&lt;!--:es--&gt;Acepto la política de privacidad&lt;!--:--&gt;&lt;!--:en--&gt;I accept the Privacy Policy&lt;!--:--&gt;&lt;!--:fr--&gt;Je accepte la politique de confidentialité&lt;!--:--&gt;&lt;!--:de--&gt;Ich akzeptiere die Datenschutzpolitik&lt;!--:--&gt;&lt;!--:pl--&gt;Zgadzam się z polityką prywatności&lt;!--:--&gt;&lt;/a&gt;[acceptance acceptance-191 default:on]&lt;/span&gt;
+&lt;/div&gt;</pre>
+
+	<h3>CSS Base</h3>	
+	<pre class="prettyprint linenums">
+/* WIFI */
+
+.cat-wifi #header {
+    background: none;
+    text-align: center;
+}
+
+.cat-wifi #header .content #menu_web, .cat-wifi #header .content .engine_mashup, .cat-wifi #footer * {
+    display: none;
+}
+
+.cat-wifi #footer {
+    background: none;
+    height: 114px;
+}
+
+.cat-wifi #logo {
+    display: block;
+    float: none;
+    margin: 30px auto 0;
+    position: relative;
+}
+
+.cat-wifi #container {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.cat-wifi #main .content {}
+
+.cat-wifi #main .content h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 80px auto 90px;
+    text-align: center;
+   
+    text-shadow: 0 3px 3px #111;
+}
+
+.cat-wifi .wpcf7 {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 4px #666;
+    -webkit-box-shadow: 0 0 4px #666;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.cat-wifi .wpcf7 form {
+    color: #354b97;
+    padding: 20px 0;
+}
+
+.cat-wifi .wpcf7 .row > div {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.cat-wifi .wpcf7 .row > div span {
+    font-size: 1.1em;
+    line-height: 28px;
+}
+
+.cat-wifi .wpcf7 .row input {
+    width: 95%;
+}
+
+.cat-wifi .wpcf7 .row .wpcf7-submit {
+    background-color: #354b97;
+    border: 0 none;
+    border-radius: 4px;
+    box-shadow: 0 0 3px #666;
+    color: #fff;
+    font-family: Open Sans;
+    margin-top: 23px;
+    padding: 10px 5px;
+}
+
+.cat-wifi .wpcf7 .row .wpcf7-submit:hover {
+    background-color: #3F59AF;
+}
+
+.cat-wifi .back-home, .cat-wifi .accept-privacy a {
+    color: #444;
+    min-height: 0;
+}
+
+.cat-wifi .back-home {
+    text-align: left;
+}
+
+.cat-wifi .back-home:before {
+    content: "<";
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 10px 0 25px;
+    vertical-align: -4px;
+}
+
+.cat-wifi .back-home:before:hover {
+    text-decoration: none;
+}
+
+.cat-wifi .accept-privacy {
+    padding: 0 28px 0 0;
+    text-align: right;
+}
+
+.cat-wifi .accept-privacy a {}
+
+.cat-wifi .accept-privacy span {
+    display: inline-block;
+    line-height: 0;
+    margin: 0 0 0 10px;
+    vertical-align: 4px;
+}
+
+
+/* CUIDADO, ESTE CÓDIGO TIENE QUE IR EN SU QUERY CORRESPONDIENTE */
+@media (min-device-width: 768px) and (max-device-width: 979px) and (orientation : portrait) {
+    .cat-wifi .wpcf7 .row .span3,
+    .cat-wifi .wpcf7 .row .span6 {
+        width: 33%;
+    }
+}
+
+
+</pre>
+
+	<h3>Notas Importantes</h3>	
+<ol>
+	<li>Esta plantilla se ha basado en el ejemplo que véis, seguramente cambien campos e idiomas dependiendo de lo que os pidan.</li>
+	<li>El código CSS es base, seguramente cambie, sobretodo si la web no tiene Bootstrap.</li>
+	<li>Atentos a la url de Política de Privacidad, hay que cambiarla e internacionalizarla o sustituirla por Aviso Legal si no dispone de una página de Política de Privacidad en sí.</li>
+</ol>
+
+</section>
+
+<div class="box-bottom-tooltip"></div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer id="footer" class="">
+			</footer><!-- end footer -->
+				
+		</div> <!-- end container -->
+
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
+		<script type='text/javascript'>
+		/* <![CDATA[ */
+			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+		/* ]]> */
+		</script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
+
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
+
+	</body>
+</html>

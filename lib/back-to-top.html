@@ -122,16 +122,16 @@ Mirai.query('#back-top').click(function(evt) {
  
 jQuery(document).ready(function() {
 	if (!Mirai.query('body').hasClass('bookingstep1')) {
-		var enginePosition = Mirai.query('.bg_engine').offset().top; // Detect engine top position
+		var enginePosition = Mirai.query('.engine_mashup').offset().top; // Detect engine top position
 		
 		Mirai.query(window).scroll(function() {
 			var iScrollY = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 			
 			if(iScrollY >= enginePosition) {
-				Mirai.query('.bg_engine').addClass('fixed_engine');
+				Mirai.query('.engine_mashup').addClass('fixed_engine');
 				Mirai.query('#back-top').fadeIn();
 			} else {
-				Mirai.query('.bg_engine').removeClass('fixed_engine');
+				Mirai.query('.engine_mashup').removeClass('fixed_engine');
 				Mirai.query('#back-top').fadeOut();
 			}
 		});

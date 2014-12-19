@@ -91,7 +91,6 @@
 }
 #back-top {
     background: url("../mirai/images/back_top.png") no-repeat scroll center -71px #333;
-    background-color: #333;
     border-radius: 30px 0 0 30px;
     -webkit-border-radius: 30px 0 0 30px;
     bottom: 80px;
@@ -116,27 +115,23 @@
 	<pre class="prettyprint linenums">
 /* Smooth scrolling for Back Top link */
 Mirai.query('#back-top').click(function(evt) {
-	evt.preventDefault();
-	Mirai.query('html,body').animate({scrollTop:0}, '800', 'swing');
+  evt.preventDefault();
+  Mirai.query('html,body').animate({scrollTop:0}, '800', 'swing');
 });
- 
-jQuery(document).ready(function() {
-	if (!Mirai.query('body').hasClass('bookingstep1')) {
-		var enginePosition = Mirai.query('.engine_mashup').offset().top; // Detect engine top position
-		
-		Mirai.query(window).scroll(function() {
-			var iScrollY = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-			
-			if(iScrollY >= enginePosition) {
-				Mirai.query('.engine_mashup').addClass('fixed_engine');
-				Mirai.query('#back-top').fadeIn();
-			} else {
-				Mirai.query('.engine_mashup').removeClass('fixed_engine');
-				Mirai.query('#back-top').fadeOut();
-			}
-		});
-	}
 
+jQuery(document).ready(function() {
+  if (!Mirai.query('body').hasClass('bookingstep1')) { 
+    
+    Mirai.query(window).scroll(function() {
+      var iScrollY = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+      
+      if(iScrollY >= '500') {
+        Mirai.query('#back-top').fadeIn();
+      } else {
+        Mirai.query('#back-top').fadeOut();
+      }
+    });
+  }
 });</pre>
 
 	<h2>Colores de la flecha</h2>

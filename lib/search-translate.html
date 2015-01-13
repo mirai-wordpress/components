@@ -12,17 +12,16 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<meta name="language" content="es" />
-		<title>Mirai Components Library</title>
+		<title>Mirai Components Library / Back to Top</title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
 		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
 		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
 		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
-		<link rel='stylesheet' id='bootstrap-doc-css'  href='docs.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
                 
-                <link rel='stylesheet' id='components-css'  href='./components.css' type='text/css' media='all' />
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
 		
 		<!--[if IE 8]>
 			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
@@ -33,80 +32,78 @@
 		
 		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
 		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
-		<link rel='canonical' href='http://webs3.mirai.es/' />
-		
+		<link rel='canonical' href='http://webs3.mirai.es/' />		
+		<script type="text/javascript">
+			common_vars = {'tooltip': 'true'};
+		</script>
+
 		<meta http-equiv="Content-Language" content="es-ES" />
 	</head>
 
-	<body id="body" class="hotel home page cat-hotel">    
+	<body id="" class="hotel home page cat-hotel">    
 
 		<div id="container" class="">
 		
 			<header id="header" class="">
 				<div class="content container">
-					<h1>Componentes Mirai</h1>
-					<p>Librería de Patrones y Componentes para la generación rápida y estándar de webs</p>	                                        
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
 				</div>
 			</header><!-- end header -->
 
 			<section id="main" class="">
-				<div class="content container">					
-					<div class="row">
+				<div class="content container">
+                    <div class="row">
+                        <nav>
+                            <ul><li><a href="..">Home</a></li></ul>
+                        </nav>
+                    </div>
+                    <div class="row">
 						<div class="span12">
-                            <section class="welcome-message">
-                                <p class="lead pagination-centered">Esta es la biblioteca de componentes frontend usados para la generación
-                                de webs en Mirai.</p>
-                            </section>
+
+
+
+<section id="colapse" class="special-page">
+	<div class="page-header">
+		<h1>Traducción del widget de búsqueda de wordpress</h1>
+	</div>
+	
+	<p>Ya que qTranslate no traduce el titulo ni el boton del widget de busqueda, utilizamos este script (modificandolo para los idiomas que haga falta).</p>
+
+	<pre class="prettyprint linenums">
+		  var searchLang = Mirai.query('html').attr('lang'),
+		      searchLabel = Mirai.query('.widget_search label'),
+		      searchSubmit = Mirai.query('.widget_search #searchsubmit');
+		  		  
+		  function searchChangeLang() {
+		    switch(searchLang) {
+		      case 'en': 
+		        searchLabel.text('Search:');
+		        searchSubmit.attr('value','Search');
+		        break;
+		      case 'es':
+		        searchLabel.text('Buscar:');
+		        searchSubmit.attr('value','Buscar');
+		        break;
+		      default:
+		        searchLabel.text('Search:');
+		        searchSubmit.attr('value','Search');
+		    }
+		    
+		  }
+		  
+		  searchChangeLang();
+	</pre>
+
+</section>
+
+<div class="box-bottom-tooltip"></div>
+
+
 						</div>
-						
-						<div class="span12 bs-docs-sidebar">
-						    <div class="span4">
-						        <h2><strong>Globales</strong></h2>
-						        <ul class="nav nav-list bs-docs-sidenav affix-top">
-						            <li><a href="lib/collapse.html"><i class="icon-plus"></i> Collapse</a></li>
-						            <li><a href="lib/tabs.html"><i class="icon-plus"></i> Tabs / Pills</a></li>
-						            <li><a href="lib/carousel.html"><i class="icon-plus"></i> Carousel</a></li>
-						            <li><a href="lib/tooltip.html"><i class="icon-plus"></i> Tooltip</a></li>
-						            <li><a href="lib/popover.html"><i class="icon-plus"></i> Popover</a></li>
-						            <li><a href="lib/ajax.html"><i class="icon-plus"></i> Ajax content loader</a></li>
-						            <li><a href="lib/jcarousel.html"><i class="icon-plus"></i> jCarousel</a></li>
-						        </ul>
-						    </div>
-						    <div class="span4">
-						        <h2><strong>Recursos HTML</strong></h2>
-						        <ul class="nav nav-list bs-docs-sidenav affix-top">
-						            <li><a href="lib/landingwifi.html"><i class="icon-plus"></i> Landing Wifi</a></li>
-						        </ul>
-						    </div>
-						    <div class="span4">
-						        <h2><strong>Recursos JS</strong></h2>
-						        <ul class="nav nav-list bs-docs-sidenav affix-top">
-						            <li><a href="lib/slider-stop.html"><i class="icon-plus"></i> Pausar Slider</a></li>
-						            <li><a href="lib/tooltip-click.html"><i class="icon-plus"></i> Ocultar tooltip en click</a></li>
-						            <li><a href="lib/back-to-top.html"><i class="icon-plus"></i> Botón Back to Top</a></li>
-						            <li><a href="lib/search-translate.html"><i class="icon-plus"></i> Traducción widget de Búsqueda</a></li>
-						        </ul>
-						    </div>
-						</div>
-						<div class="span12 bs-docs-sidebar">
-						    <div class="span4">
-						        <h2><strong>Recursos CSS</strong></h2>
-						        <ul class="nav nav-list bs-docs-sidenav affix-top">
-						            <li><a href="lib/shadowbox.html"><i class="icon-plus"></i> Shadowbox - New Style</a></li>
-						        </ul>
-						    </div>
-						    <div class="span4">
-						        <h2><strong>Hacks</strong></h2>
-						        <ul class="nav nav-list bs-docs-sidenav affix-top">
-						            <li><a href="lib/routemap.html"><i class="icon-plus"></i> Calculate route map</a></li>
-						        </ul>
-						    </div>
-						</div>
-						
 					</div>
-					<div class="box-bottom-tooltip"></div>
 				</div>
-			</section><!-- end section -->
+			</section>
 
 			<footer id="footer" class="">
 			</footer><!-- end footer -->
@@ -128,8 +125,7 @@
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-		<script src="google-code-prettify/prettify.js"></script>		
-		<script src="application.js"></script>
-		
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
 	</body>
 </html>

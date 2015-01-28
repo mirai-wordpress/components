@@ -12,17 +12,16 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<meta name="language" content="es" />
-		<title>Mirai Components Library</title>
+		<title>Mirai Components Library / CSS Style Guide</title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
 		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
 		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
 		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
-		<link rel='stylesheet' id='bootstrap-doc-css'  href='docs.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
                 
-                <link rel='stylesheet' id='components-css'  href='./components.css' type='text/css' media='all' />
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
 		
 		<!--[if IE 8]>
 			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
@@ -33,81 +32,114 @@
 		
 		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
 		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
-		<link rel='canonical' href='http://webs3.mirai.es/' />
-		
+		<link rel='canonical' href='http://webs3.mirai.es/' />		
+		<script type="text/javascript">
+			common_vars = {'tooltip': 'true'};
+		</script>
+
 		<meta http-equiv="Content-Language" content="es-ES" />
 	</head>
 
-	<body id="body" class="hotel home page cat-hotel">    
+	<body id="" class="hotel home page cat-hotel">    
 
 		<div id="container" class="">
 		
 			<header id="header" class="">
 				<div class="content container">
-					<h1>Componentes Mirai</h1>
-					<p>Librería de Patrones y Componentes para la generación rápida y estándar de webs</p>	                                        
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
 				</div>
 			</header><!-- end header -->
 
 			<section id="main" class="">
-				<div class="content container">					
-					<div class="row">
+				<div class="content container">
+                    <div class="row">
+                        <nav>
+                            <ul><li><a href="..">Home</a></li></ul>
+                        </nav>
+                    </div>
+                    <div class="row">
 						<div class="span12">
-                            <section class="welcome-message">
-                                <p class="lead pagination-centered">Esta es la biblioteca de componentes frontend usados para la generación
-                                de webs en Mirai.</p>
-                            </section>
+
+
+
+<section id="colapse" class="special-page">
+	<div class="page-header">
+		<h1>CSS Style Guide</h1>
+	</div>
+	
+	<p>Hemos creado la base de una guía de estilos CSS, la iremos ampliando según vaya siendo necesario. <br/>
+	
+	</p>
+
+	<h2>REGLAS GENERALES</h2>		
+	<pre class="">
+<h4>Salto de línea para todas las declaraciones, haya una sola o varias:</h4>
+body {
+    font-family: Open Sans;
+}
+
+<h4>Espacio entre la regla y la apertura de las declaraciones:</h4>
+body {
+    font-family: Open Sans;
+}
+
+<h4>Espacio de salto de línea entre reglas:</h4> 
+body {
+    font-family: Open Sans;
+}
+
+content {
+    padding: 0;
+}
+
+<h4>Al contextualizar varias clases juntas, éstas se escribirán seguidas sin dar salto de línea entre ellas y con un espacio entre medias:</h4>
+body, footer, #main container {
+    font-family: Open Sans;
+}
+
+<h4>Todas las declaraciones irán ordenadas alfabéticamente:</h4>
+body {
+    border-color: #000;
+font-family: Open Sans;
+margin: 10px 0;
+}
+
+<h4>Todas las declaraciones irán tabuladas:</h4>
+body {
+    border-color: #000;
+margin: 10px 0;
+}
+
+
+<h4>Para las clases que utilicen comillas en su propia regla, se respetarán esas comillas:</h4>
+.engine_mashup > div form .button-group input[type="submit"] {}
+
+<h4>Las clases deber llevar siempre guión medio, nunca guión bajo:</h4>
+class="bg-color"    ---    .bg-color
+
+<h4>Utilizar sólo minúsculas, nunca mayúsculas.</h4>
+
+<h4>Utilizar clases e ID's siempre en inglés.</h4>
+
+<h4>Backgrounds por defecto en hexadecimal (si es posible abreviado), en caso de llevar transparencia RGBA.</h4>
+
+<h4>Para las clases que determinen background utilizar "bg-" como base y el nombre del color en relación a la intensidad del mismo:</h4>
+bg-light-grey   /   bg-grey   /   bg-dark-grey
+
+<h4>Para definir margin y padding comunes utilizaremos clases genéricas:</h4>
+margin: mrg - seguido de un número consecutivo: mrg1
+padding: pdd - seguido de un número consecutivo: pdd1</pre>
+
+</section>
+
+<div class="box-bottom-tooltip"></div>
+
+
 						</div>
-						
-						<div class="span12 bs-docs-sidebar">
-						    <div class="span4">
-						        <h2><strong>Globales</strong></h2>
-						        <ul class="nav nav-list bs-docs-sidenav affix-top">
-						            <li><a href="lib/collapse.html"><i class="icon-plus"></i> Collapse</a></li>
-						            <li><a href="lib/tabs.html"><i class="icon-plus"></i> Tabs / Pills</a></li>
-						            <li><a href="lib/carousel.html"><i class="icon-plus"></i> Carousel</a></li>
-						            <li><a href="lib/tooltip.html"><i class="icon-plus"></i> Tooltip</a></li>
-						            <li><a href="lib/popover.html"><i class="icon-plus"></i> Popover</a></li>
-						            <li><a href="lib/ajax.html"><i class="icon-plus"></i> Ajax content loader</a></li>
-						            <li><a href="lib/jcarousel.html"><i class="icon-plus"></i> jCarousel</a></li>
-						        </ul>
-						    </div>
-						    <div class="span4">
-						        <h2><strong>Recursos HTML</strong></h2>
-						        <ul class="nav nav-list bs-docs-sidenav affix-top">
-						            <li><a href="lib/landingwifi.html"><i class="icon-plus"></i> Landing Wifi</a></li>
-						        </ul>
-						    </div>
-						    <div class="span4">
-						        <h2><strong>Recursos JS</strong></h2>
-						        <ul class="nav nav-list bs-docs-sidenav affix-top">
-						            <li><a href="lib/slider-stop.html"><i class="icon-plus"></i> Pausar Slider</a></li>
-						            <li><a href="lib/tooltip-click.html"><i class="icon-plus"></i> Ocultar tooltip en click</a></li>
-						            <li><a href="lib/back-to-top.html"><i class="icon-plus"></i> Botón Back to Top</a></li>
-						            <li><a href="lib/search-translate.html"><i class="icon-plus"></i> Traducción widget de Búsqueda</a></li>
-						        </ul>
-						    </div>
-						</div>
-						<div class="span12 bs-docs-sidebar">
-						    <div class="span4">
-						        <h2><strong>Recursos CSS</strong></h2>
-						        <ul class="nav nav-list bs-docs-sidenav affix-top">
-						            <li><a href="lib/css-guide.html"><i class="icon-plus"></i> CSS Style Guide</a></li>
-						            <li><a href="lib/shadowbox.html"><i class="icon-plus"></i> Shadowbox - New Style</a></li>
-						        </ul>
-						    </div>
-						    <div class="span4">
-						        <h2><strong>Hacks</strong></h2>
-						        <ul class="nav nav-list bs-docs-sidenav affix-top">
-						            <li><a href="lib/routemap.html"><i class="icon-plus"></i> Calculate route map</a></li>
-						        </ul>
-						    </div>
-						</div>
-						
 					</div>
-					<div class="box-bottom-tooltip"></div>
 				</div>
-			</section><!-- end section -->
+			</section>
 
 			<footer id="footer" class="">
 			</footer><!-- end footer -->
@@ -129,8 +161,7 @@
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-		<script src="google-code-prettify/prettify.js"></script>		
-		<script src="application.js"></script>
-		
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
 	</body>
 </html>

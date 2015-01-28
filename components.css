@@ -267,7 +267,10 @@ ul.bullets li {
 
 /* Back to top */
 .bg_arrows {background-color: lightblue;}
-.bg_arrows img {display: block; margin: 0 auto;}
+.bg_arrows img, .bg_scroll img {display: block; margin: 0 auto;}
 
 .footer_back_top {text-align: center;}
 .footer_back_top img {}
+
+/* Scroll to info */
+.bg_scroll {background-color: #A8CE4E;}

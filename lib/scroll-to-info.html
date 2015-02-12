@@ -126,6 +126,11 @@ Mirai.query('.scroll-to-info').click(function(evt){
   Mirai.query('html,body').animate({scrollTop:pos},700);
 });</pre>
 
+	<h3>Modificar el punto de destino:</h3>
+	<p>Cuando ponemos el típico menú anchor para facilitar la navegación de una página al bajar a la sección en cuestión el motor se posiciona fixed y perdemos el Título de dicha sección, para corregirlo lo único que tenemos que modificar es el valor del <em>scrollTop</em> en el JS anterior, por ejemplo:</p>
+	<pre class="prettyprint linenums">
+Mirai.query('html,body').animate({scrollTop:pos-100},800);</pre>
+
 	<h2>Colores de la flecha</h2>
 	<p>No hemos hablado nada de este tema con UX así que si queréis utilizar estas flechas utilizar esta imagen, sino a vuestro gusto</p>
 

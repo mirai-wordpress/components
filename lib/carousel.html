@@ -114,7 +114,14 @@
     &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
   &lt;/div&gt;</pre>
 
-	<h2>Javascript opcional</h2>		
+	<h2>Javascript opcional</h2>
+	<p>Para que en Chomre se inicialice el carrusel automáticamente, hay que añadir estas líenas en el custom.js.</p>
+	<pre class="prettyprint linenums">
+		Mirai.query('.carousel').carousel({
+		  interval: 4000
+		})
+	</pre>
+	
 	<p>Si quieres que este slider no comienze a pasar dispositivas automáticamente mira <a href="slider-stop.html">AQUÍ</a>.</p>
 </section>
 

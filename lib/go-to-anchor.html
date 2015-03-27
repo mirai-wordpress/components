@@ -12,7 +12,7 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<meta name="language" content="es" />
-		<title>Mirai Components Library / Scroll to Info</title>
+		<title>Mirai Components Library / Go To Anchor</title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
 		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
@@ -65,80 +65,45 @@
 
 <section id="colapse" class="special-page">
 	<div class="page-header">
-		<h1>Scroll to info</h1>
+		<h1>Go To Anchor</h1>
 	</div>
 	
-	<p>Muestra un elemento con el cual podemos desplazarnos hacia otra sección de esa misma página con un efecto animado progresivo, de este modo evitamos el salto drástico que haríamos con un simple anchor.</p>
-	<p>Este ejemplo es para mostrar una flecha como elemento con el que interactuar, pero se le puede aplicar del mismo modo a un texto.
-	</p><br/>
+	<p>Se le aplica una transición a un link con anchor.</p>
+	<br/>
 
 	<div class="bs-docs-example tooltip-demo footer_back_top">
 		<img src="../imgs/scroll-to-info.jpg" alt="">
     </div>
 
 	<h2>Marcado HTML</h2>
-	<h5>Flecha en color negro</h5>		
+	<h5>Sólo haría falta ponerle la clase "go-to-anchor", ejemplo:</h5>		
 	<pre class="prettyprint linenums">
-&lt;a href="#intro"  class="scroll-to-info"&gt;&lt;/a&gt;</pre>
-	<h5>Flecha en color blanco</h5>
-	<pre class="prettyprint linenums">
-&lt;a href="#intro"  class="scroll-to-info arrow-white"&gt;&lt;/a&gt;</pre>
-
-	<h2>CSS</h2>		
-	<pre class="prettyprint linenums">
-/* TRANSITIONS */
-.scroll-to-info {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-/* GENERAL */
-.scroll-to-info {
-    background: url("/files/arrow_down.png") no-repeat 0 0 transparent;
-    bottom: 10px;
-    display: block;
-    height: 50px;
-    left: 50%;
-    margin-left: -25px;
-    opacity: 0.7;
-    position: absolute;
-    width: 50px;
-}
-
-.scroll-to-info:hover {
-    bottom: 0px;
-}
-
-.scroll-to-info.arrow-white {
-    background-position: 0 -50px;
-}</pre>
+&lt;span class="go-to-anchor"&gt;&lt;/span&gt;</pre>
 
 	<h2>Javascript necesario</h2>		
 	<pre class="prettyprint linenums">
-/* Smooth scrolling for nav sections */
-Mirai.query('.scroll-to-info').click(function(evt){
-  evt.preventDefault();
-  var link = Mirai.query(this).attr('href');
-  var pos = Mirai.query(link).offset().top;
-  Mirai.query('html,body').animate({scrollTop:pos},700);
-});</pre>
+/* GoToAnchor all pages */
+Mirai.Dom.goToAnchor();</pre>
 
 	<h3>Modificar el punto de destino:</h3>
-	<p>Cuando ponemos el típico menú anchor para facilitar la navegación de una página al bajar a la sección en cuestión el motor se posiciona fixed y perdemos el Título de dicha sección, para corregirlo lo único que tenemos que modificar es el valor del <em>scrollTop</em> en el JS anterior, por ejemplo:</p>
+	<p>Para poder salvar el espacio que ocupa el Motor o el Header en Affix se puede modificar valor de la posición directamente en el JS anterior, basta con añadir el valor deseado entre comillas simples:</p>
 	<pre class="prettyprint linenums">
-Mirai.query('html,body').animate({scrollTop:pos-100},800);</pre>
+/* GoToAnchor all pages */
+Mirai.Dom.goToAnchor('150');</pre>
+	<p><strong>NOTA:</strong> El valor por defecto es 100.</p>
 
-	<h2>Colores de la flecha</h2>
-	<p>No hemos hablado nada de este tema con UX así que si queréis utilizar estas flechas utilizar esta imagen, sino a vuestro gusto</p>
+<hr>
 
-	<div class="bs-docs-example tooltip-demo bg_scroll">
-		<img src="../imgs/arrow_down.png" alt="">
-	</div>
-	<p>Por defecto mostrará la flecha negra, para mostrarla en blanco bastará con añadir la clase "arrow-white" al marcado tal y como se detalla en el apartado MARCADO HTML.</p>
-
+	<h3>Aplicarlo sólo a ciertas páginas:</h3>
+	<p>Con este JS podemos aplicar esta transición sólo a algunas páginas, con esto evitamos que el Script se ejecute siempre. <br>
+		Para aplicarlo a determinadas páginas habría que hacerlo por la clase "cat-" que se asigna a cada una de ellas a través del Audit. Ejemplo para aplicarlo a 2 páginas:</p>
+	<pre class="prettyprint linenums">
+/* GoToAnchor some pages */
+Mirai.query(document).ready(){
+    if (Mirai.query('BODY').hasClass('cat-location') || Mirai.query('BODY').hasClass( 'cat-rooms'))  {
+        Mirai.Dom.goToAnchor('200');
+    }
+}</pre>
 </section>
 
 <div class="box-bottom-tooltip"></div>

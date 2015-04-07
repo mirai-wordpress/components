@@ -123,6 +123,52 @@
 	</pre>
 	
 	<p>Si quieres que este slider no comienze a pasar dispositivas automáticamente mira <a href="slider-stop.html">AQUÍ</a>.</p>
+
+	<h2>Transición para el carousel</h2>
+	<p>Para que no sea sólo un pase en horizontal y tenga algún efecto "mono", hay que añadir la clase carousel-fade al contenedor principal del carousel</p>
+	<pre class="prettyprint linenums">
+&lt;div id="myCarousel" class="carousel slide carousel-face"&gt;
+    &lt;!-- Carousel items --&gt;
+    &lt;div class="carousel-inner"&gt;
+	    &lt;div class="active item"&gt;…&lt;/div&gt;
+	    &lt;div class="item"&gt;…&lt;/div&gt;
+	    &lt;div class="item"&gt;…&lt;/div&gt;
+    &lt;/div>
+    &lt;!-- Carousel nav --&gt;
+    &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&amp;lsaquo;&lt;/a&gt;
+    &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
+  &lt;/div&gt;</pre>
+
+  <p>Y el siguiente css. La transición se muede modificar al gusto en tiempo y efecto.</p>
+  <pre class="prettyprint linenums">
+	.carousel-fade .carousel-inner .item {
+	  opacity: 0;
+	  -webkit-transition: opacity 0.7s ease-in !important;
+	    -moz-transition: opacity 0.7s ease-in !important;
+	    -ms-transition: opacity 0.7s ease-in !important;
+	    -o-transition: opacity 0.7s ease-in !important;
+	    transition: opacity 0.7s ease-in !important;
+
+	}
+
+	.carousel-fade .carousel-inner  .active {
+	  opacity: 1;
+	}
+
+	.carousel-fade .carousel-inner  .active.left, .carousel-fade .carousel-inner  .active.right {
+	  left: 0;
+	  opacity: 0;
+	  z-index: 1;
+	}
+
+	.carousel-fade .carousel-inner  .next.left, .carousel-fade .carousel-inner  .prev.right {
+	  opacity: 1;
+	}
+
+	.carousel-fade .carousel-control {
+	z-index: 2;
+	}
+	</pre>
 </section>
 
 <div class="box-bottom-tooltip"></div>

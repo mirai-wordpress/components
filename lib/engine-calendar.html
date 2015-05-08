@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+	<!--[if lt IE 7]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 7]> <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 8]> <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 9]> <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <!--<![endif]-->
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+		<!--[if ie]>
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<![endif]-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="language" content="es" />
+		<title>Mirai Components Library / Engine Calendar - New Style</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
+		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
+		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
+                
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
+		
+		<!--[if IE 8]>
+			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
+		<![endif]-->
+		
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
+		
+		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
+		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
+		<link rel='canonical' href='http://webs3.mirai.es/' />		
+		<script type="text/javascript">
+			common_vars = {'tooltip': 'true'};
+		</script>
+
+		<meta http-equiv="Content-Language" content="es-ES" />
+	</head>
+
+	<body id="" class="hotel home page cat-hotel">    
+
+		<div id="container" class="">
+		
+			<header id="header" class="">
+				<div class="content container">
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
+				</div>
+			</header><!-- end header -->
+
+			<section id="main" class="">
+				<div class="content container">
+                    <div class="row">
+                        <nav>
+                            <ul><li><a href="..">Home</a></li></ul>
+                        </nav>
+                    </div>
+                    <div class="row">
+						<div class="span12">
+
+
+
+<section id="colapse" class="special-page">
+	<div class="page-header">
+		<h1>Engine Calendar - New Style</h1>
+	</div>
+	
+	<p>Estos estilos afectan a todos los calendarios que usamos en nuestras webs. El del motor, el del detalle de ofertas y el que aparece cuando no hay disponibilidad en la página del bookingstep. El objetivo de estos estilos es el de mostrar un calendario grande con una apariencia acorde con los diseños actuales. Aún se puenden mejorar muchas cosas, siéntete libre para añadir o modificar estos estilos.</p>
+
+	<div class="bs-docs-example tooltip-demo footer_back_top">
+		<img src="../imgs/shadowbox.jpg" alt="">
+    </div>
+
+	<h2>CSS</h2>		
+	<pre class="prettyprint linenums">
+#ui-datepicker-div, #noDispo .ui-widget-content {
+    border: 0!important;
+    border-radius: 0!important;
+    box-shadow: 0 0 5px #666!important
+;    font-family:  'museo_sans300';
+    font-size: 15px !important;
+    padding: 10px!important;
+}
+
+.bookingstep1 div#noDispo #noDispoContents1 {
+  padding: 60px 183px 60px 100px!important;
+}
+
+.bookingstep1 #noDispo .price1 .ui-state-default,
+.bookingstep1 #noDispo #legend .price1 {
+  border: 0!important;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    border: 0;
+    border-radius: 0;
+    padding: 6px!important;
+}
+
+.ui-datepicker th {
+  color: #999!important;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ui-datepicker-group-middle {
+    outline: 2px solid #FFF;
+    position: relative;
+    z-index: 20;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+  border: 0!important;
+  top: 8px!important;
+}
+
+.ui-datepicker .ui-datepicker-prev.ui-state-hover, .ui-datepicker .ui-datepicker-next.ui-state-hover {
+  background: #EF6772!important;
+}
+
+.bookingstep1 #noDispo .ui-widget-header, .bookingstep1 #noDispo .ui-datepicker .ui-datepicker-title, .ui-datepicker .ui-datepicker-header, .ui-datepicker .ui-datepicker-buttonpane button,
+.offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .ui-datepicker-header {
+    background: #E9E2D8!important;
+    color: #666!important;
+    font-family: 'Poiret One',cursive;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, #noDispo .ui-datepicker td span, #noDispo .ui-datepicker td a {
+  border:0!important;
+    background: #F2F2F2!important;
+    padding: 6px;
+}
+
+.ui-datepicker th.ui-datepicker-week-end {
+  color: #444!important;
+}
+
+.ui-datepicker-week-end .ui-state-default,
+.ui-datepicker-week-end .ui-widget-content .ui-state-default,
+.ui-datepicker-week-end .ui-widget-header .ui-state-default {
+  background: #DDD!important;
+}
+
+.ui-datepicker-calendar ._selected-date span, .ui-datepicker-calendar ._selected-date a, .ui-datepicker-calendar ._checkin-date span,
+.ui-datepicker-calendar ._checkin-date a, .ui-datepicker-calendar ._checkout-date span, .ui-datepicker-calendar ._checkout-date a,
+.offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-offer-day._checkin-date a,
+.offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-offer-day._selected-date a,
+.offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-offer-day._checkout-date a,
+.ui-datepicker td:hover a {
+    background: #EF6772!important;
+    color: #FFF;
+    font-weight: normal!important;
+    text-decoration: none;
+}
+
+.bookingstep1 #noDispo .price1:hover .ui-state-default, .bookingstep1 #noDispo .ui-widget-content .price1:hover .ui-state-default, .bookingstep1 #noDispo .price1 .ui-state-default, .bookingstep1 #noDispo .ui-widget-content .price1 .ui-state-default, .bookingstep1 #noDispo .ui-widget-content .price1 .ui-state-hover,
+.bookingstep1 #noDispo #legend .price1, .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .calendar-legend-offer-day a {
+    background: #90C137!important;
+    border:0!important;
+}
+
+.bookingstep1 #noDispo .price2 .ui-state-default, .bookingstep1 #noDispo .ui-widget-content .price2 .ui-state-default, .bookingstep1 #noDispo .ui-widget-content .price2 .ui-state-hover, .bookingstep1 #noDispo #legend .price2 {
+  background: #73B07B!important;
+}
+
+.bookingstep1 .ui-datepicker {
+  width: 19em;
+}
+
+.bookingstep1 #noDispo .price0 .ui-state-defaul, body.bookingstep1 #noDispo .ui-widget-contentt {
+  border: 0!important;
+}
+
+.bookingstep1 #noDispo .ui-datepicker-unselectable.ui-state-disabled.price0 {
+  background: rgba(0, 0, 0, 0)!important;
+}
+
+.bookingstep1 .ui-state-default, .bookingstep1 .ui-widget-content .ui-state-default,
+.bookingstep1 .ui-widget-header .ui-state-default {
+  padding: 6px;
+}
+
+.offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline,
+.rooms-detail-wrapper .room-calendar-wrapper .room-date .ui-datepicker-inline {
+  padding: 10px
+}
+
+/* customize ipad portrait */
+@media (min-device-width: 768px) and (max-device-width: 979px) and (orientation : portrait) {
+    #ui-datepicker-div  {
+        left: 0!important;
+        width: 98%!important;
+    }
+}
+</pre>
+
+	
+	<p>No te olvides de añadir los estilos para la versión "portrait" del iPad.</p>
+
+</section>
+
+<div class="box-bottom-tooltip"></div>
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer id="footer" class="">
+			</footer><!-- end footer -->
+				
+		</div> <!-- end container -->
+
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
+		<script type='text/javascript'>
+		/* <![CDATA[ */
+			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+		/* ]]> */
+		</script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
+	</body>
+</html>

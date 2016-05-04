@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+	<!--[if lt IE 7]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 7]> <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 8]> <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if IE 9]> <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"> <!--<![endif]-->
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+		<!--[if ie]>
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<![endif]-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="language" content="es" />
+		<title>Mirai Components Library / Tabs / Pills</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://webs3.mirai.es/xmlrpc.php" />
+		<link rel="shortcut icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://webs3.mirai.es/wp-content/themes/mirai/images/apple_touch_icon.png" />
+		<link rel='stylesheet' id='bootstrap-css'  href='http://webs3.mirai.es/wp-content/themes/mirai/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='engine-cdn-css'  href='http://js.miraiglobal.com/revalidate/bookingentranceLine.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='main-css'  href='http://webs3.mirai.es/wp-content/themes/child/style.css' type='text/css' media='all' />
+                
+                <link rel='stylesheet' id='components-css'  href='../components.css' type='text/css' media='all' />
+		
+		<!--[if IE 8]>
+			<link rel='stylesheet' id='bootstrap-ie8-fix-css'  href='http://webs3.mirai.es/wp-content/themes/hotel_becquer/ie8-fix.css' type='text/css' media='all' />
+		<![endif]-->
+		
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/ie8-html5-tags.js'></script>
+		
+		<link rel='prev' title='bookingstep3' href='http://webs3.mirai.es/bookingstep3/' />
+		<link rel='next' title='Galería' href='http://webs3.mirai.es/galeria/' />
+		<link rel='canonical' href='http://webs3.mirai.es/' />
+		
+		<meta http-equiv="Content-Language" content="es-ES" />
+	</head>
+
+	<body id="mainr" class="hotel home page cat-hotel">    
+
+		<div id="container" class="">
+		
+			<header id="header" class="">
+				<div class="content container">
+					<h1>Mirai Components</h1>
+					<p>Patterns, Objects Library for faster and easier websites production.</p>	                                        
+				</div>
+			</header><!-- end header -->
+
+			<section id="main" class="">
+				<div class="content container">
+                                    <div class="row">
+                                        <nav>
+                                            <ul><li><a href="..">Home</a></li></ul>
+                                        </nav>
+                                    </div>
+					<div class="row">						
+						<div class="span12">
+							<section id="tabs">
+								<div class="page-header">
+									<h1>Tabs / Pills</h1>
+								</div>
+								
+								<p>Para variar la posición de las pestañas (izquierda, derecha, abajo) añadimos al div.tabbable la clase correspondiente (tabs-left, tabs-right, tabs-below).</p>
+								<p>Ojo! si utilizamos .tabs-below hay que invertir el orden del marcado: primero .tab-content y luego .nav-tabs</p>
+								<p>Si cambiamos .nav-tabs por .nav-pills tenemos un formato tabs pero sin pestañas.</p>
+								
+								<div class="bs-docs-example">
+								
+									<div class="tabbable"> <!-- Only required for left/right and bellow tabs -->
+										<ul class="nav nav-tabs">
+											<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+											<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+											<li><a href="#tab3" data-toggle="tab">Section 3</a></li>
+										</ul>
+										<div class="tab-content">
+											<div class="tab-pane active" id="tab1">
+												<p>I'm in Section 1.</p>
+											</div>
+											<div class="tab-pane" id="tab2">
+												<p>Howdy, I'm in Section 2.</p>
+											</div>
+											<div class="tab-pane" id="tab3">
+												<p>Howdy, I'm in Section 3.</p>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+<pre class="prettyprint linenums">
+
+&lt;div class="tabbable"&gt; &lt;!-- Only required for left/right and bellow tabs --&gt;
+	&lt;ul class="nav nav-tabs"&gt;
+		&lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#tab3" data-toggle="tab"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="tab-content"&gt;
+		&lt;div class="tab-pane active" id="tab1"&gt;
+			&lt;p&gt;I'm in Section 1.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="tab-pane" id="tab2"&gt;
+			&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="tab-pane" id="tab3"&gt;
+			&lt;p&gt;Howdy, I'm in Section 3.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+/*----------------------------- TABS COMPONENT -----------------------------*/
+.tabbable {}
+.nav-tabs, .nav-pills {}
+.nav-tabs > li, .nav-pills > li {}
+.nav-tabs > li.active > a, .nav-pills > li.active > a {}
+.nav-tabs > li.active > a:hover, .nav-pills > li.active > a:hover {}
+.nav-tabs > li > a, .nav-pills > li > a {}
+.nav-tabs > li > a:hover, .nav-pills > li > a:hover {}
+.tab-content {}
+.tab-content > .tab-pane {}
+/*------------------------------------------------------------------------------*/
+
+</pre>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section><!-- end section -->
+
+
+
+			<footer id="footer" class="">
+			</footer><!-- end footer -->
+				
+		</div> <!-- end container -->
+
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/jquery.cycle.all.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.ngg.slideshow.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/mirai.common.js?'></script>
+		<script type='text/javascript'>
+		/* <![CDATA[ */
+			var vars = {"hotel_id":"100169479","lang":"es","hsri":"02040","booking_host":"","booking_page":"","loading":"Cargando"};
+		/* ]]> */
+		</script>
+		<script type='text/javascript' src='http://webs3.mirai.es/wp-content/themes/mirai/js/booking/booking-mobile-button.js'></script>
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="../google-code-prettify/prettify.js"></script>		
+		<script src="../application.js"></script>
+		
+	</body>
+</html>
